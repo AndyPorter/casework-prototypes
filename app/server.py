@@ -31,6 +31,10 @@ def edge_of_proto(e):
 def proto():
   return render_template('index2.html')
 
+@app.route('/hack-day')
+def proto():
+  return render_template('index-hack.html')
+
 # ---------------------------------------------------------------------------
 
 #hackday 

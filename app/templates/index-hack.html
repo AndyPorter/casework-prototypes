@@ -1,0 +1,105 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block body_classes %}prototypes-index{% endblock %}
+
+{% block proposition_header %}
+<div class="header-proposition">
+  <div class="content">
+    <nav id="proposition-menu">
+      <a href="/" id="proposition-name">Land registry</a>
+    </nav>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+<!--     {% include "includes/prototypes_banner.html" %} -->
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <h1 class="heading-large">
+          Hackday
+        </h1>
+        <div class="text">
+          <p class="lede">Land Registry and GDS, 6 Nov 2014</p>
+        </div>
+
+        <h2 class="heading-large">Simplified Register</h2>
+        <div class="text">
+          <p class="lede">What could a simple, human readable register be like, and how could we transform millions of records?</p>
+
+          <p>Lets start from scratch - assume no register exists.</p>
+
+          <p>Step out of the present - we've gone to Mars, and after getting comfortable...</p>
+
+          <p>We want to know... who owns what?</p>
+        </div>
+
+        <h3 class="heading-small">Land ownership records</h3>
+        <p>from the owners point of view</p>
+        <ul>
+          <li><a href="hackday/land-ownership-record-2">iteration two</a></li>
+          <li><a href="hackday/land-ownership-record-1">iteration one</a></li>
+          <li><a href="hackday/land-ownership-record">iteration zero</a></li>         
+        </ul>
+
+        <p>Where is it, What is it, Who owns it, <del>What you can do,</del> What you can't do, What others can do.</p>
+        <p>That's all you need to record/show</p>
+        <p>Real register title entries turned into plain English</p>
+        <p>It's as simple as this!</p>
+
+
+        <h3 class="heading-small">Converting existing titles</h3>
+        
+        <h4 class="heading-small">How?</h4>
+        <ul class="list-bullet">
+          <li>use existing professional knowledge (solicitors, conveyancers, staff)</li>
+          <li>one at a time</li>
+          <li>as and when they come up for change</li>
+          <li>a little bit at a time, or all in one</li>
+        </ul>
+
+        <h4 class="heading-small">Why - incentives</h4>
+        <ul class="list-bullet">
+          <li>anyone can understand</li>
+          <li>make is simpler and quicker to buy and sell, any sort of change</li>
+          <li>mirror principle - needs to still refect accurately</li>
+        </ul>
+
+        <h4 class="heading-small">Legal considerations</h4>
+        <ul class="list-bullet">
+          <li>indemnity</li>
+          <li>change culture and language of the conveyancing community</li>
+          <li>law and rules to change</li>
+
+        </ul>
+
+        <h4 class="heading-small">Process</h4>
+        <a href="{{ prototypes_asset_path }}images/process.png" title="Simplifying the register process by Clara Teoh"><img src="{{ prototypes_asset_path }}images/process.png" width="320" height="166" alt="Simplifying the register process"></a>
+
+        <h3 class="heading-small">What else?</h3>
+        <p>Post hackday, we have chatted about...</p>
+        <p>This is half the job done.  The text sorted.  What about the maps/plan/Geo.</p>
+        <p>Same Process - one register/boundary at a time - <b>de-generalise boundaries</b></p>
+
+
+        <h3 class="heading-small">Us</h3>
+        <p>Andy Porter, Terri Easton, David Hearsey, Andy Short, Clara Teoh, John Beale (clockwise from left)</p>
+        <a href="https://www.flickr.com/photos/psd/15737134295" title="Simplifying legal language by Paul Downey, on Flickr"><img src="https://farm8.staticflickr.com/7521/15737134295_4eca3acb36_n.jpg" width="320" height="166" alt="Simplifying legal language"></a>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+</main>
+
+{% endblock %}
