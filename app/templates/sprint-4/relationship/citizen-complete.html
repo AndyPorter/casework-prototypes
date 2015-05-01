@@ -1,0 +1,34 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/govuk-elements.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/landregistry-main.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/prototypes.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block page_title %}Confirm authorisation{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="inner-block">
+
+      <h1 class="heading-xlarge">Authorise Relationship</h1>
+
+      <div class="callout callout--completion">
+        <h2 class="heading-large">Authorisation complete</h2>
+        <p><b>Wall & Co Solicitors</b> is now authorised to transact on your behalf on <a title="view official register of title for GHR67834" href="citizen-register">GHR67834</a></p>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

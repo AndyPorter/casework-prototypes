@@ -1,0 +1,158 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Your mortgage agreement
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="text">
+
+          <h1>
+            Transfer ownership of a property
+          </h1>
+
+          <div class="panel-indent">
+            <p>Explanation</p>
+          </div>
+
+        </div>
+
+        <article class="legal-document--bounds">
+
+          <section class="legal-document--item">
+            <h2 class="visuallyhidden">Property details</h2>
+
+            <p class="lede" itemscope itemtype="http://schema.org/PostalAddress">
+              <span itemprop="streetAddress">
+                Flat 18 Kingman Court<br>
+                Verdant Road<br>
+              </span>
+              <span itemprop="addressLocality">London</span><br>
+              <span itemprop="postalCode">SV19 9BT</span>
+            </p>
+
+            <dl class="lede definition-inline">
+              <dt>Title number</dt>
+              <dd>GHR67834</dd>
+            </dl>
+
+          </section><!-- end item -->
+
+          <section class="legal-document--item legal-document--bordered">
+
+            <h2 class="heading-medium">The transferors agree to transfer ownership of the property to the transferees.</h2>
+
+            <h3 class="heading-medium">Transferors</h3>
+
+            <div class="grid grid-1-2">
+              <p>
+                Kenneth Loughton <span class="confirm-flag">has signed</span>
+              </p>
+              <p>
+                78 Church Street,<br>
+                Kensington,<br>
+                London<br>
+                W4 5TF
+              </p>
+              <p>kenneth.l@aol.com</p>
+            </div>
+
+            <div class="grid grid-1-2">
+              <p>
+                Rebecca Loughton <span class="confirm-flag">has signed</span>
+              </p>
+              <p>
+                78 Church Street,<br>
+                Kensington,<br>
+                London<br>
+                W4 5TF
+              </p>
+              <p>rebecca.l@aol.com</p>
+            </div>
+
+            <h3 class="grid heading-medium">Transferees</h3>
+
+            <div class="grid grid-1-2">
+              <p>
+                <b>Matthew Jameson</b> <span class="alert-flag">you</span>
+              </p>
+              <p>
+                118 Leafy Way,<br>
+                Thale,<br>
+                Berks<br>
+                RG12 9AB
+              </p>
+              <p>matthew.jameson@yahoo.co.uk</p>
+            </div>
+
+            <div class="grid grid-1-2">
+              <p>
+                Jennifer Spencer
+              </p>
+              <p>
+                88 Monad Road,<br>
+                Slough,<br>
+                Berks<br>
+                SL20 3JD
+              </p>
+              <p>jennifer.spencer@yahoo.co.uk</p>
+            </div>
+
+          </section><!-- end item -->
+
+          <section class="legal-document--item legal-document--bordered">
+
+            <h2 class="heading-medium">This transfer is effective on 21 July 2015 at 11:00.</h2>
+            <p>The transferors have received £250,000 from the transferees for the property.</p>
+            <p>The transferors transfer with full title guarantee.</p>
+            <p>The transferees are to hold the property in trust for themselves as joint tenants.</p>
+            <p>The transferees agree to respect the covenants refered to in the proprietorship register and to indemnify the transferors in respect to non-observation or non-performance of them.</p>
+            <p>This transfer will be signed by the land registrar upon completion.</p>
+
+          </section><!-- end item -->
+
+        </article>
+
+        <form action="{{next_page}}" method="get" class="form">
+          <div class="form-group">
+            <label for="check-1" class="block-label">
+              <input id="check-1" type="checkbox" name="agree-execution">
+              I have read and understood the information above
+            </label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="button">Sign this agreement</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}
+
+{% block body_end %}
+  <script src="{{ prototypes_asset_path }}javascripts/vendor/jquery-1.11.1.min.js"></script>
+  <script src="{{ prototypes_asset_path }}javascripts/govuk-elements.js"></script>
+  <script src="{{ prototypes_asset_path }}javascripts/stick-at-top-when-scrolling.js"></script>
+  <script src="{{ prototypes_asset_path }}javascripts/stop-scrolling-at-footer.js"></script>
+
+  <script src="{{ prototypes_asset_path }}javascripts/lr-faux-details.js"></script>
+  <script src="{{ prototypes_asset_path }}javascripts/register-view-2-0.js"></script>
+{% endblock %}

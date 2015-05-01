@@ -1,0 +1,105 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <h1 class="heading-xlarge">
+          <span class="subtitle">Property retrieved</span>
+          Task requested: sell property
+        </h1>
+
+        <div class="text">
+          <p class="lede">
+            When you accept this task you will be authorised to make changes to title <b>GHR67834</b> by <b>Matthew Jameson</b> as part of the selling process.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="grid-wrapper task-summary">
+
+      <div class="grid">
+        <div class="inner-block">
+          <h2 class="heading-medium">Title number GHR67834</h2>
+        </div>
+      </div>
+
+      <div class="grid grid-1-2">
+        <div class="inner-block">
+
+          <div itemscope itemtype ="http://schema.org/PostalAddress" class="lede">
+            <span itemprop="streetAddress">
+              Flat 18 Kingman Court<br>
+              Verdant Road<br>
+            </span>
+            <span itemprop="addressLocality">London</span><br>
+            <span itemprop="postalCode">SV19 9BT</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="grid grid-1-2">
+        <div class="inner-block">
+
+          <img src="{{ prototypes_asset_path }}images/dummy-location.png" alt="">
+
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="inner-block">
+
+          <dl class="inline">
+            <dt>Registered Owner(s)</dt>
+            <dd>
+              Matthew Jameson<br>
+              of Flat 18 Kingman Court, Verdant Road, London SV19 9BT
+            </dd>
+
+            <dt>Lender(s)</dt>
+            <dd>General UK PLC</dd>
+
+            <dt>Tenure</dt>
+            <dd>Leasehold</dd>
+
+            <dt>Quality of title</dt>
+            <dd>Absolute</dd>
+
+            <dt>Price Stated</dt>
+            <dd>&pound;450,000</dd>
+
+            <dt>Council</dt>
+            <dd>London Borough of Brent</dd>
+          </dl>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="outer-block">
+      <div class="inner-block controls">
+
+        <a href="#" class="button">Accept this task</a>
+
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

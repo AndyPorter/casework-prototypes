@@ -1,0 +1,101 @@
+// includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets
+
+// Import GOV.UK frontend toolkit
+
+@import "colours";
+@import "measurements";
+@import "conditionals";
+@import "shims";
+@import "typography";
+@import "css3";
+@import "design-patterns/alpha-beta";
+@import "design-patterns/buttons";
+
+// THIS CSS FALLS *AFTER* legal-document-1-0.css SO THERE ARE NO IMPORTS
+
+// NOT YET INTEGRATED
+// ==========================================================================
+
+.breadcumb-reverse {
+  margin-top: $gutter;
+}
+
+// Register changes items
+
+$pending: $turquoise;
+$previous: $mauve;
+
+.register-changes-pending {
+  counter-reset: li-counter;
+
+  & li {
+    position: relative;
+    padding-left: $gutter + 5;
+  }
+  & li:before {
+    content: counter(li-counter);
+    counter-increment: li-counter;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @include core-16;
+    @include border-radius(50%);
+    @include box-sizing(border-box);
+
+    font-weight: bold;
+    background-color: $pending;
+
+    display: inline-block;
+    width: 1.65em;
+    height: 1.65em;
+    padding-top: 0.25em;
+    text-align: center;
+    vertical-align: middle;
+
+  }
+}
+
+.register-changes-previous {
+  margin-top: 0;
+  border-left: 5px solid $previous; 
+
+  li {
+    @extend %contain-floats;
+
+    padding: $gutter-half;
+    padding-left: $gutter;
+  }
+
+  time {
+
+    display: block;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -$gutter;
+      top: $gutter-one-quarter;
+      width: $gutter-half;
+      border-top: 5px solid $previous;
+    }
+  }
+
+  details[open] {
+    margin-bottom: $gutter-half;
+    padding-bottom: $gutter-half;
+    border-bottom: 1px dotted $grey-2;
+
+    .changelog:last-of-type {
+      border-bottom: 1px dotted $grey-2;
+    }
+
+    .link-to-register {
+      margin-top: $gutter-half;
+      margin-bottom: 0;
+    }
+  }
+
+}

@@ -1,0 +1,32 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Log in now
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <a href="{{next_page}}">
+          <img src="{{ prototypes_asset_path }}images/govuk-verify-1.png">
+        </a>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}

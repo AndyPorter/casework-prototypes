@@ -1,0 +1,181 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Select property
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/relationship-starts-2-0.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/search-results-1-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block inside_header %}
+  {% include "includes/global_search_box.html" %}
+{% endblock %}
+
+{% block header_class %}{% endblock %}
+{% block proposition_header %}{% endblock %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="global-breadcrumb">
+          <nav role="navigation">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><a href="search">Find property information</a></li>
+              <li><strong>Results</strong></li>
+            </ol>
+          </nav>
+        </div>
+
+        <h1 class="heading-large">Select property</h1>
+
+
+        <ul class="results-list">
+          <li class="result">
+            <div class="grid grid-1-3">
+              <div class="postal-address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">
+                  <h2 class="grid heading-medium"><a href="{{ next_page }}">Flat 16 Kingman Court</a></h2>
+                  <span class="lede"> Verdant Road</span><br>
+                </span>
+                <span class="lede" itemprop="addressLocality">London</span><br>
+                <span class="lede" itemprop="postalCode">SV19 9BT</span>
+              </div>
+              <dl class="definition-inline">
+                <dt>Tenure</dt>
+                <dd>Freehold</dd>
+                <dt>Title number</dt>
+                <dd>GHR11632</dd>
+              </dl>
+            </div>
+            <div class="grid grid-1-3">
+              <div class="inner-block">
+                <img src="{{ prototypes_asset_path }}images/dummy-title-plan16.png" alt="">
+              </div>
+            </div>
+          </li>
+          <li class="result">
+            <div class="grid grid-1-3">
+              <div class="postal-address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">
+                  <h2 class="grid heading-medium"><a href="{{ next_page }}">Flat 17 Kingman Court</a></h2>
+                  <span class="lede">Verdant Road</span><br>
+                </span>
+                <span class="lede" itemprop="addressLocality">London</span><br>
+                <span class="lede" itemprop="postalCode">SV19 9BT</span>
+              </div>
+              <dl class="definition-inline">
+                <dt>Tenure</dt>
+                <dd>Freehold</dd>
+                <dt>Title number</dt>
+                <dd>GHR87455</dd>
+              </dl>
+              
+            </div>
+            <div class="grid grid-1-3">
+              <div class="inner-block">
+                <img src="{{ prototypes_asset_path }}images/dummy-title-plan17.png" alt="">
+              </div>
+            </div>
+          </li>
+
+          <li class="result">
+            <div class="grid grid-1-3">
+              <div class="postal-address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">
+                  <h2 class="grid heading-medium"><a href="{{ next_page }}">Flat 18 Kingman Court</a></h2>
+                  <span class="lede">Verdant Road</span><br>
+                </span>
+                <span class="lede" itemprop="addressLocality">London</span><br>
+                <span class="lede" itemprop="postalCode">SV19 9BT</span>
+              </div>
+              <dl class="definition-inline">
+                <dt>Tenure</dt>
+                <dd>Leasehold</dd>
+                <dt>Title number</dt>
+                <dd>GHR67834</dd>
+              </dl>
+              
+            </div>
+            <div class="grid grid-1-3">
+              <div class="inner-block">
+                <img src="{{ prototypes_asset_path }}images/dummy-title-plan18.png" alt="">
+              </div>
+            </div>
+          </li>
+
+          <li class="result">
+            <div class="grid grid-1-3">
+              <div class="postal-address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">
+                  <h2 class="grid heading-medium"><a href="{{ next_page }}">Flat 19 Kingman Court</a></h2>
+                  <span class="lede">Verdant Road</span><br>
+                </span>
+                <span class="lede" itemprop="addressLocality">London</span><br>
+                <span class="lede" itemprop="postalCode">SV19 9BT</span>
+              </div>
+              <dl class="definition-inline">
+                <dt>Tenure</dt>
+                <dd>Leasehold</dd>
+                <dt>Title number</dt>
+                <dd>GHR78956</dd>
+              </dl>
+              
+            </div>
+            <div class="grid grid-1-3">
+              <div class="inner-block">
+                <img src="{{ prototypes_asset_path }}images/dummy-title-plan19.png" alt="">
+              </div>
+            </div>
+          </li>
+
+          <li class="result">
+            <div class="grid grid-1-3">
+              <div class="postal-address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">
+                  <h2 class="grid heading-medium"><a href="{{ next_page }}">Kingman Court</a></h2>
+                  <span class="lede">Verdant Road</span><br>
+                </span>
+                <span class="lede" itemprop="addressLocality">London</span><br>
+                <span class="lede" itemprop="postalCode">SV19 9BT</span>
+              </div>
+              <dl class="definition-inline">
+                <dt>Tenure</dt>
+                <dd>Freehold</dd>
+                <dt>Title number</dt>
+                <dd>GJR29013</dd>
+              </dl>
+              
+            </div>
+            <div class="grid grid-1-3">
+              <div class="inner-block">
+                <img src="{{ prototypes_asset_path }}images/dummy-title-plan-all.png" alt="">
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}
+
+{% block footer_top %}
+  {% include "includes/footer_links.html" %}
+{% endblock %}
+

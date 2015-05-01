@@ -1,0 +1,96 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+Payment details
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/transfer.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="inner-block">
+
+      <h1 class="form-title heading-large">Paying for view of full register</h1>
+
+      <p class="lede">Viewing the full register costs £3.00</p>
+
+      <h2 class="heading-medium">Payment details</h2>
+
+      <form action="{{ next_page }}" method="get" class="form text">
+
+        <div class="form-group">
+          <label for="name-on-card" class="form-label">Name on card</label>
+          <input type="text" class="form-control" id="name-on-card">
+        </div>
+
+        <div class="form-group">
+          <label for="card-number" class="form-label">Card number</label>
+          <input type="text" class="form-control" id="card-number">
+        </div>
+
+        <div class="form-group">
+          <label for="security-code" class="form-label">Security code (CVC)</label>
+          <span class="form-hint">Last 3 digits on the back of the card</span>
+          <input type="text" class="form-control field-numeric" id="security-code">
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend class="form-label">Expiry date</legend>
+
+            <div class="date-of-birth">
+              <p class="form-hint">For example, 04 15</p>
+
+              <div class="form-group form-group-month">
+                <label for="exd-month">Month</label>
+                <input type="text" class="form-control" id="exd-month">
+              </div>
+              <div class="form-group form-group-year">
+                <label for="exd-year">Year</label>
+                <input type="text" class="form-control" id="exd-year">
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <h2 class="heading-small">Billing address</h2>
+
+        <div class="form-group">
+          <label for="street1" class="form-label">Street address</label>
+          <input type="text" class="form-control" id="street1" name="street1">
+          <input type="text" class="form-control" id="street2" name="street2">
+          <input type="text" class="form-control" id="street3" name="street3">
+        </div>
+
+        <div class="form-group">
+          <label for="city-address" class="form-label">Town or City</label>
+          <input type="text" class="form-control" id="city-address">
+        </div>
+
+        <div class="form-group">
+          <label for="post-code" class="form-label">Post code</label>
+          <input type="text" class="form-control field-numeric" id="post-code">
+        </div>
+
+        <div class="form-group">           
+          <button type="submit" class="button">Make payment and view register</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

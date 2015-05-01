@@ -1,0 +1,227 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block body_classes %}prototypes-index{% endblock %}
+
+{% block proposition_header %}
+<div class="header-proposition">
+  <div class="content">
+    <nav id="proposition-menu">
+      <a href="/" id="proposition-name">Land registry</a>
+    </nav>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+
+
+      <details>
+      <summary>html ptototypes - alpha</summary>
+
+        <h2 class="heading-large">Introduction</h2>
+        <div class="text">
+          <p>This is a place where we iterate wildly.</p>
+
+          <p>This page acts as an index to the various prototypes and ideas we’re having.</p>
+
+          <p>Full history resides in github repo, and not here as 'older' or previous versions</p>
+        </div>
+
+<!-- ================================= -->
+
+        <h2 class="heading-large">End of Alpha Presentation</h2>
+        <h3 class="heading-medium">Citizen visits GOV.UK to find out<br>
+        something that will require access to register</h3>
+        <ul>
+          <li>V1 user tested pre 08 Oct 2014 (public counter)</li>
+          <li>V2 user tested 08 Oct 2014 (Bunnyfoot)</li>
+          <li>V3 user tested 14 Oct 2014 (Bunnyfoot)</li>
+          <li>V4 user tested 17 Oct 2014 (Bunnyfoot)</li>
+        </ul>
+        <h4 class="heading-small">Flow</h4>
+        <ul>
+          <li><strong>1.</strong> <a href="find-owner/d/search">v4.0 (Verify, Payment &amp; realistic title)</a></li>
+        </ul>
+        <h4 class="heading-small">Alternate register views</h4>
+        <ul>
+          <li><a href="register-view/register-hybrid">Register view (hybrid)</a> - layout in A, B, C registers</li>
+          <li><a href="register-view/register-view-4-expanded">Register v4.0 fully open</a></li>
+          <li><a href="register-view/register-view-4-help-text">Register v4 with section help text (on show)</a></li>
+          <li><a href="register-view/register-view-citizen-1">Register "summarised"</a></li>
+        </ul>
+
+        <h3 class="heading-medium">Create a relationship</h3>
+        <p>V2 user tested 08th, 14th, 17th - when time / applicable</p>
+        <ul>
+          <li><strong>2.</strong> <a href="relationship-starts/conveyancer-start">Conveyancer starts relationship, generates code v2.2</a></li>
+          <li><strong>3.</strong> <a href="relationship-starts/client-start">First citizen (of a couple) enters code and confirms v2.2</a></li>
+        </ul>
+
+        <h3 class="heading-medium">Signing agreements</h3>
+        <p>V2, v3 user tested 08th, 14th, 17th - when time / applicable</p>
+        <ul>
+          <li><strong>4.</strong> <a href="transfer-and-charge-v3/citizen-1-email">First citizen (of a couple) signs transfer and charge v3.0</a></li>
+        </ul>
+
+      </details>
+
+
+      <details>
+      <summary>Previously</summary>
+
+        <h2 class="heading-medium">Scenarios</h2>
+
+        <h3 class="heading-small">Citizen visits GOV.UK to find out...</h3>
+        <p>who owns a property; or has paying off my mortgage updated the register; or something else about a property</p>
+        <p>Flow is GOV.UK through to LR Service</p>
+        <ul>
+          <li>V1 user tested pre 08 Oct 2014 (public counter)</li>
+          <li>V2 user tested 08 Oct 2014 (Bunnyfoot)</li>
+          <li>V3 user tested 14 Oct 2014 (Bunnyfoot)</li>
+          <li>V4 user tested 17 Oct 2014 (Bunnyfoot)</li>
+        </ul>
+        <ul>
+          <li><a href="find-owner/d/search"><strong>1.</strong> user -> find on the register... v4.0 (Verify, Payment &amp; realistic title)</a></li>
+
+          <li><a href="find-owner/c/search">user -> find on the register... v4.0 (Verify &amp; realistic title)</a></li>
+          <li><a href="register-view/register-hybrid">Register view (hybrid)</a> - layout in A, B, C registers</li>
+          <li><a href="register-view/register-view-4-expanded">Register v4.0 fully open</a></li>
+          <li><a href="register-view/register-view-4-help-text">Register v4 with section help text (on show)</a></li>
+          <li><a href="find-owner/register-view">Register with section help text (accordion)</a></li>
+          
+          <li><a href="find-owner/search">user -> find property owner v1.0 (Verify)</a></li>
+          <li><a href="find-owner/b/search">user -> find property owner v1.0 (Verify &amp; payment)</a></li>
+        </ul>
+
+
+
+        <h2 class="heading-medium">Transaction flows</h2>
+
+        <h3 class="heading-small">Create a relationship</h3>
+        <ul>
+          <li><a href="relationship-starts/conveyancer-start"><strong>2.</strong> Conveyancer starts relationship, generates code v2.2</a></li>
+          <li><a href="relationship-starts/client-start"><strong>3.</strong> First citizen (of a couple) enters code and confirms v2.2</a></li>
+          <li><a href="relationship-starts/client-2-start"><strong>4.</strong> Second citizen (of a couple) enters code and confirms v2.2</a></li>
+        </ul>
+
+        <details>
+          <summary>Older versions</summary>
+          <ul>
+            <li><a href="sprint-3/conveyancer-start">1. Conveyancer starts relationship, generates token</a></li>
+            <li><a href="sprint-4/citizen-reference">2. Citizen enters token and confirms</a></li>
+            <li><a href="sprint-2/token">Citizen starts relationship, generates token</a></li>
+            <li><a href="sprint-2/input-token">Conveyancer enters token and confirms</a></li>
+            <li><a href="sprint-2/show-change">Register view during a change</a></li>
+            <li><a href="sprint-3/buyer-login">Buyer agrees to relationship</a></li>
+          </ul>
+        </details>
+
+        <h3 class="heading-small">Create transfer</h3>
+        <ul>
+          <li><a href="transfer/login">First conveyancer creates transfer v1.5</a></li>
+          <li><a href="transfer-2nd-con/login">Second conveyancer reviews transfer v1.5</a></li>
+        </ul>
+
+        
+        <h3 class="heading-small">Signing agreements</h3>
+        <ul>
+          <li><a href="transfer-and-charge-v3/citizen-1-email">First citizen (of a couple) signs transfer and charge v3.0</a></li>
+          <li><a href="transfer-and-charge/citizen-1-start">First citizen (of a couple) signs transfer and charge v2.0</a></li>
+        </ul>
+
+        <details>
+          <summary>Older versions</summary>
+          <ul>
+            <li><a href="sprint-3/buyer-signing-start">Citizen signs transfer and charge</a></li>
+            <li><a href="sprint-2/execute-deed">Execute deed</a></li>
+          </ul>
+        </details>
+
+<!-- ================================= -->
+
+        <h2 class="heading-medium">Individual pages</h2>
+
+        <h3 class="heading-small">The register</h3>
+        <ul>
+          <li><a href="register-view/register-2.0">Register view v2.0</a> - history view inline</li>
+          <li><a href="register-view/register-2.1">Register view v2.1</a> - plain English version of 2.0</li>
+          <li><a href="register-view/register-3.0">Register view v3.0</a> - separate changes view</li>
+          <!--<li><a href="register-view/register-test-title">Register view (test title)</a> - v3 using a test title</li>
+          <li><a href="register-view/register-hybrid">Register view (hybrid)</a> - layout in A, B, C registers</li>-->
+        </ul>
+
+        <h3 class="heading-small">Changes to the register</h3>
+        <ul>
+          <li><a href="changes-view/changes-1.0">Changes view (pending and historical) v1.0</a></li>
+          <li><a href="changes-view/changes-no-pending-1.0">Changes view (historical only - no pending) v1.0</a></li>
+        </ul>
+
+        <details>
+          <summary>Older versions</summary>
+          <ul>
+            <li><a href="sprint-3/register-v1">Register view</a></li>
+            <li><a href="sprint-3/register-v1a-history">Register view: history view (current)</a></li>
+            <li><a href="sprint-3/register-v1a-history-1">Register view: history view (past)</a></li>
+          </ul>
+        </details>
+
+<!-- ================================= -->
+
+        <h3 class="heading-small">Deeds and legal documents</h3>
+        <ul>
+          <li><a href="legal-documents/mortgage-agreement-v1">Mortgage agreement</a> - an example of a legal document for digital signing</li>
+          <!--<li><a href="legal-documents/transfer-agreement-v1">Example Transfer of whole agreement</a></li>-->
+        </ul>
+
+<!-- ================================= -->
+
+<!-- ================================= -->
+
+        <h2 class="heading-medium">GOV.UK pages</h2>
+
+        <!--<h3 class="heading-small">Search for land or properties</h3>
+        <ul>
+          <li><a href="">Start / search page v2.0</a></li>
+        </ul>
+
+        <h3 class="heading-small">Search results</h3>
+        <ul>
+          <li><a href="">Results page (listing) v2.0</a></li>
+        </ul>-->
+
+        <h3 class="heading-small">GOV.UK property page</h3>
+        <ul>
+          <li><a href="govuk/property-details-2.0">Property page v2.0</a></li>
+        </ul>
+
+<!-- ================================= -->
+
+        <details>
+          <summary>The attic</summary>
+
+          <h2 class="heading-medium">Example Templates - for designers</h2>
+          <ul>
+            <li><a href="examples/example-1">starter example</a></li>
+          </ul>
+        </details>
+
+      </details>
+      </div>
+    </div>
+
+
+  </div>
+
+</main>
+
+{% endblock %}

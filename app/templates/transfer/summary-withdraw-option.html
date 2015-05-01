@@ -1,0 +1,47 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Transfer with withdraw option | Create transfer
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/transfer.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="inner-block">
+
+      <h1 class="heading-large">Transfer summary</h1>
+      <p class="lede">This transfer was created on 20/08/2014. It has been sent to all parties for them to sign.</p>
+
+    </div>
+
+      {% include "transfer/partials/_transfer-summary-dynamic.html" %}
+
+    <div class="inner-block">
+      <form action="transfer-withdrawn" method="get" class="form">
+        <h2 class="heading-medium">Withdraw</h2>
+        <div class="form-group">
+          <label for="check-1" class="block-label">
+            <input id="check-1" type="checkbox" name="agree-execution">
+            I confirm I wish to withdraw this version of the transfer
+          </label>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="button">Withdraw transfer</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

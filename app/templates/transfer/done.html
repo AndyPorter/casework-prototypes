@@ -1,0 +1,42 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Transfer created | Create transfer
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/transfer.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="inner-block">
+
+      <div class="callout callout--action-notice callout--generated-token">
+        <h1>Transfer created</h1>
+      </div>
+
+      <div class="text">
+        <h2 class="heading-medium">What happens next</h2>
+        <p>The other parties involved need to review the transfer and sign it.</p>
+        <p>The transfer will only be confirmed once all parties on the transaction have agreed and signed it.</p>
+        <p>If you need to edit the transfer <a href="summary-withdraw-option">please withdraw it</a>, make the change and re-confirm it is ready to be signed.</p>
+      </div>
+
+      <nav role="navigation">
+        <a href="conveyancer-case-list">Back to case list</a>
+      </nav>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

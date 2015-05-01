@@ -1,0 +1,36 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Which identity company
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <p>
+          <a href="javascript:window.history.back()" class="track" data-category="Sign in page - Back link" data-action="Clicked the Back link">&lt; Back</a>
+        </p>
+
+        <a href="{{ next_page }}">
+          <img src="{{ prototypes_asset_path }}images/verified-who.png">
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}

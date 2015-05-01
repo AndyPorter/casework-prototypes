@@ -1,0 +1,58 @@
+
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  <!-- insert page title here -->
+  Page title
+  <!-- -->
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+
+    <!-- insert page content here -->
+
+      <!-- copy stuff from other templates you like :) and chuck in here -->
+      <!-- each page will need a route defined in the server.py file -->
+
+
+      <!-- example heading -->
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <h1 class="heading-large">
+          Example heading
+        </h1>
+
+      </div>
+    </div>
+
+
+      <!-- example buttons (as an alternative you can make form buttons) -->
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="form-group">             
+          <a href="route-to-finished-page" class="button">button done</a>
+          <a href="route-to-next-page" class="button">button next</a>
+          <p>
+            <a href="route-to-previous-page">Back</a>
+          </p>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <!-- end of page content -->
+  </div>
+
+</main>
+
+{% endblock %}

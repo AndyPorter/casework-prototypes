@@ -1,0 +1,20 @@
+// Import GOV.UK Elements
+// ==========================================================================
+
+@import "govuk-elements";
+@import "../style-guide/app/static/development/landregistry-elements/typography";
+
+// NOT YET INTEGRATED
+// ==========================================================================
+
+.phase-banner,
+.register-nav,
+.number-flag,
+.js-faux-details-wrapper > details {
+  display: none;
+}
+
+.callout--summary {
+  border-top: 1px solid $grey-1;
+  border-bottom: 1px solid $grey-1;
+}

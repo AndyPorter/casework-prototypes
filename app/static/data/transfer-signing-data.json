@@ -1,0 +1,70 @@
+{
+  "conveyancer": {
+    "type": "buyer"
+  },
+  "property": {
+    "address": {
+      "address_line_1": "Flat 18",
+      "address_line_2": "Kingman Court",
+      "address_line_3": "Verdant Road",
+      "city": "London",
+      "postcode": "SV19 9BT"
+    },
+    "title": "GHR67834",
+    "sellers": ["Laura King", "Katie Winnick"],
+    "restrictions": true
+  },
+  "buyers": [
+    {
+      "name": "Matthew Jameson",
+      "email": "matt.jameson@gmail.com",
+      "isuser": true,
+      "addresses": [{
+        "address_line_1": "118",
+        "address_line_2": "Leafy Way",
+        "address_line_3": "",
+        "city": "Thale",
+        "county": "Berks",
+        "postcode": "RG12 9AB"
+      }]
+    },
+    {
+      "name": "Jennifer Spencer",
+      "email": "jenspen@gmail.com",
+      "addresses": [
+        {
+          "address_line_1": "88",
+          "address_line_2": "Monad Road",
+          "address_line_3": "",
+          "city": "Slough",
+          "county": "Berks",
+          "postcode": "SL20 3JD"
+        }
+      ]
+    }
+  ],
+  "declaration": "Equal share",
+  "transfer": {
+    "price": "115,000"
+  },
+  "mortgage": {
+    "mdreference": "MD77684M",
+    "lender": {
+      "name": "General UK PLC",
+      "address": {
+        "address_line_1": "12 Trinity Place",
+        "address_line_2": "",
+        "address_line_3": "Regents Street",
+        "city": "London",
+        "postcode": "NW10 6TQ"
+      }
+    }
+  },
+  "provisions": {
+    "definitions": true,
+    "restrictions": false,
+    "easements": false,
+    "covenants": true,
+    "other": false
+  }
+}

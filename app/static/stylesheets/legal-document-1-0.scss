@@ -1,0 +1,103 @@
+// includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets
+
+// Import GOV.UK frontend toolkit
+
+@import "colours";
+@import "measurements";
+@import "conditionals";
+@import "shims";
+@import "typography";
+@import "css3";
+@import "design-patterns/alpha-beta";
+@import "design-patterns/buttons";
+
+// Import GOV.UK Elements
+// ==========================================================================
+
+@import "govuk-elements";
+
+// Prototype elements
+// ==========================================================================
+
+@import "prototypes/navigation";
+@import "prototypes/tags";
+
+// "Discovery" banner - uses govuk_toolkit mixin via elements, just needs:
+@import "prototypes/discovery-banner";
+
+// Import GOV.UK styles (ripped from https://github.com/alphagov/static/)
+// ==========================================================================
+
+@import "prototypes/alphagov-static";
+
+// IMPORTING EXISTING STYLE-GUIDE APP STYLES
+// ==========================================================================
+
+@import "../style-guide/app/static/development/stylesheets/landregistry-main";
+
+
+// NOT YET INTEGRATED
+// ==========================================================================
+
+// Breadcrumbs
+.global-breadcrumb {
+
+  ol {
+    padding: 0.75em 0;
+    @extend %contain-floats;
+  }
+
+  li {
+    @include core-16;
+    float: left;
+
+    &:before {
+      content: '>';
+      color: $grey-2;
+      display: inline-block;
+      margin: 0 0.5em;
+    }
+
+    &:first-child:before {
+      content: '';
+      margin: 0;
+    }
+  }
+
+  a {
+    color: $text-colour;
+  }
+
+  strong {
+    font-weight: normal;
+  }
+}
+
+.address-inline {
+  [itemprop]:after {
+    content: ', ';
+  }
+}
+
+.legal-document--bounds {
+  margin-bottom: $gutter;
+  padding: $gutter 0; 
+  border-top: 4px solid $light-blue;
+  border-bottom: 2px solid $light-blue;
+}
+
+  .legal-document--item {
+    width: $two-thirds;
+    padding-right: $one-third;
+
+    @extend %contain-floats;
+  }
+
+  .legal-document--bordered {
+    margin-top: $gutter;
+    border-top: 1px solid $grey-3;
+  }
+
+.legal-document--bounds .legal-document--item:first-of-type h2 {
+  margin-top: 15px;
+}

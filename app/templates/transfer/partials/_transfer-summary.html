@@ -1,0 +1,328 @@
+<article class="legal-document--bounds">
+  <section class="document-section">
+    <h2 class="heading-medium document-section__heading">Property{% if conveyancer == "seller" %} <span class="alert-flag">selling</span>{% endif %}</h2>
+
+    <div class="grid-wrapper">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Address</div>
+      </div>
+      <div class="grid grid-1-3">
+        <div class="inner-block">
+          <p itemscope="" itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">Flat 18 Kingman Court<br>Verdant Road<br></span>
+            <span itemprop="addressLocality">London</span><br>
+            <span itemprop="postalCode">SV19 9BT</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Title</div>
+      </div>
+      <div class="grid grid-1-3">
+        <div class="inner-block"><p>GHR67834</p></div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Sellers (current proprietors)</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <ul>
+            <li>Jessica Emma Hunt</li>
+            <li>Xi Jenny Koh</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper document-section__item">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Restrictions</div>
+      </div>
+      <div class="grid grid-1-2">
+        <div class="inner-block">you have provided evidence to comply with the relevant restrictions</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="create-transfer#restrictions" class="button-secondary">Change<span class="visuallyhidden"> evidence provided for relevant restrictions</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+  </section><!--  end property section -->
+
+  <section class="document-section document-section--bordered">
+    <h2 class="heading-medium">Buyers{% if conveyancer == "buyer" %} <span class="alert-flag">working on behalf of</span>{% endif %}</h2>
+
+    <div class="grid-wrapper document-section__item">
+      <div class="grid grid-1-4">
+        <p class="inner-block">No. of proprietors</p>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <p>2</p>
+        </div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="#" class="button-secondary">Change<span class="visuallyhidden"> number of proprietors</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="grid-wrapper document-section__item">
+      <div class="grid">
+        <p class="inner-block"><b>Buyer 1</b></p>
+      </div>
+    </div>
+    <div class="grid-wrapper document-section__item">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Name</div>
+      </div>
+      <div class="grid grid-1-4">
+        <p class="inner-block">Jason Amilio Smith</p>
+      </div>
+    </div>
+    <div class="grid-wrapper document-section__item">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Address(es)</div>
+      </div>
+      <div class="grid grid-1-4">
+        <p class="inner-block">
+          118 Leafy Way,<br>
+          Thale,<br>
+          Berks<br>
+          RG12 9AB
+        </p>
+      </div>
+    </div>
+
+    <div class="grid-wrapper document-section__item">
+      <div class="grid">
+        <p class="inner-block"><b>Buyer 2</b></p>
+      </div>
+    </div>
+    <div class="grid-wrapper document-section__item">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Name</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">Peter Smith</div>
+      </div>
+    </div>
+    <div class="grid-wrapper document-section__item">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Address(es)</div>
+      </div>
+      <div class="grid grid-1-4">
+        <p class="inner-block">
+          118 Leafy Way,<br>
+          Thale,<br>
+          Berks<br>
+          RG12 9AB
+        </p>
+      </div>
+      <div class="grid grid-1-4">
+        <p class="inner-block">
+          12 Spring Road,<br>
+          Wakefield,<br>
+          Yorks<br>
+          WK12 9AB
+        </p>
+      </div>
+    </div>
+  </section><!-- end buyers section -->
+
+  <section class="document-section document-section--bordered">
+    <div class="grid-wrapper">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Declaration of trust</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">Equal share</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="create-transfer#declaration" class="button-secondary">Change<span class="visuallyhidden"> declaration of trust</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </section><!-- end declaration section -->
+
+  <section class="document-section document-section--bordered">
+    <h2 class="heading-medium">Transfer</h2>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Price paid</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">£190 000</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="create-transfer#pricedetails" class="button-secondary">Change<span class="visuallyhidden"> price paid value</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Transfer date</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">15th December 2014</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="create-transfer#pricedetails" class="button-secondary">Change<span class="visuallyhidden"> date of the transfer</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">SDLT</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">URN: 1937485936</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          Received
+        </div>
+      </div>
+    </div>
+  </section><!-- end transfer section -->
+
+  <section class="document-section document-section--bordered">
+    <h2 class="heading-medium">New provisions</h2>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-2">
+        <div class="inner-block">New definitions added</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="new-provisions#definitions" class="button-secondary">Change<span class="visuallyhidden"> details of the additional definitions</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-2">
+        <div class="inner-block">No new easements added</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="new-provisions#easements" class="button-secondary">Change<span class="visuallyhidden"> details of the additional easements</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-2">
+        <div class="inner-block">New covenants added</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="new-provisions#covenants" class="button-secondary">Change<span class="visuallyhidden"> details of the additional covenants</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-2">
+        <div class="inner-block">No other provisions added</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="new-provisions#other" class="button-secondary">Change<span class="visuallyhidden"> details of the other provisions provided</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </section><!-- end new provisions section -->
+
+  <section class="document-section document-section--bordered">
+    <h2 class="heading-medium">Mortgage details</h2>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">MD Reference</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">MD1234F</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="mortgage-details" class="button-secondary">Change<span class="visuallyhidden"> MD reference number</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Lender</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">Nationwide</div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Lender address</div>
+      </div>
+      <div class="grid grid-1-4">
+        <p class="inner-block">
+          Nationwide Building Society,<br>
+          Nationwide House,<br>
+          Pipers Way,<br>
+          Swindon,<br>
+          SN38 1NW
+        </p>
+      </div>
+    </div>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Mortgage date</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          21 July 2015
+        </div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="mortgage-details" class="button-secondary">Change<span class="visuallyhidden"> date of mortgage</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </section><!-- end mortgage section -->
+
+</article>

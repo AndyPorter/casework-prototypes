@@ -1,0 +1,244 @@
+// includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets
+
+// Import GOV.UK frontend toolkit
+
+@import "colours";
+@import "measurements";
+@import "conditionals";
+@import "shims";
+@import "typography";
+@import "css3";
+@import "design-patterns/alpha-beta";
+@import "design-patterns/buttons";
+
+// Import GOV.UK Elements
+// ==========================================================================
+
+@import "govuk-elements";
+
+// Prototype elements
+// ==========================================================================
+
+@import "prototypes/navigation";
+@import "prototypes/tags";
+
+// "Discovery" banner - uses govuk_toolkit mixin via elements, just needs:
+@import "prototypes/discovery-banner";
+
+
+// IMPORTING EXISTING STYLE-GUIDE APP STYLES
+// ==========================================================================
+
+@import "../style-guide/app/static/development/stylesheets/landregistry-main";
+
+// NOT YET INTEGRATED
+// ==========================================================================
+
+.first-item > [class*='heading-'] {
+  margin-top: 0;
+}
+
+/* .register-related-items {
+  margin-top: $gutter;
+  padding-top: $gutter;
+  border-top: 4px solid $light-blue;
+} */
+
+.register-make-change {
+  margin-top: $gutter;
+  padding-top: $gutter;
+  border-top: 2px solid $grey-3;
+}
+
+.maps-and-plans-item {
+  img {
+    border: 3px solid $grey-3;
+  }
+}
+
+.note {
+  margin: 1em 0;
+  p {
+    margin-bottom: 0.25em;
+  }
+}
+
+.group {
+  @extend %contain-floats;
+}
+
+.deed-relationship {
+  @extend %contain-floats;
+  margin-bottom: 1em;
+  
+  dt {
+    font-style: italic;
+    padding-bottom: 0.25em;
+  }
+  dd {
+    padding-bottom: 0.25em;
+  }
+
+  @include media(tablet) {
+    dl {
+      float: left;
+      width: $half;
+    }
+    dt {
+      float: left;
+      width: 30%;
+    }
+    dd {
+      float: left;
+      width: 70%;
+      &:not(:first-of-type) {
+        margin-left: 30%;
+      }
+    }
+  }
+}
+
+
+// in-page changelog
+.changelog {
+  padding-top: 1em;
+  border-top: 1px dotted $grey-3;
+
+  @extend %contain-floats;
+  @include core-16;
+
+  h5 {
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  .removal,
+  .addition {
+    @include box-sizing(border-box);
+  }
+
+  .removal {
+    float: left;
+    width: $half;
+    padding-right: $gutter-half;
+  }
+
+  .addition {
+    float: right;
+    width: $half;
+    padding-left: $gutter-half;
+  }
+}
+
+
+// doing <details> without using <details> aaaaaaaaaaargh :S
+.js-enabled {
+
+  .js-faux-details > :first-child {
+    cursor: pointer;
+    position: relative;
+    margin-top: 0;
+    padding-left: 0.8em;
+    
+    &:hover {
+      color: $link-hover-colour;
+    }
+
+    &:focus {
+      outline: 3px solid $yellow;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.2em;
+      border-top: (0.4em * 0.866) solid transparent;
+      border-right: 0.4 solid transparent;
+      border-bottom: (0.4em * 0.866) solid transparent;
+      border-left: 0.4em solid $black;
+    }
+
+  }
+
+  .js-faux-details-wrapper {
+    display: none;
+    margin-bottom: em(25, 19);
+
+    @include media(tablet) {
+      margin-bottom: em(45, 19 );
+    }
+  }
+
+  .js-faux-details--open {
+
+    & > :first-child:before {
+      top: 0.35em;
+      border-top: 0.4em solid $black;
+      border-right: (0.4em * 0.866) solid transparent;
+      border-bottom: 0.4em solid transparent;
+      border-left: (0.4em * 0.866) solid transparent;
+    }
+
+    .js-faux-details-wrapper {
+      display: block;
+    }
+
+  }
+
+}
+
+#property-restrictions ol,
+.register-hybrid ol,
+ol.numbered {
+  margin-left: 1.2em;
+
+  & > li {
+    list-style-type: decimal;
+    margin-bottom: em(20, 16);
+  }
+}
+
+.pending-changes-flag {
+  margin-top: $gutter-half;
+  padding-top: $gutter-half;
+  border-top: 1px solid #fff;
+
+  p {
+    display: inline-block;
+    margin: 0 8px 0 0;
+    padding: 2px 5px 0;
+    color: #005ea5;
+    background-color: #ffffff;
+  }
+
+  a {
+    margin: 0;
+    font-weight: 700;
+  }
+}
+
+p.sub-heading-small{
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin-top: 0px;
+  margin-bottom: 0.3125em;
+  color: #6f777b;
+}
+
+.panel-indent--help {
+  clear: both;
+  border-left: 4px solid #bfc1c3;
+  padding: 0px 0 0px 15px;
+  margin: 10px 15px 30px 20px;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  color: #6f777b;
+}
+

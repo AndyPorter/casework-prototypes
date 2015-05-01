@@ -1,0 +1,71 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}Confirm authorisation{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="inner-block">
+
+      <h1 class="heading-xlarge">Authorise Relationship</h1>
+
+    </div>
+
+    <!--<div class="grid-wrapper">
+      <div class="grid grid-1-4">
+        <div class="inner-block">test</div>
+      </div>
+      <div class="grid grid-3-4"><div class="inner-block">test again</div></div>
+    </div>-->
+
+
+    <div class="inner-block">
+      <p><b>You are authorising</b></p>
+      <dl class="definition-tabular">
+        <dt>Conveyancer</dt>
+        <dd>
+          <h3>Wall & Co Solicitors</h3>
+          <p itemscope itemtype="http://schema.org/PostalAddress">
+              <span itemprop="streetAddress">32 Edinburgh Street</span><br />
+              <span itemprop="addressLocality">London</span><br />
+              <span itemprop="postalCode">SW6 7TR</span>
+          </p>
+        </dd>
+      </dl>
+      <p><b>To act on your behalf on</b></p>
+      <dl class="definition-tabular">
+        <dt>Property</dt>
+        <dd>
+          <h3>GHR67834</h3>
+          <p itemscope itemtype="http://schema.org/PostalAddress">
+              <span itemprop="streetAddress">6 Sydney House<br />Dawes Rd<span><br />
+              <span itemprop="addressLocality">London</span><br />
+              <span itemprop="postalCode">EC2 7LN</span>
+          </p>
+
+        </dd>
+      </dl>
+    </div>
+
+    <div class="inner-block">
+      <form action="citizen-complete" method="get" class="form">
+        <div class="form-group">
+          <label for="confirm" class="block-label">
+            <input type="checkbox" id="confirm" name="confirm" />
+            I confirm the above information
+          </label>
+        </div>
+        <button type="submit" id="submit" class="button">Submit</button>
+      </form>
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

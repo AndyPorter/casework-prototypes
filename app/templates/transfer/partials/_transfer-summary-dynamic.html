@@ -1,0 +1,277 @@
+{% import 'transfer/partials/common.html' as common %}
+<article class="legal-document--bounds">
+  <section class="document-section">
+    <h2 class="heading-medium document-section__heading">Property{% if conveyancer == "seller" %} <span class="alert-flag">selling</span>{% endif %}</h2>
+
+    <div class="grid-wrapper document-section__item">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Address</div>
+      </div>
+      <div class="grid grid-1-3">
+        <div class="inner-block">
+          {{ common.address(data.property.address) }}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper document-section__item">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Title</div>
+      </div>
+      <div class="grid grid-1-3">
+        <div class="inner-block"><p>{{ data.property.title }}</p></div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper document-section__item">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Sellers (current proprietors)</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <ul>
+            {% for seller in data.property.sellers %}
+                <li>{{ seller }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper document-section__item {% if not data.property.restrictions %}empty-state{% endif %}">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Restrictions</div>
+      </div>
+      <div class="grid grid-1-2">
+        {% if data.property.restrictions %}
+        <div class="inner-block">you have provided evidence to comply with the relevant restrictions</div>
+        {% else %}
+        <div class="inner-block">evidence not provided</div>
+        {% endif %}
+      </div>
+
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="create-transfer#restrictions" class="button-secondary">Change<span class="visuallyhidden"> evidence provided for relevant restrictions</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+  </section><!--  end property section -->
+
+  {% include "transfer/partials/_buyers-section.html" %}
+
+  <section class="document-section document-section--bordered {% if data.declaration is undefined %}empty-state{% endif %}">
+    <div class="grid-wrapper">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Declaration of trust</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">{{ data.declaration }}</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="create-transfer#declaration" class="button-secondary">Change<span class="visuallyhidden"> declaration of trust</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </section><!-- end declaration section -->
+
+  <section class="document-section document-section--bordered">
+    <h2 class="heading-medium">Transfer</h2>
+
+    <div class="grid-wrapper document-section__item {% if data.transfer.price is undefined %}empty-state{% endif %}">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Price paid</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">£{{ data.transfer.price }}</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="create-transfer#pricedetails" class="button-secondary">Change<span class="visuallyhidden"> price paid value</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Transfer date</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">{{ data.transfer.date }}</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="create-transfer#pricedetails" class="button-secondary">Change<span class="visuallyhidden"> date of the transfer</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">SDLT</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">URN: {{ data.transfer.stamp_duty.urn }}</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          {% if data.transfer.stamp_duty.received %}
+          Received
+          {% else %}
+          Not received
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section><!-- end transfer section -->
+
+  <section class="document-section document-section--bordered">
+    <h2 class="heading-medium">New provisions</h2>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-2">
+        <div class="inner-block">{% if data.provisions.definitions %}New definitions added{% else %}No new definitions added{% endif %}</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="new-provisions#definitions" class="button-secondary">{% if data.provisions.definitions %}Change{% else %}Add{% endif %}<span class="visuallyhidden"> details of the additional definitions</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-2">
+        <div class="inner-block">{% if data.provisions.restrictions %}New restrictions added{% else %}No new restrictions added{% endif %}</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="new-provisions#restrictions" class="button-secondary">{% if data.provisions.restrictions %}Change{% else %}Add{% endif %}<span class="visuallyhidden"> details of the additional restrictions</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-2">
+        <div class="inner-block">{% if data.provisions.easements %}New easements added{% else %}No new easements added{% endif %}</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="new-provisions#easements" class="button-secondary">{% if data.provisions.easements %}Change{% else %}Add{% endif %}<span class="visuallyhidden"> details of the additional easements</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-2">
+        <div class="inner-block">{% if data.provisions.covenants %}New covenants added{% else %}No new covenants added{% endif %}</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="new-provisions#covenants" class="button-secondary">{% if data.provisions.covenants %}Change{% else %}Add{% endif %}<span class="visuallyhidden"> details of the additional covenants</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-2">
+        <div class="inner-block">{% if data.provisions.other %}Other provisions added{% else %}No other provisions added{% endif %}</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="new-provisions#other" class="button-secondary">{% if data.provisions.other %}Change{% else %}Add{% endif %}<span class="visuallyhidden"> details of the other provisions provided</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </section><!-- end new provisions section -->
+
+  {% if citizen != "seller" %}
+  <section class="document-section document-section--bordered">
+    <h2 class="heading-medium">Mortgage details</h2>
+    {% if data.mortgage is defined %}
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">MD Reference</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">{{ data.mortgage.mdreference }}</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="mortgage-details" class="button-secondary">Change<span class="visuallyhidden"> MD reference number</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Lender</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">{{ data.mortgage.lender.name }}</div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Lender address</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          {{ common.address(data.mortgage.lender.address) }}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-4">
+        <div class="inner-block">Mortgage date</div>
+      </div>
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          {{ data.mortgage.date }}
+        </div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="mortgage-details" class="button-secondary">Change<span class="visuallyhidden"> date of mortgage</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    {% else %}
+    <div class="grid-wrapper document-section__item ">
+      <div class="grid grid-1-2">
+        <div class="inner-block">Mortgage not required</div>
+      </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="mortgage-details" class="button-secondary">Change<span class="visuallyhidden"> mortgage details</span></a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+  </section><!-- end mortgage section -->
+  {% endif %}
+
+</article>

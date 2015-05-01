@@ -1,0 +1,156 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Sign transfer
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="summary">
+
+          <h1 class="heading-large">
+            Sign your transfer of whole of registered title agreement 
+          </h1>
+
+
+
+          <dl class="inline">
+
+            <dt>Title number</dt>
+            <dd>
+              TGL123456<br>
+            </dd>
+
+            <dt>Address</dt>
+            <dd>
+              123 High Street<br>
+              Ashburton<br>
+              Devon<br>
+              PL1 1QQ<br>
+            </dd>
+
+          </dl>
+
+
+
+
+          <hr>
+
+
+
+
+<!--
+          <div itemscope itemtype ="http://schema.org/PostalAddress" class="lede">
+            <span itemprop="streetAddress">
+              123 High Street
+            </span><br>
+            <span itemprop="addressLocality">Ashburton</span><br>
+            <span itemprop="addressRegion">Devon</span><br>
+            <span itemprop="postalCode">PL1 1QQ</span>
+          </div>
+-->
+
+
+
+
+
+          <dl class="inline">
+
+            <dt>Title number</dt>
+            <dd>
+              TGL123456<br>
+            </dd>
+
+            <dt>Property</dt>
+            <dd>
+            10 Pound Lane, LittleTown, LT1 2WE
+            </dd>
+
+            <dt>Date this transfer <br> will take effect</dt>
+            <dd>
+            21 July 2015 at 11:00.
+            </dd>
+
+            <dt>Transferors</dt>
+            <dd>
+            Victoria O'Hara <br>
+            Ian O'Hara
+            </dd>
+
+            <dt>Transferees</dt>
+            <dd>
+            Jeremy Barija <br>
+            Peter Steiner
+            </dd>
+
+            <dt>Transferees contact address</dt>
+            <dd>
+            10 Pound Lane, LittleTown, LT1 2WE <br>
+            jeremybarija@notarealemail.co.uk
+            </dd>
+          </dl>
+
+
+          <hr> <b>
+            The transferor transfers the property to the transferee </b>
+          <hr>
+
+          <br>
+            
+            The transferor has received from the transferee for the property £250,000.<br><p><p></b>
+            
+            The transferor transfers with full title garantee.<br><p></b>
+
+            The transferee is more than one person and they are to hold the property in trust for themselves as joint tenants. <br><p></b>
+
+            The transferee covenants to observe and perform to the covenants refered to in the proprietorship register of the property and to indemnify the transferor in respect to non-observation of non-performance of them. <br><p></b>
+
+          </b>
+          <hr>
+
+          This transfer is electronically signed by Victoria O'Hara. <p>
+          This transfer will be signed by the registrar upon completion. <p>
+          Effective 21 July 2015 at 11:00.
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="outer-block">
+      <div class="inner-block">
+        <form action="two-factor" method="get" class="form">
+
+
+          <div class="form-group">
+
+            <label for="check-1" class="block-label">
+              <input id="check-1" type="checkbox" name="agree-execution">
+              I agree that I have read the information above and am ready to sign
+            </label>
+
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="button">Sign</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+
+</main>
+
+{% endblock %}

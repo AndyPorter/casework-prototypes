@@ -1,0 +1,52 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Sign transfer and charge - Property and land registration
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="global-breadcrumb">
+          <nav role="navigation">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><a href="/">Property and land registration</a></li>
+            </ol>
+          </nav>
+        </div>
+
+        <h1>Sign your deeds</h1>
+
+        <div class="text">
+          <p class="lede">You must electronically sign your deeds to change ownership of a property.</p>
+          <p>To use this service you’ll need:</p>
+          <ul class="list-bullet">
+            <li>to verify your identify on GOV.UK</li>
+            <li>the code from your solicitor or conveyancer</li>
+            <li>to confirm all property and mortgage details are correct</li>
+          </ul>
+        </div>
+
+        <p>
+          <a href="{{next_page}}" class="button button-get-started">Start now</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}

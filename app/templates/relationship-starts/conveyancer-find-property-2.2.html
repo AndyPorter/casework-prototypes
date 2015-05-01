@@ -1,0 +1,47 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Find property
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/relationship-starts-2-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <form class="form" action="conveyancer-select-property" method="get">
+
+          <h1 class="form-title heading-large">
+            Find property or land
+          </h1>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="search">Search the Land Registry</label>
+            <p class="form-hint">eg by title number, postcode, street name or town or city</p>
+            <input type="text" class="form-control" id="search">
+          </div>
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Search">
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}

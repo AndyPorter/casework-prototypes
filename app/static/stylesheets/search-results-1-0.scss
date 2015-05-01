@@ -1,0 +1,45 @@
+// includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets
+
+// Import GOV.UK frontend toolkit
+
+@import "colours";
+@import "measurements";
+@import "conditionals";
+@import "shims";
+@import "typography";
+@import "css3";
+@import "design-patterns/alpha-beta";
+@import "design-patterns/buttons";
+
+// Import GOV.UK Elements
+// ==========================================================================
+
+@import "govuk-elements";
+
+// Prototype elements
+// ==========================================================================
+
+@import "prototypes/navigation";
+@import "prototypes/tags";
+
+// "Discovery" banner - uses govuk_toolkit mixin via elements, just needs:
+@import "prototypes/discovery-banner";
+
+// Import GOV.UK styles (ripped from https://github.com/alphagov/static/)
+// ==========================================================================
+
+@import "prototypes/alphagov-static";
+
+// IMPORTING EXISTING STYLE-GUIDE APP STYLES
+// ==========================================================================
+
+@import "../style-guide/app/static/development/stylesheets/landregistry-main";
+
+
+// NOT YET INTEGRATED
+// ==========================================================================
+
+
+.postal-address {
+	margin-bottom:$gutter-half;	
+}

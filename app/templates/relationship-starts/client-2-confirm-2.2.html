@@ -1,0 +1,137 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Confirm details
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/relationship-starts-2-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <h1 class="heading-large">Verify relationship</h1>
+
+        <div class="text">
+          <p class="lede">Please check all the details carefully before verifying you want this solicitor or conveyancer to act on your behalf for this transaction.</p>
+        </div>
+
+        <article class="legal-document--bounds">
+
+          <section class="legal-document--item">
+            
+            <h2 class="heading-small">You are authorising:</h2>
+
+            <p itemscope itemtype="http://schema.org/Corporation">
+              <span itemprop="name">Wall &amp; Co Solicitors</span><br>
+              <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="address-inline">
+                <span itemprop="streetAddress">
+                  32 Edinburgh Street
+                </span><br>
+                <span itemprop="addressLocality">London</span><br>
+                <span itemprop="postalCode">SW6 7TR</span>
+              </span>
+              <dl class="definition-inline">
+                <dt>Company registration number</dt>
+                <dd>2347676</dd>
+                <dt>Account number</dt>
+                <dd>1007-789654</dd>
+              </dl>
+            </p>
+
+          </section><!-- end item -->
+
+
+          <section class="legal-document--item legal-document--bordered">
+
+            <h2 class="heading-small">To act on your behalf on:</h2>
+
+            <div class="grid grid-1-2">
+              <p itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">
+                  Flat 18 Kingman Court<br>
+                  Verdant Road<br>
+                </span>
+                <span itemprop="addressLocality">London</span><br>
+                <span itemprop="postalCode">SV19 9BT</span>
+              </p>
+
+              <dl class="definition-inline">
+                <dt>Title number</dt>
+                <dd>GHR67834</dd>
+              </dl>
+            </div>
+
+            <div class="grid grid-1-2">
+              <img src="{{ prototypes_asset_path }}images/dummy-title-plan.png" alt="">
+            </div>
+
+          </section><!-- end item -->
+
+
+          <section class="legal-document--item legal-document--bordered">
+
+            <h3 class="heading-small">To make the following changes:</h3>
+            <p class="text">Sell property</p>
+
+          </section><!-- end item -->
+
+
+          <section class="legal-document--item legal-document--bordered">
+
+            <h3 class="heading-small">Parties:</h3>
+
+            <div class="grid grid-1-2">
+              <p>
+                Matthew Jameson <span class="confirm-flag">confirmed</span><br>
+                118 Leafy Way,<br>
+                Thale,<br>
+                Berks<br>
+                RG12 9AB
+              </p>
+            </div>
+
+            <div class="grid grid-1-2">
+              <p>
+                <b>Jennifer Spencer</b> <span class="alert-flag">you</span><br>
+                88 Monad Road,<br>
+                Slough,<br>
+                Berks<br>
+                SL20 3JD
+              </p>
+            </div>
+
+          </section><!-- end item -->
+
+        </article>
+
+
+        <form action="clients-confirmed" method="" class="form">
+          <div class="form-group">
+            <label for="check-1" class="block-label">
+              <input id="check-1" type="checkbox" name="agree-execution">
+              I have read the information and confirm it’s correct
+            </label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="button">Verify relationship</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}

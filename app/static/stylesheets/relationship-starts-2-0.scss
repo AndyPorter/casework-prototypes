@@ -1,0 +1,23 @@
+// includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets
+
+// Import GOV.UK frontend toolkit
+
+@import "colours";
+@import "measurements";
+@import "conditionals";
+@import "shims";
+@import "typography";
+@import "css3";
+@import "design-patterns/alpha-beta";
+@import "design-patterns/buttons";
+
+// THIS CSS FALLS *AFTER* legal-document-1-0.css SO THERE ARE NO IMPORTS
+
+// NOT YET INTEGRATED
+// ==========================================================================
+
+.confirmation-blocks {
+  .inner-block {
+    border-top: 1px solid $grey-3;
+  }
+}

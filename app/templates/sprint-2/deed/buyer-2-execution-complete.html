@@ -1,0 +1,50 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Completed mortgage deed
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="summary">
+
+          <h1 class="heading-large">
+            Execution of mortgage deed complete
+          </h1>
+
+          <div itemscope itemtype ="http://schema.org/PostalAddress" class="lede">
+            <span itemprop="streetAddress">
+              123 High Street
+            </span><br>
+            <span itemprop="addressLocality">Ashburton</span><br>
+            <span itemprop="addressRegion">Devon</span><br>
+            <span itemprop="postalCode">PL1 1QQ</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="outer-block">
+      <div class="inner-block">
+        <h2 class="heading-medium">What happens next</h2>
+        <p>When the registrar receives notification from the xxxx (conveyancer?), a charge will appear on the register for this title</p>
+        <p>You will be notified when this happens.</p>
+
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

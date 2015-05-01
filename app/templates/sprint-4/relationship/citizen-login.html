@@ -1,0 +1,47 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  <!-- insert page title here -->
+  Page title
+  <!-- -->
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="inner-block">
+
+      <h1 class="heading-xlarge">Authorise Relationship</h1>
+
+      <p class="lede">Please Login</p>
+
+      <form action="citizen-confirm" method="get" class="form">
+
+        <div class="form-group">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username">
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password">
+        </div>
+
+        <div class="form-group">           
+          <button type="submit" class="button">Login</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

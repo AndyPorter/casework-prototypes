@@ -1,0 +1,84 @@
+{
+  "conveyancer": {
+    "type": "buyer"
+  },
+  "property": {
+    "address": {
+      "address_line_1": "Flat 18",
+      "address_line_2": "Kingman Court",
+      "address_line_3": "Verdant Road",
+      "city": "London",
+      "postcode": "SV19 9BT"
+    },
+    "title": "GHR67834",
+    "sellers": ["Jessica Emma Hunt", "Xi Jenny Koh"],
+    "restrictions": true
+  },
+  "buyers": [
+    {
+      "name": "Jason Amilio Smith",
+      "email": "jasmith@gmail.com",
+      "isuser": true,
+      "addresses": [{
+        "address_line_1": "118",
+        "address_line_2": "Leafy Way",
+        "address_line_3": "",
+        "city": "Thale",
+        "county": "Berks",
+        "postcode": "RG12 9AB"
+      }]
+    },
+    {
+      "name": "Peter Smith",
+      "email": "p.smithy@aol.com",
+      "addresses": [
+        {
+          "address_line_1": "118",
+          "address_line_2": "Leafy Way",
+          "address_line_3": "",
+          "city": "Thale",
+          "county": "Berks",
+          "postcode": "RG12 9AB"
+        },
+        {
+          "address_line_1": "12",
+          "address_line_2": "Spring Road",
+          "address_line_3": "",
+          "city": "Wakefield",
+          "county": "Yorks",
+          "postcode": "WK12 9AB"
+        }
+      ]
+    }
+  ],
+  "declaration": "Equal share",
+  "transfer": {
+    "price": "190,000",
+    "date": "15th December 2014",
+    "stamp_duty": {
+      "received": true,
+      "urn": "1937485936"
+    }
+  },
+  "mortgage": {
+    "mdreference": "MD1234F",
+    "lender": {
+      "name": "Nationwide",
+      "address": {
+        "address_line_1": "Nationwide Building Society",
+        "address_line_2": "Nationwide House",
+        "address_line_3": "Pipers Way",
+        "city": "Swindon",
+        "postcode": "SN38 1NW"
+      }
+    },
+    "date": "24 July 2015"
+  },
+  "provisions": {
+    "definitions": true,
+    "restrictions": false,
+    "easements": false,
+    "covenants": true,
+    "other": false
+  }
+}

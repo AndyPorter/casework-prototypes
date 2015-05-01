@@ -1,0 +1,62 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Create a relationship - Property and land registration
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/relationship-starts-2-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="global-breadcrumb">
+          <nav role="navigation">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><a href="/">Property and land registration</a></li>
+            </ol>
+          </nav>
+        </div>
+
+        <h1>Get client assurance</h1>
+
+        <div class="text">
+
+          <p class="lede">If you’re acting on behalf of a client they must verify your relationship before you can proceed with a transaction.</p>
+
+          <p>To verify the relationship you must use this service to generate a unique code to give to each client.</p>
+
+          <p>The relationship will only be verified once each client on the transaction has entered the code on <a href="http://www.gov.uk">GOV.UK</a></p>
+
+          <p>To use this service you’ll need to confirm:</p>
+          <ul class="list-bullet">
+            <li>your identity on GOV.UK</li>
+            <li>the address of the property or land</li>
+            <li>contact details of your client</li>
+            <li>what your client wants to do</li>
+          </ul>
+
+        </div>
+
+        <p>
+          <a href="login" class="button button-get-started">Start now</a>
+        </p>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}

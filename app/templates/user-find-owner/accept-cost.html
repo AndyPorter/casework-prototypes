@@ -1,0 +1,46 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Find property information
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <form class="form" action="{{ next_page }}" method="get">
+
+          <h1 class="form-title heading-x-large">
+            Register view payment
+          </h1>
+
+          <fieldset class="form-group">
+            <legend class="heading-small">Viewing the register costs £3.00</legend>
+            <label for="accept-cost" class="block-label"><input id="accept-cost" type="checkbox" name="accept-register-cost" />I confirm I still wish to view the register
+            </label>
+          </fieldset>
+
+          <div class="form-group">
+            <button type="submit" class="button">Next</button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}

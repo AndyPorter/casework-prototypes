@@ -1,0 +1,55 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Relationship verified
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/relationship-starts-2-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="callout callout--action-notice callout--generated-token">
+
+          <h1>
+            Relationship verified
+          </h1>
+
+        </div>
+
+        <div class="text">
+          <p class="lede">
+            You’ve verified your relationship with Wall &amp; Co Solicitors.
+          </p>
+          <p>To authorise Wall &amp; Co Solicitors to act on your behalf on this transaction, other parties must also complete this process.</p>
+        </div>
+
+
+        <div class="text">
+          <h2>What happens next</h2>
+
+          <p>Your solicitor or conveyancer will be notified of the verification and will start preparing the deeds for the transfer and mortgage.</p>
+
+          <p>Once your documents are ready to sign, you’ll be notified by text or email.</p>
+        </div> 
+
+        <a href="client-view-register">View property</a>
+
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}

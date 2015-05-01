@@ -1,0 +1,133 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Verify identity
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/verify-identity-0-1.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+
+		<div class="intro">
+
+			<div class="step-wrap" id="step-wrap">
+
+	<!-- 			<div class="progress" id="progress">
+					<ul class="steps">
+						<li id="progress-step-1" class="selected"></li>
+						<li id="progress-step-2"></li>
+						<li id="progress-step-3"></li>
+					</ul>
+				</div> -->
+
+				<section class="step step-1">
+
+					<img class="icon" src="{{ prototypes_asset_path }}images/icon-crown-shield-2.png">
+
+					<div class="text-wrap">
+						<!-- <strong class="new">New</strong> -->
+						<h4>Before you can view the full register</h4>
+
+						<h3>you need to verify your identity</h3>
+						
+						<p>Is this your first time verifying your identity?</p>
+
+						<div class="actions">
+							<a class="next track"
+								href="#"
+								data-category="Intro page step 1 - Yes button"
+								data-action="Clicked the Yes button">
+								Yes
+							</a>
+							<a class="been-verified track"
+								href="{{ next_page }}"
+								data-category="Intro page step 1 - No button"
+								data-action="Clicked the No button">
+								No
+							</a>
+						</div>
+
+						<details>
+
+							<summary aria-controls="details-content-0" tabindex="0">
+								<span class="summary">Can I use Government Gateway?</span>
+							</summary>
+
+							<div class="panel-indent" id="details-content-0" aria-expanded="false" >
+								<p>
+									You can't use Government Gateway with this service, it's being replaced by GOV.UK Verify.
+								</p>
+							</div>
+
+						</details>
+
+					</div>
+
+				</section>
+
+	<!-- 			<section class="step step-2">
+
+					<h3>You need to verify your identity to prevent someone from pretending to be you</h3>
+
+					<p>
+						<img class="icon" src="/public/images/icon-clock.png">
+						<strong>Fast</strong> - takes about 10 minutes
+					</p>
+
+					<p>
+						<img class="icon" src="/public/images/icon-padlock.png">
+						<strong>Secure</strong> - helps protect against fraud and identity theft
+					</p>
+
+					<p>
+						<img class="icon" src="/public/images/icon-tick.png">
+						<strong>Verify once</strong> - access many GOV.UK services
+					</p>
+
+					<div class="actions">
+
+						<a class="next track" href="#"
+							data-category="Intro page step 2 - Next button"
+							data-action="Clicked the Next button">
+							Next
+						</a>
+
+					</div>
+				</section> -->
+
+	<!-- 			<section class="step step-3">
+
+					<p>A certified company will verify your identity - there's no charge.</p>
+
+					<img class="logos" src="/public/images/logos-white-on-blue.png">
+
+					<p>They've all met security standards set by government.</p>
+
+					<div class="actions">
+						<a class="start track" href="/age?requestId=dvla"
+							data-category="Intro page step 3 - Verify my identity button"
+							data-action="Clicked the Verify my identity button">
+							Start
+						</a>
+					</div>
+
+				</section> -->
+
+			</div>
+
+
+		</div>
+
+  </div>
+</main>
+
+{% endblock %}

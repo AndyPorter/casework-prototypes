@@ -1,0 +1,193 @@
+
+@import "navigation";
+@import "tags";
+
+b {
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.subtitle{
+  display: block;
+  margin: 0;
+  color: $secondary-text-colour;
+  @include core-24;
+}
+
+.inline {
+  
+  @extend %contain-floats;
+
+  dt, dd {
+  }
+
+  dt {
+    @include media(tablet) {
+      float: left;
+      clear: left;
+      width: $one-quarter;
+      margin-bottom: $gutter-one-third;
+    }
+    &:after {
+      content: ':';
+    }
+  }
+
+  dd {
+    margin-bottom: $gutter-one-third;
+    @include media(tablet) {
+      float: left;
+      width: $three-quarters;
+    }
+  }
+
+}
+
+// Register of title elements
+// ==========================================================================
+
+.summary {
+  margin: $gutter 0;
+  padding: $gutter;
+  color: $white;
+  background-color: $light-blue;
+
+  @extend %contain-floats;
+
+  h1, h2 {
+    margin-top: 0;
+  }
+
+  .title-flag {
+    @include highlight-tag($light-blue, $white);
+  }
+
+  dd {
+    font-weight: bold;
+  }
+
+}
+
+.task-summary {
+  margin: $gutter;
+  padding: $gutter 0;
+
+  background-color: $grey-4;
+
+  @extend %contain-floats;
+
+  h1, h2 {
+    margin-top: 0;
+  }
+
+  dl {
+    padding-top: $gutter;
+  }
+  dd {
+    font-weight: bold;
+  }
+}
+
+.change-flag {
+  margin: $gutter 0;
+  padding: $gutter;
+  border: $gutter-one-quarter solid $grass-green;
+
+  @include core-16;
+
+  @extend %contain-floats;
+
+  h1, h2 {
+    margin-top: 0;
+  }
+
+  .title-flag {
+    @include highlight-tag($light-blue, $white);
+  }
+
+  .lede {
+    margin-bottom: $gutter;
+    padding: $gutter 0;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+  }
+
+  dd {
+    font-weight: bold;
+  }
+
+}
+
+.first-item {
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.note {
+  margin: $gutter 0;
+  border-top: 2px solid $grey-4;
+
+  time {
+    @include core-16;
+    @include highlight-tag($black, $grey-4);
+    position: relative;
+    top: -1px;
+    margin-bottom: $gutter-one-third;
+  }
+}
+
+.change-controls {
+  border-top: $gutter-one-quarter solid $grey-3;
+}
+
+.controls {
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+}
+
+.form details {
+  clear: both;
+  margin-bottom: $gutter;
+  summary {
+    margin-top: $gutter-half;
+  }
+  .panel-indent {
+    margin-bottom: 0;
+  }
+}
+
+.token-display {
+  text-align: center;
+  span {
+    display: block;
+  }
+}
+
+a.stop-changes {
+  display: inline-block;
+  margin-left: $gutter; 
+}
+
+// Namespaced elements...
+// ==========================================================================
+.register-view-v0 {
+
+  .summary .lede {
+    margin-bottom: $gutter;
+    padding: $gutter 0;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+  }
+
+  .title-plan {
+    margin: $gutter 0;
+    padding: $gutter-one-quarter;
+    background-color: $grey-4;
+  }
+
+}

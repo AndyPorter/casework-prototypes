@@ -1,0 +1,106 @@
+{
+  "cases": [
+    {
+      "property": {
+        "title": "GHR67834",
+        "addr": {
+          "streetaddress": "Flat 18 Kingman Court, Verdant Road",
+          "addresslocality": "London",
+          "postalcode": "SV19 9BT"
+        }
+      },
+      "clients": [
+        {
+          "fullname": "Jessica Emma Hunt",
+          "status": "verified",
+          "code": ""
+        },
+        {
+          "fullname": "Xi Jenny Koh",
+          "status": "unverified",
+          "code": "CHGY"
+        }
+      ],
+      "transfer" : {
+        "status": "-"
+      }
+    },
+    {
+      "property": {
+        "title": "GHT46758",
+        "addr": {
+          "streetaddress": "108 Spring Road",
+          "addresslocality": "Bedford",
+          "postalcode": "BE9 3BS"
+        }
+      },
+      "clients": [
+        {
+          "fullname": "Jessica Emma Hunt",
+          "status": "verified",
+          "code": ""
+        },
+        {
+          "fullname": "Xi Jenny Koh",
+          "status": "verified",
+          "code": "UDTS"
+        }
+      ],
+      "transfer" : {
+        "status": "drafted"
+      }
+    },
+    {
+      "property": {
+        "title": "GHN89712",
+        "addr": {
+          "streetaddress": "Shannon Cottage, Martlesham",
+          "addresslocality": "Whitby",
+          "postalcode": "WH6 7MA"
+        }
+      },
+      "clients": [
+        {
+          "fullname": "Laura King",
+          "status": "verified",
+          "code": "",
+          "signed": true
+        },
+        {
+          "fullname": "Katie Winnick",
+          "status": "verified",
+          "code": "UDTS",
+          "signed": false
+        }
+      ],
+      "transfer" : {
+        "status": "ready to sign"
+      }
+    },
+    {
+      "property": {
+        "title": "GHF11451",
+        "addr": {
+          "streetaddress": "32 Tentergate Road",
+          "addresslocality": "Knaresborough",
+          "postalcode": "HG7 5HY"
+        }
+      },
+      "clients": [
+        {
+          "fullname": "Andy Towers",
+          "status": "verified",
+          "code": ""
+        },
+        {
+          "fullname": "Claire Towersn",
+          "status": "verified",
+          "code": ""
+        }
+      ],
+      "transfer" : {
+        "status": "withdrawn"
+      }
+    }
+  ]
+}

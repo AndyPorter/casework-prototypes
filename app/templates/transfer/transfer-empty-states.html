@@ -1,0 +1,46 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Transfer summary | Create transfer
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/transfer.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="inner-block">
+      <h1 class="heading-large">Confirm transfer details</h1>
+
+      <p class="lede text">Please check all the details carefully before confirming.</p>
+    </div>
+
+      {% include "transfer/partials/_transfer-summary-dynamic-v1.5.html" %}
+
+    <div class="inner-block">
+      <form action="done" method="get" class="form">
+        <div class="form-group">
+          <label for="check-1" class="block-label">
+            <input id="check-1" type="checkbox" name="agree-execution">
+            I confirm the above is correct
+          </label>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="button">Confirm transfer details</button>
+          <p><a href="conveyancer-case-list">Save draft</a></p>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

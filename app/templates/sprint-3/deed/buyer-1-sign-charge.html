@@ -1,0 +1,123 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Sign mortgage
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="summary">
+
+          <h1 class="heading-large">
+            Sign your mortgage agreement 
+          </h1>
+
+ 
+
+
+
+          <dl class="inline">
+
+            <dt>Title number</dt>
+            <dd>
+              TGL123456<br>
+            </dd>
+
+            <dt>Address</dt>
+            <dd>
+              123 High Street<br>
+              Ashburton<br>
+              Devon<br>
+              PL1 1QQ<br>
+            </dd>
+
+          </dl>
+
+
+
+
+          <hr>
+
+          <dl class="inline">
+
+            <dt>Lender</dt>
+            <dd>
+              The Bank plc<br>
+              Registered Office: 100 Commonwealth Avenue, Glasgow, GL7 7AA<br>
+              Registered Number: 7474101<br>
+              Account Number: 1007-789654<br>
+            </dd>
+
+            <dt>You, the borrower</dt>
+            <dd>Mr A Tickle<br>
+            10 Pound Lane, LittleTown, LT1 2WE
+            </dd>
+
+            <dt>Make Effective</dt>
+            <dd>This charge takes effect when the registrar receives notification from Wall &amp; Co Solicitors, who prepared this charge, that it is to take effect</dd>
+
+            <dt>Charging clause</dt>
+            <dd>You, the borrower, with full title guarantee, charge property to the lender by way of legal mortgage with the payment of all money secured by this charge</dd>
+
+            <dt>Obligation</dt>
+            <dd>The lender is under an obligation to make further advances and applies for the obligation to be entered in the register</dd>
+
+            <dt>Restriction</dt>
+            <dd>You apply to the Chief Land Registrar to enter a restriction on the register to the effect that no disposition of the registered estate by the proprietor of the registered estate is to be registered without a written consent by the proprietor for the time being of the charge dated on the date this charge takes effect in favour of The Bank PLC referred to in the Charges Register</dd>
+
+            <br>
+
+            <p>This transfer will be signed by the registrar upon completion. </p>
+
+
+
+          </dl>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="outer-block">
+      <div class="inner-block">
+<p>This Mortgage Deed incorporates the <a href="">Lenders Mortgage Conditions and Explanation 2006</a>, a copy of which has been received by the Borrower</p>
+      </div>
+    </div>
+
+    <div class="outer-block">
+      <div class="inner-block">
+        <form action="display-transfer-for-signing" method="get" class="form">
+
+
+          <div class="form-group">
+
+            <label for="check-1" class="block-label">
+              <input id="check-1" type="checkbox" name="agree-execution">
+              I agree that I have read the information above and am ready to sign
+            </label>
+
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="button">Sign</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+
+</main>
+
+{% endblock %}

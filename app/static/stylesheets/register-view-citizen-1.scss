@@ -1,0 +1,81 @@
+// includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets
+
+// Import GOV.UK frontend toolkit
+
+@import "colours";
+@import "measurements";
+@import "conditionals";
+@import "shims";
+@import "typography";
+@import "css3";
+@import "design-patterns/alpha-beta";
+@import "design-patterns/buttons";
+
+// Import GOV.UK Elements
+// ==========================================================================
+
+@import "govuk-elements";
+
+// Prototype elements
+// ==========================================================================
+
+@import "prototypes/navigation";
+@import "prototypes/tags";
+
+// "Discovery" banner - uses govuk_toolkit mixin via elements, just needs:
+@import "prototypes/discovery-banner";
+
+
+// IMPORTING EXISTING STYLE-GUIDE APP STYLES
+// ==========================================================================
+
+@import "../style-guide/app/static/development/stylesheets/landregistry-main";
+
+// NOT YET INTEGRATED
+// ==========================================================================
+
+.first-item > [class*='heading-'] {
+  margin-top: 0;
+}
+
+.maps-and-plans-item {
+  img {
+    border: 3px solid $grey-3;
+  }
+}
+
+.pending-changes-flag {
+  margin-top: $gutter;
+  padding-top: $gutter;
+  border-top: 1px solid $white;
+
+  p {
+    display: inline-block;
+    margin: 0;
+    padding: $gutter-half;
+    background-color: $white;
+  }
+}
+
+details {
+  margin-bottom: $gutter-half;
+}
+
+.group {
+  @extend %contain-floats;
+}
+
+h4.documents {
+  font-weight: normal;
+}
+
+.items {
+  padding-bottom: $gutter-half;
+  margin-bottom: 0;
+  border-bottom: 1px solid $grey-4;
+}
+
+.legal-division--top {
+  margin-top: 0;
+  padding-top: 0;
+}

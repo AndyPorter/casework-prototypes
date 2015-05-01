@@ -1,0 +1,94 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Execute mortgage deed
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="summary">
+
+          <h1 class="heading-large">
+            Execution of mortgate deed against title <span class="title-flag">TGL123456</span>
+          </h1>
+
+          <div itemscope itemtype ="http://schema.org/PostalAddress" class="lede">
+            <span itemprop="streetAddress">
+              123 High Street
+            </span><br>
+            <span itemprop="addressLocality">Ashburton</span><br>
+            <span itemprop="addressRegion">Devon</span><br>
+            <span itemprop="postalCode">PL1 1QQ</span>
+          </div>
+
+          <dl class="inline">
+
+            <dt>Lender</dt>
+            <dd>
+              The Bank plc<br>
+              Registered Office: 100 Commonwealth Avenue, Glasgow, GL7 7AA<br>
+              Registered Number: 7474101<br>
+              Account Number: 1007-789654<br>
+            </dd>
+
+            <dt>You, the borrower</dt>
+            <dd>Mr A Tickle<br>
+            10 Pound Lane, LittleTown, LT1 2WE
+            </dd>
+
+            <dt>Make Effective</dt>
+            <dd>This charge takes effect when the registrar receives notification from XXXXXX, who prepared this charge, that it is to take effect</dd>
+
+            <dt>Charging clause</dt>
+            <dd>You, the borrower, with full title guarantee, charge property to the lender by way of legal mortgage with the payment of all money secured by this charge</dd>
+
+            <dt>Obligation</dt>
+            <dd>The lender is under an obligation to make further advances and applies for the obligation to be entered in the register</dd>
+
+            <dt>Restriction</dt>
+            <dd>You apply to the Chief Land Registrar to enter a restriction on the register to the effect that no disposition of the registered estate by the proprietor of the registered estate is to be registered without a written consent by the proprietor for the time being of the charge dated on the date this charge takes effect in favour of The Bank PLC referred to in the Charges Register</dd>
+
+          </dl>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="outer-block">
+      <div class="inner-block">
+        <form action="execution-complete" method="get" class="form">
+
+
+          <div class="form-group">
+
+            <label for="check-1" class="block-label">
+              <input id="check-1" type="checkbox" name="agree-execution">
+              I agree that the information above is correct and i wish to execute the deed
+            </label>
+
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="button">Execute deed</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+
+</main>
+
+{% endblock %}

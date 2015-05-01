@@ -1,0 +1,67 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  <!-- insert page title here -->
+  Identify property and interest
+  <!-- -->
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <form action="conveyancer-add-buyers" method="get" class="form">
+
+          <h1 class="form-title heading-xlarge">
+            Property details
+          </h1>
+
+          <div class="form-group">
+            <label for="title-no" class="form-label-bold">Title number</label>
+            <input type="text" class="form-control" id="title-no">
+              <p>
+                <a href="#">don't know the title number?</a>
+              </p>
+
+          </div>
+
+          <h2>Is your client buying or selling this property?</h2>
+
+          <div class="form-group">
+
+              <label for="radio-inline-1" class="block-label">
+                <input id="radio-inline-1" type="radio" name="radio-inline-group" value="buyer">
+                buying
+              </label>
+              <label for="radio-inline-2" class="block-label">
+                <input id="radio-inline-2" type="radio" name="radio-inline-group" value="seller">
+                selling
+              </label>
+            </fieldset>
+          </div>
+
+
+          <div class="form-group">
+            <button type="submit" class="button">Next</button>
+            <p>
+              <a href="conveyancer-login">Back</a>
+            </p>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

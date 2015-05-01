@@ -1,0 +1,66 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  New provisions | Create transfer
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/transfer.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="inner-block">
+
+      <h1 class="heading-large">New provisions</h1>
+
+      <p class="lede text">You must provide details of the new provisions. Or use the <a href="">provision templates</a>.</p>
+
+      <form action="mortgage-details" method="get" class="form new-provisions text">
+        <details open>
+          <summary><label class="form-label" for="definitions-text">Definitions</label></summary>
+          <textarea class="form-control" id="definitions-text" name="definitions-text" rows="6"></textarea>
+        </details>
+
+        <details>
+          <summary><label class="form-label" for="restrictions-text">Restrictions</label></summary>
+          <textarea class="form-control" id="restrictions-text" name="restrictions-text" rows="6"></textarea>
+        </details>
+
+        <details>
+          <summary><label class="form-label" for="easements-text">Easements</label></summary>
+          <textarea class="form-control" id="easements-text" name="easements-text" rows="6"></textarea>
+        </details>
+
+        <details>
+          <summary><label class="form-label" for="covenants-text">Covenants</label></summary>
+          <textarea class="form-control" id="covenants-text" name="covenants-text" rows="6"></textarea>
+        </details>
+
+        <details>
+          <summary><label class="form-label" for="other-text">Other provisions</label></summary>
+          <textarea class="form-control" id="other-text" name="other-text" rows="6"></textarea>
+        </details>
+
+        <button type="submit" class="button final-btn">Next</button>
+        <p><a href="conveyancer-case-list">Save draft</a></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}
+
+{% block body_end_additional %}
+  <script src="{{ prototypes_asset_path }}javascripts/lr-new-provisions.js"></script>
+{% endblock %}

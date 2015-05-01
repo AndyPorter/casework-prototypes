@@ -1,0 +1,70 @@
+{
+  "conveyancer": {
+    "type": "buyer"
+  },
+  "property": {
+    "address": {
+      "address_line_1": "Shannon Cottage",
+      "address_line_2": "",
+      "address_line_3": "Martlesham",
+      "city": "Whitby",
+      "postcode": "WH6 7MA"
+    },
+    "title": "GHN89712",
+    "sellers": ["Laura King", "Katie Winnick"],
+    "restrictions": true
+  },
+  "buyers": [
+    {
+      "name": "Norma Jones",
+      "email": "nrm.jns@gmail.com",
+      "isuser": true,
+      "addresses": [{
+        "address_line_1": "2",
+        "address_line_2": "Carrington Street",
+        "address_line_3": "",
+        "city": "Liveprool",
+        "county": "Merseyside",
+        "postcode": "LS3 7GH"
+      }]
+    },
+    {
+      "name": "Terry Jones",
+      "email": "terry.jones@gmail.com",
+      "addresses": [
+        {
+          "address_line_1": "2",
+          "address_line_2": "Carrington Street",
+          "address_line_3": "",
+          "city": "Liveprool",
+          "county": "Merseyside",
+          "postcode": "LS3 7GH"
+        }
+      ]
+    }
+  ],
+  "declaration": "Equal share",
+  "transfer": {
+    "price": "115,000"
+  },
+  "mortgage": {
+    "mdreference": "MD77684M",
+    "lender": {
+      "name": "HSBC",
+      "address": {
+        "address_line_1": "HSBC",
+        "address_line_2": "",
+        "address_line_3": "7 Albert Rd",
+        "city": "Liverpool",
+        "postcode": "LS1 5HG"
+      }
+    }
+  },
+  "provisions": {
+    "definitions": true,
+    "restrictions": false,
+    "easements": false,
+    "covenants": true,
+    "other": false
+  }
+}

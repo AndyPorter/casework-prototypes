@@ -1,0 +1,81 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Select role
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <form action="relationship-reference" method="get" class="form">
+
+          <h1 class="form-title heading-large">
+            Buyer details
+          </h1>
+
+	        <div class="form-group">
+	          <label for="full-name" class="form-label">Full name</label>
+	          <input type="text" class="form-control" id="full-name">
+	        </div>
+
+					<fieldset>
+					<legend>Date of birth</legend>
+					<div class='date-of-birth'>
+						<p class='form-hint datefield-hint' id='dobHint'>For example, 28 4 2014</p>
+						<div class='datefield form-group form-group-day'>
+							<label for='buyer_date_of_birth_day'>Day</label>
+							<input class='form-control' id='buyer_date_of_birth_day' type='number' value=''>
+						</div>
+						<div class='datefield form-group form-group-month'>
+							<label for='buyer_date_of_birth_month'>Month</label>
+							<input class='form-control' id='buyer_date_of_birth_month' type='number' value=''>
+						</div>
+						<div class='datefield form-group form-group-year'>
+							<label for='buyer_date_of_birth_year'>Year</label>
+							<input class='form-control' id='buyer_date_of_birth_year' type='number' value=''>
+						</div>
+					</div>
+					</fieldset>
+
+          <div class="form-group">
+            <label for="address" class="form-label">Address</label>
+            <textarea rows="4" maxlength="140" class="form-control" id="address"></textarea>
+          </div>
+
+
+          <div class="form-group">
+            <label for="mobile-phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="mobile-phone">
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email">
+          </div>
+
+          <div class="form-group">           
+            <button type="submit" class="button">Done</button>
+            <p>
+              <a href="conveyancer-add-buyers">Add another buyer</a><br/>
+              <a href="select-action">Back</a>
+            </p>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

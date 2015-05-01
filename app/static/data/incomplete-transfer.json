@@ -1,0 +1,55 @@
+{
+  "conveyancer": {
+    "type": "buyer"
+  },
+  "property": {
+    "address": {
+      "address_line_1": "108",
+      "address_line_2": "Spring Road",
+      "address_line_3": "",
+      "city": "Bedford",
+      "postcode": "BE9 3BS"
+    },
+    "title": "GHT46758",
+    "sellers": ["Jessica Emma Hunt", "Xi Jenny Koh"]
+  },
+  "buyers": [
+    {
+      "name": "Sarah Spencer",
+      "addresses": []
+    },
+    {
+      "name": "Brian Kerr",
+      "email": "bribo@gmail.com",
+      "addresses": []
+    }
+  ],
+  "transfer": {
+    "date": "15th December 2014",
+    "stamp_duty": {
+      "received": true,
+      "urn": "1937485936"
+    }
+  },
+  "mortgage": {
+    "mdreference": "MD1234F",
+    "lender": {
+      "name": "Nationwide",
+      "address": {
+        "address_line_1": "Nationwide Building Society",
+        "address_line_2": "Nationwide House",
+        "address_line_3": "Pipers Way",
+        "city": "Swindon",
+        "postcode": "SN38 1NW"
+      }
+    },
+    "date": "24 July 2015"
+  },
+  "provisions": {
+    "definitions": true,
+    "restrictions": false,
+    "easements": false,
+    "covenants": true,
+    "other": false
+  }
+}

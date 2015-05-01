@@ -1,0 +1,72 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Find property information
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/relationship-starts-2-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block inside_header %}
+  {% include "includes/global_search_box.html" %}
+{% endblock %}
+
+{% block header_class %}{% endblock %}
+{% block proposition_header %}{% endblock %}
+
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="global-breadcrumb">
+          <nav role="navigation">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><strong>Find property information</strong></li>
+            </ol>
+          </nav>
+        </div>
+
+        <form class="form" action="{{ next_page }}" method="get">
+
+          <h1 class="form-title heading-x-large">
+            Find property information
+          </h1>
+
+          <div class="text">
+            <p>Use this service to get information related to any property (eg price paid, council tax band) in England and Wales.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="search">Find a property</label>
+            <p class="form-hint">eg postcode, street name or town/city</p>
+            <input type="text" class="form-control" id="search">
+          </div>
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Search">
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}
+
+{% block footer_top %}
+  {% include "includes/footer_links.html" %}
+{% endblock %}
+

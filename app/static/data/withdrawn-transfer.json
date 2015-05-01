@@ -1,0 +1,70 @@
+{
+  "conveyancer": {
+    "type": "buyer"
+  },
+  "property": {
+    "address": {
+      "address_line_1": "32",
+      "address_line_2": "Tentergate Road",
+      "address_line_3": "Knaresborough",
+      "city": "North Yorkshire",
+      "postcode": "HG7 5HY"
+    },
+    "title": "GHF11451",
+    "sellers": ["Andy Towers", "Claire Towers"],
+    "restrictions": true
+  },
+  "buyers": [
+    {
+      "name": "Gerald Turner",
+      "email": "GedT@gmail.com",
+      "isuser": true,
+      "addresses": [{
+        "address_line_1": "8",
+        "address_line_2": "Bridge Street",
+        "address_line_3": "",
+        "city": "Knaresborough",
+        "county": "North Yorkshire",
+        "postcode": "HG8 4FT"
+      }]
+    },
+    {
+      "name": "Bernadette Thomson",
+      "email": "bethomo@gmail.com",
+      "addresses": [
+        {
+          "address_line_1": "Flat 9",
+          "address_line_2": "Stockwell Estate",
+          "address_line_3": "",
+          "city": "Knaresborough",
+          "county": "North Yorkshire",
+          "postcode": "HG9 1CV"
+        }
+      ]
+    }
+  ],
+  "declaration": "Equal share",
+  "transfer": {
+    "price": "210,000"
+  },
+  "mortgage": {
+    "mdreference": "MD76584B",
+    "lender": {
+      "name": "HSBC",
+      "address": {
+        "address_line_1": "HSBC",
+        "address_line_2": "",
+        "address_line_3": "7 Cresent Cross",
+        "city": "Harrogate",
+        "postcode": "HG3 2RE"
+      }
+    }
+  },
+  "provisions": {
+    "definitions": true,
+    "restrictions": false,
+    "easements": false,
+    "covenants": true,
+    "other": false
+  }
+}

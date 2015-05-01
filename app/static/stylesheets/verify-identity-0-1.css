@@ -1,0 +1,563 @@
+/* GOV.UK Verify */
+/* currently used in create a client relation ship flow (relationship-starts) */
+/* copied wholesale from GOV.UK Verify thinking - as of mid sept 14
+
+/* includes node_modules/govuk_frontend_toolkit/govuk_frontend_toolkit/stylesheets */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+
+.cf:before, .cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+#content {
+  margin: 0 auto;
+  max-width: 1020px;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    #content {
+      font-size: 16px;
+      line-height: 1.25; } }
+
+.page-header {
+  padding: 0 32px; }
+  .page-header h1 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 48px;
+    line-height: 1.04167;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: 700;
+    padding: 1em 0 0.7em 0; }
+    @media (max-width: 640px) {
+      .page-header h1 {
+        font-size: 32px;
+        line-height: 1.09375; } }
+
+h2 {
+  margin: 1em 0 0.5em 0; }
+
+h3 {
+  margin: 22px 0 0.5em 0; }
+
+.info-notice {
+  border-left: 10px solid #bfc1c3;
+  padding-left: 1em; }
+
+.page-progress {
+  display: none;
+  margin: 0 30px;
+  padding: 0 0 10px 0;
+  color: #6f777b;
+  border-bottom: 1px solid #bfc1c3; }
+  .page-progress span {
+    display: inline-block;
+    margin: 0 10px 0 0; }
+  .page-progress .selected {
+    color: #0b0c0c;
+    font-weight: bold; }
+
+.article-container {
+  max-width: 610px; }
+  .article-container article {
+    padding-left: 30px;
+    padding-bottom: 50px; }
+
+.article-container.full-width {
+  max-width: none; }
+  .article-container.full-width article {
+    padding-right: 30px; }
+
+
+.cards-accepted {
+  font-size: 16px; }
+
+.requirements li {
+  margin: 0.5em 0; }
+
+.sub-requirement {
+  margin: 0;
+  color: #6f777b; }
+
+article p, article a, article li {
+  font-size: 19px; }
+
+h4 {
+  margin: 1em 0; }
+
+.step details summary {
+  cursor: pointer;
+  text-decoration: underline; 
+  color: rgb(255,255,255); }
+
+.sign-in .government-gateway {
+  margin: 20px 0; }
+  .sign-in .government-gateway p {
+    margin: 0 0 20px 0; }
+
+a.logo {
+  position: relative;
+  width: 290px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-position: 30% 50%;
+  display: inline-block;
+  margin: 0 36px 36px 0;
+  border: 1px solid #aaa;
+  text-align: center;
+  box-shadow: 0 3px 0 #aaa;
+  border-radius: 5px; }
+  a.logo img {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    right: 25px; }
+
+a.logo:hover {
+  border-color: #333;
+  box-shadow: 0 2px 0 #333; }
+
+.sign-in-wrap {
+  margin: 20px 0 20px 0; }
+  .sign-in-wrap .button-wrap {
+    display: inline-block;
+    min-width: 240px;
+    margin: 0 10px 0 0; }
+    .sign-in-wrap .button-wrap strong {
+      display: block; }
+  .sign-in-wrap .button {
+    display: block; }
+  .sign-in-wrap .provider-logos-wrap {
+    display: none;
+    padding-top: 20px; }
+
+.button {
+  background-color: #00823b;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #003518;
+  -moz-box-shadow: 0 2px 0 #003518;
+  box-shadow: 0 2px 0 #003518;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #fff; }
+  .button:visited {
+    background-color: #00823b; }
+  .button:hover, .button:focus {
+    background-color: #00692f; }
+  .button:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #00823b;
+    -moz-box-shadow: 0 0 0 #00823b;
+    box-shadow: 0 0 0 #00823b; }
+  .button.disabled, .button[disabled="disabled"], .button[disabled] {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5; }
+    .button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
+      cursor: default;
+      background-color: #00823b; }
+    .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #003518;
+      -moz-box-shadow: 0 2px 0 #003518;
+      box-shadow: 0 2px 0 #003518; }
+  .button:link, .button:hover, .button:focus, .button:visited {
+    color: #fff; }
+  .button:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .button:active:before {
+    top: -10%;
+    height: 120%; }
+  .button[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+.button {
+  padding: 10px 12px; }
+
+.button.toggle-on {
+  color: #000;
+  position: relative;
+  border: 2px solid #111;
+  padding: 8px 10px;
+  box-shadow: none;
+  background: #fff;
+  top: 2px; }
+
+.get-started .button {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  line-height: 0.66667;
+  color: #FFF;
+  background-color: #00823b;
+  padding: 14px 41px 10px 16px;
+  background-image: url("/public/images/icon-pointer.png");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  margin-bottom: 0; }
+  @media (max-width: 640px) {
+    .get-started .button {
+      font-size: 20px;
+      line-height: 1.2; } }
+.get-started .button:hover {
+  background-color: #006435; }
+.get-started .button:focus {
+  outline: 3px solid #ffbf47; }
+
+.intro-wrap {
+  background: #fff;
+  margin: 50px 0; }
+
+.intro-header h1 {
+  text-align: left; }
+
+.intro {
+  position: relative;
+  width: 960px;
+  margin: auto; }
+  .intro .step-wrap {
+    position: relative;
+    width: 960px;
+    margin: auto;
+    overflow: hidden;
+    white-space: nowrap; }
+    .intro .step-wrap .progress {
+      display: none;
+      text-align: center; }
+      .intro .step-wrap .progress .steps {
+        padding: 0;
+        margin: 0; }
+      .intro .step-wrap .progress li {
+        margin: 5px;
+        display: inline-block;
+        list-style: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background: #fff;
+        opacity: 0.3; }
+      .intro .step-wrap .progress li.selected {
+        opacity: 1; }
+  .intro .step {
+    min-height: 360px;
+    white-space: normal;
+    padding: 70px 100px 50px 100px;
+    width: 760px;
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    font-size: 22px;
+    margin-right: -4px;
+    background: #005ea5; }
+    .intro .step .icon {
+      vertical-align: -15px;
+      margin: 0 10px 0 0; }
+    .intro .step details {
+      font-size: 16px; }
+  .intro a {
+    color: #fff; }
+  .intro .step-1 h4 {
+    margin: 22px 0 0.1em 0;
+    font-weight: normal;
+    font-size: 22px; }
+  .intro .step-1 h3 {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    font-size: 25px; }
+  .intro .step-1 li {
+    margin: 8px 0; }
+  .intro .step-1 img.icon {
+    width: 230px;
+    position: absolute;
+    right: 90px;
+    top: 90px; }
+  .intro .step-1 .text-wrap {
+    width: 525px;
+    padding-right: 20px; }
+  .intro .step-1 .government-gateway-logo {
+    width: 80px; }
+  .intro .step-2 h3 {
+    margin-top: 0;
+    font-size: 22px;
+    max-width: 600px; }
+  .intro .new {
+    display: inline-block;
+    margin: 0 0 10px 0;
+    border: 1px solid #fff;
+    padding: 2px 7px 0 7px;
+    color: #fff;
+    font-size: 19px; }
+  .intro .step-3 .button {
+    background: #fff;
+    color: #28A197;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 2px #087167;
+    margin: 30px;
+    vertical-align: top; }
+    .intro .step-3 .button strong {
+      display: block; }
+  .intro .logos {
+    margin: 8px 0; }
+  .intro .government-gateway {
+    color: #fff;
+    font-size: 17px;
+    margin: 40px 0 0 0; }
+  .intro .actions {
+    font-size: 19px;
+    margin: 30px 0 30px -20px; }
+    .intro .actions .sign-in-link {
+      display: inline-block;
+      margin-left: 20px; }
+    .intro .actions .back, .intro .actions .next, .intro .actions .start, .intro .actions .been-verified {
+      display: inline-block;
+      width: 180px;
+      padding: 8px 6px 6px 6px;
+      text-align: center;
+      border: 1px solid #fff;
+      text-decoration: none;
+      background: #fff;
+      color: #005ea5;
+      font-weight: bold;
+      margin: 0 0 0 20px;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4); }
+    .intro .actions .back {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: none; }
+
+.optional-section {
+  display: none;
+  margin: 1em 0; }
+  .optional-section ul {
+    padding: 0; }
+
+.connected {
+  border-left: 4px solid #6f777b;
+  padding-left: 20px; }
+
+.identity-methods h3 {
+  margin: 0.5em 0 0.5em 0; }
+
+.help {
+  display: block;
+  color: #6f777b;
+  margin: 0.5em 0; }
+
+.actions .button {
+  margin: 1em 0 1em 0; }
+
+.selectable {
+  display: block;
+  position: relative;
+  background: #dee0e2;
+  border: 2px solid #dee0e2;
+  padding: 11px 12px 9px 34px;
+  cursor: pointer; }
+  .selectable em {
+    display: block;
+    color: #6f777b;
+    font-style: normal; }
+  .selectable input {
+    position: absolute;
+    left: 10px;
+    top: 12px; }
+
+label.selectable:hover {
+  border: 2px solid #6f777b; }
+
+.selectable.selected {
+  border: 2px solid #0b0c0c;
+  background-color: #fff; }
+
+.selectable.selected:hover {
+  border: 2px solid #0b0c0c;
+  background-color: #fff; }
+
+.required {
+  color: #6f777b; }
+
+.options {
+  margin: 0 0 1em 0;
+  padding: 0;
+  width: 67%; }
+  .options li {
+    list-style: none;
+    margin: 0 0 1em 0; }
+
+.binary li {
+  display: inline-block;
+  width: 45%;
+  margin-right: 10px; }
+
+.validation-message {
+  display: none;
+  padding: 20px;
+  color: #b10e1e;
+  border-left: 4px solid #b10e1e;
+  margin-left: -24px; }
+
+.invalid {
+  border-left: 4px solid #b10e1e;
+  margin-left: -24px;
+  padding-left: 20px; }
+
+.sub-method {
+  margin-left: 2em;
+  list-style: circle; }
+
+.company {
+  float: left;
+  width: 33.3%;
+  text-align: center; }
+  .company .logo {
+    -webkit-filter: grayscale(1);
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 100px;
+    width: 200px; }
+  .company .button-wrap {
+    margin: 0 0 20px 0; }
+  .company .about-wrap a {
+    font-size: 16px; }
+  .company .company-inner {
+    border: 5px solid #dee0e2;
+    margin: 20px;
+    padding: 20px 20px 30px 20px; }
+
+.valid-companies {
+  margin: 0 -20px 30px -20px; }
+
+.invalid-companies {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  margin-bottom: 20px; }
+  .invalid-companies .companies {
+    margin: 0 -20px; }
+  .invalid-companies .company ul {
+    list-style: none;
+    padding: 0; }
+  .invalid-companies .company p {
+    margin-top: 0; }
+  .invalid-companies .company p, .invalid-companies .company li {
+    font-weight: bold;
+    color: #b10e1e; }
+
+.invalid-companies.no-valid-companies {
+  border-top: none; }
+
+.company-info-overlay {
+  display: none;
+  z-index: 1000;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7); }
+  .company-info-overlay .company-info {
+    background: #fff;
+    width: 600px;
+    margin-bottom: 60px;
+    margin-left: -300px;
+    top: 30px;
+    left: 50%;
+    position: absolute;
+    padding: 20px 40px 40px 40px;
+    border: 1px solid #6f777b; }
+    .company-info-overlay .company-info .close {
+      position: absolute;
+      top: 40px;
+      right: 40px; }
+    .company-info-overlay .company-info .subtitle {
+      color: #6f777b; }
+
+.permission-wrap {
+  margin: 30px 0;
+  border: 1px solid #666;
+  width: 500px;
+  margin-left: -290px;
+  padding: 40px;
+  position: relative;
+  left: 50%; }
+  .permission-wrap .title {
+    margin-top: 0; }
+
+.confirmation-wrap .intro h3 {
+  margin-top: 30px; }
+
+.page-fail h4 {
+  font-weight: normal; }

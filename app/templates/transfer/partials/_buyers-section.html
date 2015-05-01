@@ -1,0 +1,82 @@
+<section class="document-section document-section--bordered">
+  <h2 class="heading-medium">Buyers{% if conveyancer == "buyer" %} <span class="alert-flag">acting on behalf of</span>{% endif %}</h2>
+
+  <div class="grid-wrapper document-section__item">
+    <div class="grid grid-1-4">
+      <p class="inner-block">No. of proprietors</p>
+    </div>
+    <div class="grid grid-1-4">
+      <div class="inner-block">{{ data.buyers|length }}</div>
+    </div>
+  </div>
+
+  {% for buyer in data.buyers  %}
+  <div class="grid-wrapper document-section__item">
+    <div class="grid">
+      <p class="inner-block"><b>Buyer {{ loop.index }}</b></p>
+    </div>
+  </div>
+  <div class="grid-wrapper document-section__item">
+    <div class="grid grid-1-4">
+      <div class="inner-block">Name</div>
+    </div>
+    <div class="grid grid-1-4">
+      <p class="inner-block">{{ buyer.name }}</p>
+    </div>
+  </div>
+
+  <div class="grid-wrapper document-section__item {% if buyer.addresses|length == 0 %}empty-state{% endif %}">
+    <div class="grid grid-1-4">
+      <div class="inner-block">Address(es)</div>
+    </div>
+    {% for addr in buyer.addresses  %}
+    <div class="grid grid-1-4">
+      <div class="inner-block">
+        {{ common.address(addr) }}
+      </div>
+      {% if editable %}
+      <div class="inner-block">
+        <a href="#" class="button-secondary">Change<span class="visuallyhidden"> address details</span></a>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+    {% if editable %}
+      {% if buyer.addresses|length < 3 %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="#" class="button-secondary">Add<span class="visuallyhidden"> another</span> address</a>
+        </div>
+      </div>
+      {% endif %}
+    {% endif %}
+  </div>
+
+  <div class="grid-wrapper document-section__item">
+    <div class="grid grid-1-4">
+      <div class="inner-block">Email</div>
+    </div>
+    {% if buyer.email %}
+    <div class="grid grid-1-4">
+      <p class="inner-block">{{ buyer.email }}</p>
+    </div>
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="#" class="button-secondary">Change<span class="visuallyhidden"> email address</span></a>
+        </div>
+      </div>
+      {% endif %}
+    {% else %}
+      {% if editable %}
+      <div class="grid grid-1-4">
+        <div class="inner-block">
+          <a href="#" class="button-secondary">Add<span class="visuallyhidden"> email address</span></a>
+        </div>
+      </div>
+      {% endif %}
+    {% endif %}
+  </div>
+
+  {% endfor %}
+</section><!-- end buyers section -->

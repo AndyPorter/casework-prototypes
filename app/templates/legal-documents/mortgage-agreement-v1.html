@@ -1,0 +1,165 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Your mortgage agreement
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="text">
+
+          <h1>
+            Your mortgage agreement
+          </h1>
+
+          <div class="panel-indent">
+            <p>Explanation</p>
+          </div>
+
+        </div>
+
+        <article class="legal-document--bounds">
+
+          <section class="legal-document--item">
+            <h2 class="visuallyhidden">Property details</h2>
+
+            <p class="lede" itemscope itemtype="http://schema.org/PostalAddress">
+              <span itemprop="streetAddress">
+                Flat 18 Kingman Court<br>
+                Verdant Road<br>
+              </span>
+              <span itemprop="addressLocality">London</span><br>
+              <span itemprop="postalCode">SV19 9BT</span>
+            </p>
+
+            <dl class="lede definition-inline">
+              <dt>Title number</dt>
+              <dd>GHR67834</dd>
+            </dl>
+
+          </section><!-- end item -->
+
+          <section class="legal-document--item legal-document--bordered">
+            <h2 class="heading-medium">Mortgage lender</h2>
+
+            <p itemscope itemtype="http://schema.org/Corporation">
+              <span itemprop="name">General UK PLC</span><br>
+              <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="address-inline">
+                <span itemprop="streetAddress">
+                  12 Trinity Place, Regents Street
+                </span>
+                <span itemprop="addressLocality">London</span>
+                <span itemprop="postalCode">NW10 6TQ</span>
+              </span>
+              <dl class="definition-inline">
+                <dt>Company registration number</dt>
+                <dd>2347676</dd>
+                <dt>Account number</dt>
+                <dd>1007-789654</dd>
+              </dl>
+            </p>
+
+          </section><!-- end item -->
+
+          <section class="legal-document--item legal-document--bordered">
+            
+            <h2 class="heading-medium">Agreement</h2>
+
+            <h3 class="heading-small">You, the borrower:</h3>
+
+            <div class="grid grid-1-2">
+              <p>
+                <b>Matthew Jameson</b> <span class="alert-flag">you</span><br>
+                118 Leafy Way,<br>
+                Thale,<br>
+                Berks<br>
+                RG12 9AB
+              </p>
+            </div>
+
+          </section><!-- end item -->
+
+
+          <section class="legal-document--item">
+
+            <h3 class="heading-small">Make effective:</h3>
+            <p class="text">This charge takes effect when the registrar receives notification from Wall &amp; Co Solicitors, who prepared this charge, that it is to take effect</p>
+
+          </section><!-- end item -->
+
+
+          <section class="legal-document--item">
+
+            <h3 class="heading-small">Charging clause:</h3>
+            <p class="text">You, the borrower, with full title guarantee, charge property to the lender by way of legal mortgage with the payment of all money secured by this charge</p>
+
+          </section><!-- end item -->
+
+
+          <section class="legal-document--item">
+
+            <h3 class="heading-small">Obligation:</h3>
+            <p class="text">The lender is under an obligation to make further advances and applies for the obligation to be entered in the register</p>
+
+          </section><!-- end item -->
+
+
+          <section class="legal-document--item">
+
+            <h3 class="heading-small">Restriction:</h3>
+            <p class="text">You apply to the Chief Land Registrar to enter a restriction on the register to the effect that no disposition of the registered estate by the proprietor of the registered estate is to be registered without a written consent by the proprietor for the time being of the charge dated on the date this charge takes effect in favour of General UK PLC referred to in the Charges Register</p>
+
+          </section>
+
+        </article>
+
+        <div class="panel-indent text">
+          <div class="footnote">
+            <p>Form of mortgage deed filed at Land Registry under <a href="#" rel="external">MD859K</a>.</p>
+            <p>This Mortgage Deed incorporates the <a href="#" rel="external">Lenders Mortgage Conditions and Explanation 2006</a>, a copy of which has been received by the Borrower</p>
+          </div>
+        </div>
+
+
+        <form action="display-transfer-for-signing" method="get" class="form">
+          <div class="form-group">
+            <label for="check-1" class="block-label">
+              <input id="check-1" type="checkbox" name="agree-execution">
+              I have read and understood the information above
+            </label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="button">Sign agreement</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}
+
+{% block body_end %}
+  <script src="{{ prototypes_asset_path }}javascripts/vendor/jquery-1.11.1.min.js"></script>
+  <script src="{{ prototypes_asset_path }}javascripts/govuk-elements.js"></script>
+  <script src="{{ prototypes_asset_path }}javascripts/stick-at-top-when-scrolling.js"></script>
+  <script src="{{ prototypes_asset_path }}javascripts/stop-scrolling-at-footer.js"></script>
+
+  <script src="{{ prototypes_asset_path }}javascripts/lr-faux-details.js"></script>
+  <script src="{{ prototypes_asset_path }}javascripts/register-view-2-0.js"></script>
+{% endblock %}

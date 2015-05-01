@@ -1,0 +1,14 @@
+{% macro address(address) -%}
+  <p itemscope itemtype="http://schema.org/PostalAddress" class="addr-collapse">
+    <span itemprop="streetAddress">{{ address.address_line_1 }} {{ address.address_line_2 }}<br>
+      {% if address.address_line_3 %}
+      {{ address.address_line_3 }}<br>
+      {% endif %}
+    </span>
+    <span itemprop="addressLocality">{{ address.city }}</span><br>
+    {% if address.county %}
+    <span itemprop="">{{ address.county }}</span><br>
+    {% endif %}
+    <span itemprop="postalCode">{{ address.postcode }}</span>
+  </p>
+{%- endmacro %}

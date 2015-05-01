@@ -1,0 +1,62 @@
+
+@import "navigation";
+@import "tags";
+
+
+
+// Register of title elements
+// ==========================================================================
+
+.complete {
+  margin: $gutter 0;
+  padding: $gutter;
+  color: $white;
+  background-color: $turquoise;
+
+  @extend %contain-floats;
+
+  h1, h2 {
+    margin-top: 0;
+  }
+
+  .title-flag {
+    @include highlight-tag($light-blue, $white);
+  }
+
+  .lede {
+    margin-bottom: $gutter;
+    padding: $gutter 0;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+  }
+
+  dd {
+    font-weight: bold;
+  }
+
+}
+
+.task-summary {
+  margin: $gutter;
+  padding: $gutter 0;
+
+  background-color: $grey-4;
+
+  @extend %contain-floats;
+
+  h1, h2 {
+    margin-top: 0;
+  }
+
+  dl {
+    padding-top: $gutter;
+  }
+  dd {
+    font-weight: bold;
+  }
+}
+
+
+
+
+

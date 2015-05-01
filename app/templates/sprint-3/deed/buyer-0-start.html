@@ -1,0 +1,72 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Sign agreements
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/govuk-elements.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/prototypes.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/hack.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+
+
+<main id="content" role="main" class="group">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+
+<header class="page-header group">
+<div>
+      <h1>Sign agreements</h1>
+    
+</div>
+  </header><div class="article-container group">
+  	<article role="article" class="group"><div class="inner">
+
+      <section class="intro"><div class="get-started-intro">
+        
+        <p>Use this service when:</p>
+
+        <ul>
+          <li>you have been given a reference number by your conveyancer</li>
+          <li>you are buying or selling a property</li>
+        </ul>
+
+        <p>You will be shown agreements which you will have to sign to show that you have understood and agree with them.</p>
+
+
+        <div class="application-notice info-notice">
+          <p>You’ll need to verify your identiy on GOV.UK and enter some additional security information.</p>
+        </div>
+      
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="reference" class="form-label">Reference number</label>
+          <input type="text" class="form-control" id="reference">
+          <a href="buyer-signing-login" class="button">Start now</a>
+        </div>
+
+
+        </section>
+        </div>
+        </article>
+        <!-- report_a_problem -->
+        <!-- end report_a_problem -->
+
+    </div>
+
+</main>
+
+{% endblock %}

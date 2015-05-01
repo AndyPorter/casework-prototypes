@@ -1,0 +1,45 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Number of clients
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/relationship-starts-2-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <form class="form" action="conveyancer-add-client-1" method="get">
+
+          <h1 class="form-title heading-large">
+            How many clients are you acting for?
+          </h1>
+
+          <div class="form-group">
+            <input type="number" min="1" max="4" class="form-control field-numeric" id="num-clients" name="num-clients">
+          </div>
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Next">
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}

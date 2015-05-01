@@ -1,0 +1,145 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Reserve priority - select interest
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/reserve-priority-2-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        
+        <h1 class="heading-large">Reserve priority</h1>
+
+        <form class="form" action="confirm" method="get">
+
+          <div class="text">
+            <p class="lede">I am protecting a:</p>
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="check-inline-1" class="block-label">
+              <input id="check-inline-1" type="checkbox" name="purchase" value="purchase">
+              Purchase
+            </label>
+
+
+            <label for="check-inline-2" class="block-label">
+              <input id="check-inline-2" type="checkbox" name="mortgage" value="mortgage">
+              Mortgage
+            </label>
+
+            <div id="mortgageTaskDetail" class="panel-indent--checkbox-list">
+              <label class="form-label" for="mortgage-task-detail">lender:</label>
+              <input type="text" class="form-control" id="mortgage-task-detail" name="mortgage-task-detail">
+            </div>
+
+
+            <label for="check-inline-3" class="block-label">
+              <input id="check-inline-3" type="checkbox" name="lease" value="lease">
+              Lease
+            </label>
+
+             <div id="leaseTaskDetail" class="panel-indent--checkbox-list">
+              <label class="form-label" for="lease-task-detail">lessee:</label>
+              <input type="text" class="form-control" id="lease-task-detail" name="lease-task-detail">
+            </div>           
+
+
+            <label for="check-inline-4" class="block-label">
+              <input id="check-inline-4" type="checkbox" name="easement" value="easement">
+              Easement
+            </label>
+
+            <div id="easementTaskDetail" class="panel-indent--checkbox-list">
+              <label class="form-label" for="easement-task-detail">specify easement:</label>
+              <input type="text" class="form-control" id="easement-task-detail" name="easement-task-detail">
+            </div>
+
+
+            <label for="check-inline-5" class="block-label">
+              <input id="check-inline-5" type="checkbox" name="other" value="other">
+              Other
+            </label>
+
+            <div id="otherTaskDetail" class="panel-indent--checkbox-list">
+              <label class="form-label" for="other-task-detail">please specify:</label>
+              <input type="text" class="form-control" id="other-task-detail" name="other-task-detail">
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Next">
+          </div>
+
+        </form>
+
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}
+
+{% block body_end_additional %}
+  <script type="text/javascript">
+  
+    $(function() {
+      $(':checkbox[name="other"]').on('change', function() {
+        if ($(this).is(':checked')) {
+          $('#otherTaskDetail').show();
+        } else {
+          $('#otherTaskDetail').hide();
+        }
+      }).trigger('change');
+    });
+
+    $(function() {
+      $(':checkbox[name="mortgage"]').on('change', function() {
+        if ($(this).is(':checked')) {
+          $('#mortgageTaskDetail').show();
+        } else {
+          $('#mortgageTaskDetail').hide();
+        }
+      }).trigger('change');
+    });
+
+    $(function() {
+      $(':checkbox[name="easement"]').on('change', function() {
+        if ($(this).is(':checked')) {
+          $('#easementTaskDetail').show();
+        } else {
+          $('#easementTaskDetail').hide();
+        }
+      }).trigger('change');
+    });
+
+    $(function() {
+      $(':checkbox[name="lease"]').on('change', function() {
+        if ($(this).is(':checked')) {
+          $('#leaseTaskDetail').show();
+        } else {
+          $('#leaseTaskDetail').hide();
+        }
+      }).trigger('change');
+    });
+
+  </script>
+{% endblock %}

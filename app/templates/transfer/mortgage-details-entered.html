@@ -1,0 +1,57 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Mortgage details | Create transfer
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/transfer.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="inner-block">
+
+      <h1 class="heading-xlarge">Mortgage Details</h1>
+
+      <form action="summary" method="get" class="form">
+
+        {% include "transfer/partials/_md-ref.html" %}
+
+        <section class="panel-indent">
+          <h2 class="heading-medium">Mortgage lender</h2>
+
+          <p itemscope="" itemtype="http://schema.org/Corporation">
+            <span itemprop="name">General UK PLC</span><br>
+            <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress" class="address-inline">
+              <span itemprop="streetAddress">12 Trinity Place, Regents Street</span>
+              <span itemprop="addressLocality">London</span>
+              <span itemprop="postalCode">NW10 6TQ</span>
+            </span>
+          </p>
+          <dl class="definition-inline">
+            <dt>Company registration number</dt>
+            <dd>2347676</dd>
+            <dt>Account number</dt>
+            <dd>1007-789654</dd>
+          </dl>
+        </section>
+
+        <button class="button final-btn">Confirm mortgage details</button>
+        <p><a href="conveyancer-case-list">Save draft</a></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

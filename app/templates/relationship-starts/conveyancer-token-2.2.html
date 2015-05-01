@@ -1,0 +1,45 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+  Relationship token
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/legal-document-1-0.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/relationship-starts-2-0.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <div class="callout callout--action-notice callout--generated-token">
+
+          <h1>
+            Transaction code: <span class="title-flag">USNV</strong>
+          </h1>
+
+        </div>
+
+        <div class="text">
+          <h2 class="heading-medium">What happens next</h2>
+          <p>You must tell your client(s) the code so they can enter it on GOV.UK</p>
+          <p>The relationship will only be confirmed once all parties on the transaction have entered the unique code.</p>
+        </div>
+
+        <a href="/transfer/conveyancer-case-list">Go to case list</a>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+{% endblock %}
