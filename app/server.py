@@ -32,7 +32,7 @@ def proto():
   return render_template('index2.html')
 
 @app.route('/hack-day')
-def proto():
+def hackday():
   return render_template('index-hack.html')
 
 # ---------------------------------------------------------------------------
