@@ -1,0 +1,14 @@
+{
+  "cases":[
+    {
+        "titleNumber":"DN1",
+        "applicationReference":"LR0011",
+        "dateReceived":"01.05.2015"
+    },
+    {
+        "titleNumber":"DN2",
+        "applicationReference":"LR0002",
+        "dateReceived":"18.04.2015"
+    }
+  ]
+}

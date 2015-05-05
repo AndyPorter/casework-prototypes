@@ -37,6 +37,18 @@ def hackday():
 
 # ---------------------------------------------------------------------------
 
+#Casework prototypes 
+
+# Just display a basic list - 
+@app.route('/casework/cases')
+def casework_case_list():
+  json_data=open('app/static/data/casework-cases.json', "r")
+  data = json.load(json_data)
+  return render_template('casework/case-list.html', data=data)
+
+
+
+# ---------------------------------------------------------------------------
 #hackday 
 @app.route('/hackday/land-ownership-record')
 def hackday_land_record():
