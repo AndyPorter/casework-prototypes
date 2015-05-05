@@ -1,0 +1,55 @@
+{% extends "global/prototypes_base.html" %}
+
+{% block page_title %}
+
+Case list
+
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/transfer.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="inner-block">
+
+      <h1 class="heading-large">Case list</h1>
+
+      <table class="casework-dashboard">
+        <thead>
+          <tr>
+            <th scope="col">Reference</th>
+            <th scope="col">Title No</th>
+            <th scope="col">Received ▼</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+          {% for case in data.cases %}
+
+          <tr class="summary">
+            <td><b>{{ case.applicationReference }}</b></td>
+            <td>{{ case.titleNumber }}</td>
+            <td>{{ case.dateReceived }}</td>
+          </tr>
+          
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}
