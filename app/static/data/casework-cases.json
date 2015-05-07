@@ -2,12 +2,12 @@
   "cases":[
     {
         "titleNumber":"DN1",
-        "applicationReference":"LR001",
+        "applicationReference":"lr001",
         "dateReceived":"07.05.2015"
     },
     {
         "titleNumber":"DN2",
-        "applicationReference":"LR002",
+        "applicationReference":"lr002",
         "dateReceived":"06.05.2015"
     },
     {
