@@ -2,13 +2,23 @@
   "cases":[
     {
         "titleNumber":"DN1",
-        "applicationReference":"LR0011",
-        "dateReceived":"01.05.2015"
+        "applicationReference":"LR001",
+        "dateReceived":"07.05.2015"
     },
     {
         "titleNumber":"DN2",
-        "applicationReference":"LR0002",
-        "dateReceived":"18.04.2015"
+        "applicationReference":"LR002",
+        "dateReceived":"06.05.2015"
+    },
+    {
+        "titleNumber":"AP849",
+        "applicationReference":"3453er",
+        "dateReceived":"03.05.2015"
+    },
+    {
+        "titleNumber":"CD251",
+        "applicationReference":"67thdy",
+        "dateReceived":"02.05.2015"
     }
   ]
 }
