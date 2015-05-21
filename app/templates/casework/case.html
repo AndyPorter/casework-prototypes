@@ -18,9 +18,7 @@ Case
 
     <div class="inner-block">
 
-      {% for item in data.case %}
-      <h1 class="heading-large">Case {{ item.applicationReference }} </h1>
-      {% endfor %}  
+      <h1 class="heading-large">Case reference {{ data.case.applicationReference }} </h1>
 
       <table class="casework-dashboard">
         <thead>
@@ -32,17 +30,15 @@ Case
         </thead>
         <tbody>
 
-        {% for item in data.case %}
           <tr>
-            <td>{{ item.titleNumber }}</td>
-            <td>{{ item.dateReceived }}</td>
+            <td>{{ data.case.titleNumber }}</td>
+            <td>{{ data.case.dateReceived }}</td>
           </tr>
-        {% endfor %}  
 
         </tbody>
       </table>
 
-      <p><a href="/casework/cases">worklist</a></p>
+      <p><a href="/cases">worklist</a></p>
 
     </div>
 
