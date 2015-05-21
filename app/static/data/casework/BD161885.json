@@ -1,0 +1,117 @@
+{
+  "application_reference": "MA2785D",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-09-02 14:11:03.411110",
+          "sub_register": "A",
+          "status": "Current",
+          "role_code": "RDES",
+          "sequence_number": 1,
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "postcode": "LU1 1DQ",
+                "town": "Luton",
+                "leading_info": "Land at",
+                "address_string": "Land at 29 Kenilworth Road, Luton (LU1 1DQ)",
+                "house_no": "29",
+                "street_name": "Kenilworth Road"
+              },
+              "type": "Address"
+            }
+          ],
+          "entry_date": "2014-09-02",
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being Land at 29 Kenilworth Road, Luton (LU1 1DQ).",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-09-02 14:10:48.846470",
+          "sub_register": "B",
+          "status": "Current",
+          "role_code": "RPRO",
+          "sequence_number": 1,
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "PL5 1DQ",
+                      "town": "Plymouth",
+                      "address_string": "29 Looe Street, Plymouth PL5 1DQ",
+                      "house_no": "29",
+                      "address_type": "UK",
+                      "street_name": "Looe Street"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Kelly",
+                    "forename": "Gene",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "entry_date": "2014-09-02",
+          "full_text": "PROPRIETOR: %GENE KELLY% of 29 Looe Street, *Plymouth* PL5 1DQ.",
+          "template_text": "PROPRIETOR: *RP*"
+        },
+        {
+          "entry_id": "2014-09-02 14:10:49.107840",
+          "sub_register": "B",
+          "status": "Current",
+          "draft_entry_version": 1,
+          "role_code": "RPPD",
+          "sequence_number": 2,
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "text": "02/09/2014",
+              "date": "2014-09-02",
+              "type": "DATE"
+            },
+            {
+              "text": "£10,000",
+              "type": "PRICE"
+            }
+          ],
+          "entry_date": "2014-09-02",
+          "full_text": "The price stated to have been paid on 2 September 2014 was £10,000.",
+          "template_text": "The price stated to have been paid on *DA* was *AM*.",
+          "draft_entry_code": "BK688"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-09-02",
+  "last_app_timestamp": "2014-09-02T14:07:13+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558727
+  ],
+  "title_number": "BD161885",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

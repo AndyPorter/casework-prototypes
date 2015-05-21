@@ -1,0 +1,426 @@
+{
+  "application_reference": "S368KWW",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-08-22 13:10:11.982130",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "postcode": "LU1 1DQ",
+                "town": "Luton",
+                "address_string": "31 Kenilworth Road, Luton (LU1 1DQ)",
+                "house_no": "31",
+                "street_name": "Kenilworth Road"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being 31 Kenilworth Road, Luton (LU1 1DQ).",
+          "entry_date": "2014-08-22",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-11-06 11:11:18.237830",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "LU1 1DQ",
+                      "town": "Luton",
+                      "address_string": "31 Keniworth Road, Luton LU1 1DQ",
+                      "house_no": "31",
+                      "address_type": "UK",
+                      "street_name": "Keniworth Road"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Brown",
+                    "forename": "Dotty",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %DOTTY BROWN% of 31 Keniworth Road, *Luton* LU1 1DQ.",
+          "entry_date": "2014-08-22",
+          "template_text": "PROPRIETOR: *RP*"
+        },
+        {
+          "entry_id": "2014-08-22 13:01:47.188480",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "RPPD",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "text": "08/08/2014",
+              "date": "2014-08-08",
+              "type": "DATE"
+            },
+            {
+              "text": "£250,000",
+              "type": "PRICE"
+            }
+          ],
+          "full_text": "The price stated to have been paid on 8 August 2014 was £250,000.",
+          "entry_date": "2014-08-22",
+          "template_text": "The price stated to have been paid on *DA* was *AM*.",
+          "draft_entry_code": "BK688"
+        },
+        {
+          "entry_id": "2014-08-22 13:05:32.082700",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 3,
+          "role_code": "OJPR",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "full_text": "RESTRICTION: No disposition by a sole proprietor of the registered estate (except a trust corporation) under which capital money arises is to be registered unless authorised by an order of the court.",
+          "entry_date": "2014-08-22",
+          "template_text": "RESTRICTION: No disposition by a sole proprietor of the registered estate (except a trust corporation) under which capital money arises is to be registered unless authorised by an order of the court.",
+          "draft_entry_code": "BX900"
+        }
+      ]
+    },
+    {
+      "group_id": "2014-08-22 13:03:24.012520",
+      "category": "CHARGE",
+      "entries": [
+        {
+          "entry_id": "2014-08-22 13:03:24.177110",
+          "charge_id": "2014-08-22 13:03:24.012520",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 4,
+          "role_code": "CBCR",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "CHARGE",
+          "infills": [
+            {
+              "text": "08/08/2014",
+              "date": "2014-08-08",
+              "type": "DATE"
+            },
+            {
+              "text": "Abbey National PLC"
+            }
+          ],
+          "full_text": "RESTRICTION: Except under an order of the registrar no disposition by the proprietor of the land is to be registered without the consent of the proprietor of the Charge dated 8 August 2014 in favour of Abbey National PLC referred to in the Charges Register.",
+          "entry_date": "2014-08-22",
+          "template_text": "RESTRICTION: Except under an order of the registrar no disposition by the proprietor of the land is to be registered without the consent of the proprietor of the Charge dated *CD* in favour of *CP* referred to in the Charges Register.",
+          "draft_entry_code": "BX294"
+        },
+        {
+          "entry_id": "2014-08-22 13:03:24.049020",
+          "charge_id": "2014-08-22 13:03:24.012520",
+          "sub_register": "C",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "CCHA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "CHARGE",
+          "infills": [
+            {
+              "text": "08/08/2014",
+              "date": "2014-08-08",
+              "type": "DATE"
+            }
+          ],
+          "full_text": "REGISTERED CHARGE dated 8 August 2014.",
+          "entry_date": "2014-08-22",
+          "template_text": "REGISTERED CHARGE dated *CD*.",
+          "draft_entry_code": "CD100"
+        },
+        {
+          "entry_id": "2014-08-22 13:03:24.132350",
+          "charge_id": "2014-08-22 13:03:24.012520",
+          "sub_register": "C",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "CCHR",
+          "draft_entry_version": 2,
+          "language": "ENG",
+          "category": "CHARGE",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "address_string": "Deeds Services, 101 Midsummer Boulevard, Milton Keynes MK9 1AA",
+                      "address_type": "UK"
+                    }
+                  ],
+                  "name": {
+                    "non_private_individual_name": "Abbey National PLC"
+                  }
+                }
+              ],
+              "type": "Charge Proprietor"
+            }
+          ],
+          "full_text": "Proprietor: #ABBEY NATIONAL PLC# (Co. Regn. No. 2294747) of Deeds Services, 101 Midsummer Boulevard, Milton Keynes MK9 1AA.",
+          "entry_date": "2014-08-22",
+          "template_text": "Proprietor: #ABBEY NATIONAL PLC# (Co. Regn. No. 2294747) of Deeds Services, 101 Midsummer Boulevard, Milton Keynes MK9 1AA.",
+          "draft_entry_code": "CABBY"
+        }
+      ]
+    },
+    {
+      "category": "REGISTER",
+      "entries": [
+        {
+          "entry_id": "2014-10-17 10:39:09.086680",
+          "sub_register": "C",
+          "status": "Current",
+          "sequence_number": 3,
+          "role_code": "RRNT",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "REGISTER",
+          "infills": [
+            {
+              "text": "peppercorn"
+            },
+            {
+              "text": "Conveyance"
+            }
+          ],
+          "full_text": "The parts of the land affected thereby are subject to the specified peppercorn yearly rentcharges created by and to the covenants contained in, the Conveyance particulars of which are set out in the Schedule of Rentcharges hereto.",
+          "entry_date": "2014-10-17",
+          "template_text": "The parts of the land affected thereby are subject to the specified *O<>O* yearly rentcharges created by and to the covenants contained in, the *M<>M* particulars of which are set out in the Schedule of Rentcharges hereto.",
+          "draft_entry_code": "CK808"
+        },
+        {
+          "entry_id": "2014-10-17 10:36:57.003170",
+          "sub_register": "C",
+          "status": "Current",
+          "sequence_number": 4,
+          "role_code": "RLER",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "REGISTER",
+          "full_text": "The land is subject to the lease set out in the schedule of leases hereto.",
+          "entry_date": "2014-10-17",
+          "template_text": "The land is subject to the lease set out in the schedule of leases hereto.",
+          "draft_entry_code": "CH155"
+        },
+        {
+          "entry_id": "2014-10-17 10:35:06.977390",
+          "sub_register": "L",
+          "schedule": {
+            "fields": [
+              {
+                "text": "2014-09-06",
+                "header": "Registration Date"
+              },
+              {
+                "text": "tinted blue",
+                "header": "Plan Reference"
+              },
+              {
+                "text": "Garage 1",
+                "header": "Property Description"
+              },
+              {
+                "text": "2013-07-31",
+                "header": "Date of Lease"
+              },
+              {
+                "text": "999 years",
+                "header": "Term"
+              },
+              {
+                "text": "BD161872",
+                "header": "Lessees Title"
+              }
+            ],
+            "schedule_type": "L",
+            "parent_register": "C",
+            "header": "SCHEDULE OF NOTICES OF LEASES"
+          },
+          "deeds": [
+            {
+              "date": "2013-07-31",
+              "lease_term": "999 years",
+              "id": "2014-10-17 10:35:07.036330",
+              "description": "Lease"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RLLE",
+          "language": "ENG",
+          "category": "REGISTER",
+          "full_text": "Registration Date     : 06.09.2014                                       \rPlan Reference        : tinted blue                                      \rProperty Description  : Garage 1                                         \rDate of Lease         : 31.07.2013                                       \rTerm                  : 999 years                                        \rLessee's Title        : BD161872                                         \rNOTE: Yes",
+          "notes": [
+            {
+              "text": "Yes"
+            }
+          ]
+        },
+        {
+          "entry_id": "2014-10-17 10:33:06.134690",
+          "sub_register": "W",
+          "schedule": {
+            "fields": [
+              {
+                "text": "tinted pink",
+                "header": "Description of land"
+              },
+              {
+                "text": "a peppercorn",
+                "header": "Rentcharge"
+              },
+              {
+                "text": "Conveyance",
+                "header": "Nature of deed"
+              },
+              {
+                "text": "2013-10-05",
+                "header": "Date of deed"
+              },
+              {
+                "text": "BD161872",
+                "header": "Title No.of rentcharge"
+              },
+              {
+                "text": "2014-10-10",
+                "header": "Registration date"
+              }
+            ],
+            "schedule_type": "W",
+            "parent_register": "C",
+            "header": "SCHEDULE OF RENTCHARGES"
+          },
+          "deeds": [
+            {
+              "rentcharge_amount": "a peppercorn",
+              "date": "2013-10-05",
+              "id": "2014-10-17 10:33:06.648190",
+              "description": "Conveyance"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RWRN",
+          "language": "ENG",
+          "category": "REGISTER",
+          "full_text": "Description of land   : tinted pink                                      \rRentcharge            : a peppercorn                                     \rNature of deed        : Conveyance                                       \rDate of deed          : 5 October 2013                                   \rTitle No.of rentcharge: BD161872                                         \rRegistration date     : 10.10.2014                                       \rNOTE: Noted",
+          "notes": [
+            {
+              "text": "Noted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "2014-10-17 10:28:40.134340",
+      "category": "CHARGE",
+      "entries": [
+        {
+          "entry_id": "2014-10-17 10:28:40.154250",
+          "charge_id": "2014-10-17 10:28:40.134340",
+          "sub_register": "C",
+          "status": "Current",
+          "sequence_number": 5,
+          "role_code": "CCHA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "CHARGE",
+          "infills": [
+            {
+              "text": "03/10/2014",
+              "date": "2014-10-03",
+              "type": "DATE"
+            }
+          ],
+          "full_text": "REGISTERED CHARGE dated 3 October 2014 to secure the moneys including the further advances therein mentioned.",
+          "entry_date": "2014-10-17",
+          "template_text": "REGISTERED CHARGE dated *CD* to secure the moneys including the further advances therein mentioned.",
+          "draft_entry_code": "CHFAD"
+        },
+        {
+          "entry_id": "2014-10-17 10:28:40.206350",
+          "charge_id": "2014-10-17 10:28:40.134340",
+          "sub_register": "C",
+          "status": "Current",
+          "sequence_number": 6,
+          "role_code": "CCHR",
+          "draft_entry_version": 2,
+          "language": "ENG",
+          "category": "CHARGE",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "address_string": "Deeds Services, 101 Midsummer Boulevard, Milton Keynes MK9 1AA",
+                      "address_type": "UK"
+                    }
+                  ],
+                  "name": {
+                    "non_private_individual_name": "Abbey National PLC"
+                  }
+                }
+              ],
+              "type": "Charge Proprietor"
+            }
+          ],
+          "full_text": "Proprietor: #ABBEY NATIONAL PLC# (Co. Regn. No. 2294747) of Deeds Services, 101 Midsummer Boulevard, Milton Keynes MK9 1AA.",
+          "entry_date": "2014-10-17",
+          "template_text": "Proprietor: #ABBEY NATIONAL PLC# (Co. Regn. No. 2294747) of Deeds Services, 101 Midsummer Boulevard, Milton Keynes MK9 1AA.",
+          "draft_entry_code": "CABBY"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-11-06",
+  "last_app_timestamp": "2014-11-06T11:09:35+00:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558641
+  ],
+  "title_number": "BD161873",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "application_reference": "MA2784E",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-05-22 15:39:52.527610",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "postcode": "LU1 1DQ",
+                "town": "Luton",
+                "address_string": "17 Kenilworth Road, Luton (LU1 1DQ)",
+                "house_no": "17",
+                "street_name": "Kenilworth Road"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being 17 Kenilworth Road, Luton (LU1 1DQ).",
+          "entry_date": "2014-05-22",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-05-22 15:39:32.607710",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "LU1 1DQ",
+                      "town": "Luton",
+                      "address_string": "17 Kenilworth Road, Luton LU1 1DQ",
+                      "house_no": "17",
+                      "address_type": "UK",
+                      "street_name": "Kenilworth Road"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Oakes",
+                    "forename": "Scott",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %SCOTT OAKES% of 17 Kenilworth Road, *Luton* LU1 1DQ.",
+          "entry_date": "2014-05-22",
+          "template_text": "PROPRIETOR: *RP*"
+        },
+        {
+          "entry_id": "2014-05-22 15:38:01.287620",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "RPPD",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "text": "01/05/2014",
+              "date": "2014-05-01",
+              "type": "DATE"
+            },
+            {
+              "text": "£100,000",
+              "type": "PRICE"
+            }
+          ],
+          "full_text": "The price stated to have been paid on 1 May 2014 was £100,000.",
+          "entry_date": "2014-05-22",
+          "template_text": "The price stated to have been paid on *DA* was *AM*.",
+          "draft_entry_code": "BK688"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-05-22",
+  "last_app_timestamp": "2014-05-22T15:16:38+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558627
+  ],
+  "title_number": "BD161870",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

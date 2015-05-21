@@ -1,0 +1,135 @@
+{
+  "application_reference": "X147KWW",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-08-22 08:55:26.604940",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "postcode": "LU1 1DQ",
+                "town": "Luton",
+                "address_string": "23 Kenilworth Road, Luton (LU1 1DQ)",
+                "house_no": "23",
+                "street_name": "Kenilworth Road"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being 23 Kenilworth Road, Luton (LU1 1DQ).",
+          "entry_date": "2014-08-22",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "REGISTER",
+      "entries": [
+        {
+          "entry_id": "2014-08-22 09:52:24.599850",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "RGRE",
+          "draft_entry_version": 2,
+          "language": "ENG",
+          "category": "REGISTER",
+          "full_text": "The land edged and numbered in green on the title plan has been removed from this title and registered under the title number or numbers shown in green on the said plan.",
+          "entry_date": "2014-08-22",
+          "template_text": "The land edged and numbered in green on the title plan has been removed from this title and registered under the title number or numbers shown in green on the said plan.",
+          "draft_entry_code": "AL140"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-08-22 08:54:17.406030",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "LU1 1DQ",
+                      "town": "Luton",
+                      "address_string": "23 Kenilworth Road, Luton LU1 1DQ",
+                      "house_no": "23",
+                      "address_type": "UK",
+                      "street_name": "Kenilworth Road"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Brown",
+                    "forename": "Dotty",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %DOTTY BROWN% of 23 Kenilworth Road, *Luton* LU1 1DQ.",
+          "entry_date": "2014-08-22",
+          "template_text": "PROPRIETOR: *RP*"
+        },
+        {
+          "entry_id": "2014-08-22 08:51:01.984780",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "RPPD",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "text": "15/08/2014",
+              "date": "2014-08-15",
+              "type": "DATE"
+            },
+            {
+              "text": "£300,000",
+              "type": "PRICE"
+            }
+          ],
+          "full_text": "The price stated to have been paid on 15 August 2014 was £300,000.",
+          "entry_date": "2014-08-22",
+          "template_text": "The price stated to have been paid on *DA* was *AM*.",
+          "draft_entry_code": "BK688"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-08-22",
+  "last_app_timestamp": "2014-08-22T09:50:53+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558633
+  ],
+  "title_number": "BD161871",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

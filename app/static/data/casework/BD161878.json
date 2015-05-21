@@ -1,0 +1,367 @@
+{
+  "application_reference": "MA27856",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-08-27 14:34:28.997240",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "postcode": "LU1 1DZ",
+                "town": "Luton",
+                "address_string": "12 Hazelbury Crescent, Luton (LU1 1DZ)",
+                "house_no": "12",
+                "street_name": "Hazelbury Crescent"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being 12 Hazelbury Crescent, Luton (LU1 1DZ).",
+          "entry_date": "2014-08-27",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "group_id": "2014-08-27 14:36:14.867100",
+      "category": "DEED",
+      "entries": [
+        {
+          "entry_id": "2014-08-27 14:36:14.998870",
+          "sub_register": "A",
+          "deeds": [
+            {
+              "parties": [
+                {
+                  "names": [
+                    {
+                      "surname": "Wright",
+                      "forename": "Edna"
+                    }
+                  ],
+                  "party_role_description": "Vendor"
+                },
+                {
+                  "names": [
+                    {
+                      "surname": "Harris",
+                      "forename": "Fred"
+                    }
+                  ],
+                  "party_role_description": "Purchaser"
+                }
+              ],
+              "date": "2014-08-01",
+              "id": "2014-08-27 14:36:14.867100",
+              "description": "Deed"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "DAEA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "DEED",
+          "infills": [
+            {
+              "text": "tinted pink",
+              "type": "EXTENT"
+            },
+            {
+              "type": "EXTENT"
+            }
+          ],
+          "full_text": "The land tinted pink has the benefit of the rights granted by the Deed dated 1 August 2014 referred to in the Charges Register.",
+          "entry_date": "2014-08-27",
+          "template_text": "The land *E<>E* has the benefit of the rights granted by the *DT**DE* dated *DD* referred to in the Charges Register.",
+          "draft_entry_code": "AE002"
+        },
+        {
+          "entry_id": "2014-08-27 14:37:45.141140",
+          "sub_register": "A",
+          "deeds": [
+            {
+              "parties": [
+                {
+                  "names": [
+                    {
+                      "surname": "Wright",
+                      "forename": "Edna"
+                    }
+                  ],
+                  "party_role_description": "Vendor"
+                },
+                {
+                  "names": [
+                    {
+                      "surname": "Harris",
+                      "forename": "Fred"
+                    }
+                  ],
+                  "party_role_description": "Purchaser"
+                }
+              ],
+              "date": "2014-08-01",
+              "id": "2014-08-27 14:36:14.867100",
+              "description": "Deed"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 3,
+          "role_code": "DAEA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "DEED",
+          "infills": [
+            {
+              "text": "with the T Mark",
+              "type": "EXTENT"
+            },
+            {
+              "type": "EXTENT"
+            }
+          ],
+          "full_text": "The land with the T Mark has the benefit of the rights granted by but is subject to the rights reserved by the Deed dated 1 August 2014 referred to in the Charges Register.",
+          "entry_date": "2014-08-27",
+          "template_text": "The land *E<>E* has the benefit of the rights granted by but is subject to the rights reserved by the *DT**DE* dated *DD* referred to in the Charges Register.",
+          "draft_entry_code": "AE010"
+        },
+        {
+          "entry_id": "2014-08-27 14:38:45.443950",
+          "sub_register": "A",
+          "deeds": [
+            {
+              "parties": [
+                {
+                  "names": [
+                    {
+                      "surname": "Wright",
+                      "forename": "Edna"
+                    }
+                  ],
+                  "party_role_description": "Vendor"
+                },
+                {
+                  "names": [
+                    {
+                      "surname": "Harris",
+                      "forename": "Fred"
+                    }
+                  ],
+                  "party_role_description": "Purchaser"
+                }
+              ],
+              "date": "2014-08-01",
+              "id": "2014-08-27 14:36:14.867100",
+              "description": "Deed"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 4,
+          "role_code": "DAEA",
+          "draft_entry_version": 2,
+          "language": "ENG",
+          "category": "DEED",
+          "infills": [
+            {
+              "text": "with the black pecked line",
+              "type": "EXTENT"
+            },
+            {
+              "text": "of the land in this title and other land",
+              "type": "EXTENT"
+            }
+          ],
+          "full_text": "The land with the black pecked line has the benefit of the rights granted by but is subject to the rights reserved by a Deed of the land in this title and other land dated 1 August 2014 made between (1) Edna Wright (Vendor) and (2) Fred Harris (Purchaser).\r\r¬NOTE: Copy filed.",
+          "entry_date": "2014-08-27",
+          "template_text": "The land *E<>E* has the benefit of the rights granted by but is subject to the rights reserved by a *DT**DE* dated *DD* made between *DP*.\r\r*N<¬NOTE: Copy filed>N*.",
+          "notes": [
+            {
+              "text": "Copy filed",
+              "font": "I"
+            }
+          ],
+          "draft_entry_code": "AE009"
+        },
+        {
+          "entry_id": "2014-08-27 14:40:05.521690",
+          "sub_register": "C",
+          "deeds": [
+            {
+              "parties": [
+                {
+                  "names": [
+                    {
+                      "surname": "Wright",
+                      "forename": "Edna"
+                    }
+                  ],
+                  "party_role_description": "Vendor"
+                },
+                {
+                  "names": [
+                    {
+                      "surname": "Harris",
+                      "forename": "Fred"
+                    }
+                  ],
+                  "party_role_description": "Purchaser"
+                }
+              ],
+              "date": "2014-08-01",
+              "id": "2014-08-27 14:36:14.867100",
+              "description": "Deed"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "DCEA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "DEED",
+          "infills": [
+            {
+              "text": "hatched blue",
+              "type": "EXTENT"
+            },
+            {
+              "text": "reserved by"
+            },
+            {
+              "type": "EXTENT"
+            }
+          ],
+          "full_text": "The land hatched blue is subject to the rights reserved by the Deed dated 1 August 2014 referred to above.",
+          "entry_date": "2014-08-27",
+          "template_text": "The land *E<>E* is subject to the rights *M<>M* the *DT**DE* dated *DD* referred to above.",
+          "draft_entry_code": "CF662"
+        },
+        {
+          "entry_id": "2014-08-27 14:41:07.783530",
+          "sub_register": "C",
+          "deeds": [
+            {
+              "parties": [
+                {
+                  "names": [
+                    {
+                      "surname": "Wright",
+                      "forename": "Edna"
+                    }
+                  ],
+                  "party_role_description": "Vendor"
+                },
+                {
+                  "names": [
+                    {
+                      "surname": "Harris",
+                      "forename": "Fred"
+                    }
+                  ],
+                  "party_role_description": "Purchaser"
+                }
+              ],
+              "date": "2014-08-01",
+              "id": "2014-08-27 14:36:14.867100",
+              "description": "Deed"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "DCEA",
+          "draft_entry_version": 2,
+          "language": "ENG",
+          "category": "DEED",
+          "infills": [
+            {
+              "text": "lettered A in blue",
+              "type": "EXTENT"
+            },
+            {
+              "text": "reserved by"
+            },
+            {
+              "text": "of the land in this title and other land",
+              "type": "EXTENT"
+            }
+          ],
+          "full_text": "The land lettered A in blue is subject to the rights reserved by a Deed of the land in this title and other land dated 1 August 2014 made between (1) Edna Wright (Vendor) and (2) Fred Harris (Purchaser).\r\r¬NOTE: Copy filed.",
+          "entry_date": "2014-08-27",
+          "template_text": "The land *E<>E* is subject to the rights *M<>M* a *DT**DE* dated *DD* made between *DP*.\r\r*N<¬NOTE: Copy filed>N*.",
+          "notes": [
+            {
+              "text": "Copy filed",
+              "font": "I"
+            }
+          ],
+          "draft_entry_code": "CF664"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-08-27 14:33:54.052180",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "BA1 2GH",
+                      "town": "Bath",
+                      "address_string": "35 Bicton Walk, Bath BA1 2GH",
+                      "house_no": "35",
+                      "address_type": "UK",
+                      "street_name": "Bicton Walk"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Wood",
+                    "forename": "Alan",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %ALAN WOOD% of 35 Bicton Walk, *Bath* BA1 2GH.",
+          "entry_date": "2014-08-27",
+          "template_text": "PROPRIETOR: *RP*"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-08-27",
+  "last_app_timestamp": "2014-08-27T13:35:46+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558674
+  ],
+  "title_number": "BD161878",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

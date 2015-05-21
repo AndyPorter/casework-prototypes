@@ -1,0 +1,379 @@
+{
+  "application_reference": "U948KWW",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-08-27 15:06:29.925060",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "postcode": "LU1 1DZ",
+                "town": "Luton",
+                "address_string": "14 Hazelbury Crescent, Luton (LU1 1DZ)",
+                "house_no": "14",
+                "street_name": "Hazelbury Crescent"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being 14 Hazelbury Crescent, Luton (LU1 1DZ).",
+          "entry_date": "2014-08-27",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "group_id": "2014-08-27 15:11:27.754850",
+      "category": "DEED",
+      "entries": [
+        {
+          "entry_id": "2014-08-27 15:11:28.063860",
+          "sub_register": "A",
+          "deeds": [
+            {
+              "parties": [
+                {
+                  "names": [
+                    {
+                      "surname": "Brown",
+                      "forename": "Emma"
+                    }
+                  ],
+                  "party_role_description": "Vendor"
+                },
+                {
+                  "names": [
+                    {
+                      "surname": "Smith",
+                      "forename": "Dave"
+                    }
+                  ],
+                  "party_role_description": "Purchaser"
+                }
+              ],
+              "date": "1955-05-01",
+              "id": "2014-08-27 15:11:27.754850",
+              "description": "Conveyance"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "DAEA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "DEED",
+          "infills": [
+            {
+              "text": "tinted pink",
+              "type": "EXTENT"
+            },
+            {
+              "type": "EXTENT"
+            }
+          ],
+          "full_text": "The land tinted pink has the benefit of the rights granted by the Conveyance dated 1 May 1955 referred to in the Charges Register.",
+          "entry_date": "2014-08-27",
+          "template_text": "The land *E<>E* has the benefit of the rights granted by the *DT**DE* dated *DD* referred to in the Charges Register.",
+          "draft_entry_code": "AE002"
+        },
+        {
+          "entry_id": "2014-08-27 15:11:46.641050",
+          "sub_register": "A",
+          "deeds": [
+            {
+              "parties": [
+                {
+                  "names": [
+                    {
+                      "surname": "Brown",
+                      "forename": "Emma"
+                    }
+                  ],
+                  "party_role_description": "Vendor"
+                },
+                {
+                  "names": [
+                    {
+                      "surname": "Smith",
+                      "forename": "Dave"
+                    }
+                  ],
+                  "party_role_description": "Purchaser"
+                }
+              ],
+              "date": "1955-05-01",
+              "id": "2014-08-27 15:11:27.754850",
+              "description": "Conveyance"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 3,
+          "role_code": "DAEA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "DEED",
+          "infills": [
+            {
+              "text": "lettered A in mauve",
+              "type": "EXTENT"
+            },
+            {
+              "type": "EXTENT"
+            }
+          ],
+          "full_text": "The land lettered A in mauve has the benefit of the rights granted by but is subject to the rights reserved by the Conveyance dated 1 May 1955 referred to in the Charges Register.",
+          "entry_date": "2014-08-27",
+          "template_text": "The land *E<>E* has the benefit of the rights granted by but is subject to the rights reserved by the *DT**DE* dated *DD* referred to in the Charges Register.",
+          "draft_entry_code": "AE010"
+        },
+        {
+          "entry_id": "2014-08-27 15:12:05.100720",
+          "sub_register": "A",
+          "deeds": [
+            {
+              "parties": [
+                {
+                  "names": [
+                    {
+                      "surname": "Brown",
+                      "forename": "Emma"
+                    }
+                  ],
+                  "party_role_description": "Vendor"
+                },
+                {
+                  "names": [
+                    {
+                      "surname": "Smith",
+                      "forename": "Dave"
+                    }
+                  ],
+                  "party_role_description": "Purchaser"
+                }
+              ],
+              "date": "1955-05-01",
+              "id": "2014-08-27 15:11:27.754850",
+              "description": "Conveyance"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 4,
+          "role_code": "DAEA",
+          "draft_entry_version": 2,
+          "language": "ENG",
+          "category": "DEED",
+          "infills": [
+            {
+              "text": "shown as a black broken line",
+              "type": "EXTENT"
+            },
+            {
+              "text": "of the land in this title and other land",
+              "type": "EXTENT"
+            }
+          ],
+          "full_text": "The land shown as a black broken line has the benefit of the rights granted by but is subject to the rights reserved by a Conveyance of the land in this title and other land dated 1 May 1955 made between (1) Emma Brown (Vendor) and (2) Dave Smith (Purchaser).\r\r¬NOTE: Copy filed.",
+          "entry_date": "2014-08-27",
+          "template_text": "The land *E<>E* has the benefit of the rights granted by but is subject to the rights reserved by a *DT**DE* dated *DD* made between *DP*.\r\r*N<¬NOTE: Copy filed>N*.",
+          "notes": [
+            {
+              "text": "Copy filed",
+              "font": "I"
+            }
+          ],
+          "draft_entry_code": "AE009"
+        },
+        {
+          "entry_id": "2014-08-27 15:12:31.881890",
+          "sub_register": "C",
+          "deeds": [
+            {
+              "parties": [
+                {
+                  "names": [
+                    {
+                      "surname": "Brown",
+                      "forename": "Emma"
+                    }
+                  ],
+                  "party_role_description": "Vendor"
+                },
+                {
+                  "names": [
+                    {
+                      "surname": "Smith",
+                      "forename": "Dave"
+                    }
+                  ],
+                  "party_role_description": "Purchaser"
+                }
+              ],
+              "date": "1955-05-01",
+              "id": "2014-08-27 15:11:27.754850",
+              "description": "Conveyance"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "DCEA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "DEED",
+          "infills": [
+            {
+              "text": "hatched blue",
+              "type": "EXTENT"
+            },
+            {
+              "text": "reserved by"
+            },
+            {
+              "type": "EXTENT"
+            }
+          ],
+          "full_text": "The land hatched blue is subject to the rights reserved by the Conveyance dated 1 May 1955 referred to above.",
+          "entry_date": "2014-08-27",
+          "template_text": "The land *E<>E* is subject to the rights *M<>M* the *DT**DE* dated *DD* referred to above.",
+          "draft_entry_code": "CF662"
+        },
+        {
+          "entry_id": "2014-08-27 15:12:59.644860",
+          "sub_register": "C",
+          "deeds": [
+            {
+              "parties": [
+                {
+                  "names": [
+                    {
+                      "surname": "Brown",
+                      "forename": "Emma"
+                    }
+                  ],
+                  "party_role_description": "Vendor"
+                },
+                {
+                  "names": [
+                    {
+                      "surname": "Smith",
+                      "forename": "Dave"
+                    }
+                  ],
+                  "party_role_description": "Purchaser"
+                }
+              ],
+              "date": "1955-05-01",
+              "id": "2014-08-27 15:11:27.754850",
+              "description": "Conveyance"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "DCEA",
+          "draft_entry_version": 2,
+          "language": "ENG",
+          "category": "DEED",
+          "infills": [
+            {
+              "text": "with a T mark",
+              "type": "EXTENT"
+            },
+            {
+              "text": "ontained in"
+            },
+            {
+              "text": "of the land in this title and other land",
+              "type": "EXTENT"
+            }
+          ],
+          "full_text": "The land with a T mark is subject to the rights ontained in a Conveyance of the land in this title and other land dated 1 May 1955 made between (1) Emma Brown (Vendor) and (2) Dave Smith (Purchaser).\r\r¬NOTE: Copy filed.",
+          "entry_date": "2014-08-27",
+          "template_text": "The land *E<>E* is subject to the rights *M<>M* a *DT**DE* dated *DD* made between *DP*.\r\r*N<¬NOTE: Copy filed>N*.",
+          "notes": [
+            {
+              "text": "Copy filed",
+              "font": "I"
+            }
+          ],
+          "draft_entry_code": "CF664"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-11-03 11:47:57.585640",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "PL1 1AA",
+                      "town": "Plymouth",
+                      "address_string": "1 Fore Street, Plymouth PL1 1AA",
+                      "house_no": "1",
+                      "address_type": "UK",
+                      "street_name": "Fore Street"
+                    }
+                  ],
+                  "name": {
+                    "alias_names": [
+                      {
+                        "upper_override": true,
+                        "surname": "builder",
+                        "title": "miss",
+                        "decoration": "obe",
+                        "forename": "brenda"
+                      }
+                    ],
+                    "surname": "buiilder",
+                    "decoration": "mbe",
+                    "forename": "bob",
+                    "name_category": "PRIVATE INDIVIDUAL",
+                    "title": "mr",
+                    "auto_uppercase_override": true
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %(mr) bob buiilder (mbe)% also known as %(MISS) BRENDA BUILDER (OBE)% of 1 Fore Street, *Plymouth* PL1 1AA.",
+          "entry_date": "2014-11-03",
+          "template_text": "PROPRIETOR: *RP*"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-11-03",
+  "last_app_timestamp": "2014-11-03T11:43:27+00:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558676
+  ],
+  "title_number": "BD161879",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

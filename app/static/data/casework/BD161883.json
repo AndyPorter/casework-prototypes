@@ -1,0 +1,135 @@
+{
+  "application_reference": "MA2785E",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-09-02 13:58:30.657000",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "postcode": "LU1 1DQ",
+                "town": "Luton",
+                "address_string": "29 Kenilworth Road, Luton (LU1 1DQ)",
+                "house_no": "29",
+                "street_name": "Kenilworth Road"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being 29 Kenilworth Road, Luton (LU1 1DQ).",
+          "entry_date": "2014-09-02",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "REGISTER",
+      "entries": [
+        {
+          "entry_id": "2014-09-02 14:43:17.534840",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "RGRE",
+          "draft_entry_version": 2,
+          "language": "ENG",
+          "category": "REGISTER",
+          "full_text": "The land edged and numbered in green on the title plan has been removed from this title and registered under the title number or numbers shown in green on the said plan.",
+          "entry_date": "2014-09-02",
+          "template_text": "The land edged and numbered in green on the title plan has been removed from this title and registered under the title number or numbers shown in green on the said plan.",
+          "draft_entry_code": "AL140"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-09-02 13:57:53.151740",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "PL10 1EA",
+                      "town": "Plymouth",
+                      "address_string": "The White House, Looe Street, Plymouth PL10 1EA",
+                      "address_type": "UK",
+                      "street_name": "Looe Street",
+                      "house_description": "The White House"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Felgate",
+                    "forename": "Lily",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %LILY FELGATE% of The White House, Looe Street, *Plymouth* PL10 1EA.",
+          "entry_date": "2014-09-02",
+          "template_text": "PROPRIETOR: *RP*"
+        },
+        {
+          "entry_id": "2014-09-02 13:58:08.226170",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "RPPD",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "text": "01/09/2014",
+              "date": "2014-09-01",
+              "type": "DATE"
+            },
+            {
+              "text": "£215,000",
+              "type": "PRICE"
+            }
+          ],
+          "full_text": "The value stated as at 1 September 2014 was £215,000.",
+          "entry_date": "2014-09-02",
+          "template_text": "The value stated as at *DA* was *AM*.",
+          "draft_entry_code": "BK483"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-09-02",
+  "last_app_timestamp": "2014-09-02T14:14:54+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558639
+  ],
+  "title_number": "BD161883",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

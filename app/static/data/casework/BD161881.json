@@ -1,0 +1,213 @@
+{
+  "application_reference": "MA27859",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-08-28 11:32:40.937890",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "postcode": "LU1 1DZ",
+                "town": "Luton",
+                "address_string": "19 Hazelbury Crescent, Luton (LU1 1DZ)",
+                "house_no": "19",
+                "street_name": "Hazelbury Crescent"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being 19 Hazelbury Crescent, Luton (LU1 1DZ).",
+          "entry_date": "2014-08-28",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "group_id": "2014-08-28 11:31:54.790010",
+      "category": "DEED",
+      "entries": [
+        {
+          "entry_id": "2014-08-28 11:32:09.154360",
+          "sub_register": "A",
+          "deeds": [
+            {
+              "date": "1950-05-01",
+              "id": "2014-08-28 11:31:54.790010",
+              "description": "Conveyance"
+            }
+          ],
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "DAEA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "DEED",
+          "infills": [
+            {
+              "text": "tinted brown",
+              "type": "EXTENT"
+            },
+            {
+              "type": "EXTENT"
+            }
+          ],
+          "full_text": "The land tinted brown has the benefit of the rights granted by but is subject to the rights reserved by the Conveyance dated 1 May 1950 referred to in the Charges Register.",
+          "entry_date": "2014-08-28",
+          "template_text": "The land *E<>E* has the benefit of the rights granted by but is subject to the rights reserved by the *DT**DE* dated *DD* referred to in the Charges Register.",
+          "draft_entry_code": "AE010"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-08-28 11:34:01.095920",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "PL10 1EA",
+                      "town": "Plymouth",
+                      "address_string": "The White House, Looe Street, Plymouth PL10 1EA",
+                      "address_type": "UK",
+                      "street_name": "Looe Street",
+                      "house_description": "The White House"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Wisp",
+                    "forename": "Willow The",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %WILLOW THE WISP% of The White House, Looe Street, *Plymouth* PL10 1EA.",
+          "entry_date": "2014-08-28",
+          "template_text": "PROPRIETOR: *RP*"
+        },
+        {
+          "entry_id": "2014-08-28 11:34:01.345580",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "RPPD",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "text": "02/07/2014",
+              "date": "2014-07-02",
+              "type": "DATE"
+            },
+            {
+              "text": "£205,000",
+              "type": "PRICE"
+            }
+          ],
+          "full_text": "The value stated as at 2 July 2014 was £205,000.",
+          "entry_date": "2014-08-28",
+          "template_text": "The value stated as at *DA* was *AM*.",
+          "draft_entry_code": "BK483"
+        }
+      ]
+    },
+    {
+      "group_id": "2014-08-28 11:30:29.879730",
+      "category": "CHARGE",
+      "entries": [
+        {
+          "entry_id": "2014-08-28 11:30:29.931120",
+          "charge_id": "2014-08-28 11:30:29.879730",
+          "sub_register": "C",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "CCHA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "CHARGE",
+          "infills": [
+            {
+              "text": "02/07/2014",
+              "date": "2014-07-02",
+              "type": "DATE"
+            }
+          ],
+          "full_text": "REGISTERED CHARGE dated 2 July 2014.",
+          "entry_date": "2014-08-28",
+          "template_text": "REGISTERED CHARGE dated *CD*.",
+          "draft_entry_code": "CD100"
+        },
+        {
+          "entry_id": "2014-08-28 11:30:30.004190",
+          "charge_id": "2014-08-28 11:30:29.879730",
+          "sub_register": "C",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "CCHR",
+          "draft_entry_version": 2,
+          "language": "ENG",
+          "category": "CHARGE",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "address_string": "Deeds Services, 101 Midsummer Boulevard, Milton Keynes MK9 1AA",
+                      "address_type": "UK"
+                    }
+                  ],
+                  "name": {
+                    "non_private_individual_name": "Abbey National PLC"
+                  }
+                }
+              ],
+              "type": "Charge Proprietor"
+            }
+          ],
+          "full_text": "Proprietor: #ABBEY NATIONAL PLC# (Co. Regn. No. 2294747) of Deeds Services, 101 Midsummer Boulevard, Milton Keynes MK9 1AA.",
+          "entry_date": "2014-08-28",
+          "template_text": "Proprietor: #ABBEY NATIONAL PLC# (Co. Regn. No. 2294747) of Deeds Services, 101 Midsummer Boulevard, Milton Keynes MK9 1AA.",
+          "draft_entry_code": "CABBY"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-08-28",
+  "last_app_timestamp": "2014-08-28T11:28:17+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558681
+  ],
+  "title_number": "BD161881",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}
