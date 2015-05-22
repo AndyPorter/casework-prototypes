@@ -52,6 +52,11 @@ def casework_case(case_id):
   data = json.load(json_data)
   return render_template('casework/case.html', data=data)
 
+@app.route('/cases-sor/<case_id>')
+def casework_case_sor(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework/case-sor.html', regData=regData)
 
 # ---------------------------------------------------------------------------
 #hackday 
