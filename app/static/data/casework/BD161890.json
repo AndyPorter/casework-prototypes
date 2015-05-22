@@ -1,0 +1,109 @@
+{
+  "application_reference": "MA27863",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-09-03 15:44:05.208200",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "town": "Luton",
+                "leading_info": "Land at",
+                "address_string": "Land at Blow's Down, Luton",
+                "house_description": "Blow's Down"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being Land at Blow's Down, Luton.",
+          "entry_date": "2014-09-03",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "REGISTER",
+      "entries": [
+        {
+          "entry_id": "2014-09-03 15:54:45.065530",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "RGRE",
+          "draft_entry_version": 2,
+          "language": "ENG",
+          "category": "REGISTER",
+          "full_text": "The land edged and numbered in green on the title plan has been removed from this title and registered under the title number or numbers shown in green on the said plan.",
+          "entry_date": "2014-09-03",
+          "template_text": "The land edged and numbered in green on the title plan has been removed from this title and registered under the title number or numbers shown in green on the said plan.",
+          "draft_entry_code": "AL140"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-09-03 15:43:45.789170",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "P10 1EA",
+                      "town": "Plymouth",
+                      "address_string": "10 Looe Street, Plymouth P10 1EA",
+                      "house_no": "10",
+                      "address_type": "UK",
+                      "street_name": "Looe Street"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Black",
+                    "forename": "Shelby",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %SHELBY BLACK% of 10 Looe Street, *Plymouth* P10 1EA.",
+          "entry_date": "2014-09-03",
+          "template_text": "PROPRIETOR: *RP*"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-09-03",
+  "last_app_timestamp": "2014-09-03T15:46:45+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558732
+  ],
+  "title_number": "BD161890",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

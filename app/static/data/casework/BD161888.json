@@ -1,0 +1,90 @@
+{
+  "application_reference": "MA27860",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-09-03 12:48:56.964430",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "town": "Luton",
+                "leading_info": "Land at",
+                "address_string": "Land at Thirty Wood, Luton",
+                "house_description": "Thirty Wood"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being Land at Thirty Wood, Luton.",
+          "entry_date": "2014-09-03",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-09-03 12:48:41.027070",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "PL10 1EA",
+                      "town": "Plymouth",
+                      "address_string": "2 Whitehall, Plymouth PL10 1EA",
+                      "house_no": "2",
+                      "address_type": "UK",
+                      "street_name": "Whitehall"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Aplin",
+                    "forename": "Elizabeth",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %ELIZABETH APLIN% of 2 Whitehall, *Plymouth* PL10 1EA.",
+          "entry_date": "2014-09-03",
+          "template_text": "PROPRIETOR: *RP*"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-09-03",
+  "last_app_timestamp": "2014-09-03T12:37:35+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558730
+  ],
+  "title_number": "BD161888",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

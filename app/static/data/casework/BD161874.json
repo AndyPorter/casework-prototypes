@@ -1,0 +1,177 @@
+{
+  "application_reference": "MA27852",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-08-22 13:46:58.104310",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "postcode": "LU1 1DZ",
+                "town": "Luton",
+                "address_string": "6 Hazelbury Crescent, Luton (LU1 1DZ)",
+                "house_no": "6",
+                "street_name": "Hazelbury Crescent"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being 6 Hazelbury Crescent, Luton (LU1 1DZ).",
+          "entry_date": "2014-08-22",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-08-22 13:46:21.551950",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "LU1 1DZ",
+                      "town": "Luton",
+                      "address_string": "6 Hazelbury Crescent, Luton LU1 1DZ",
+                      "house_no": "6",
+                      "address_type": "UK",
+                      "street_name": "Hazelbury Crescent"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Berkeley",
+                    "forename": "Alice",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %ALICE BERKELEY% of 6 Hazelbury Crescent, *Luton* LU1 1DZ.",
+          "entry_date": "2014-08-22",
+          "template_text": "PROPRIETOR: *RP*"
+        },
+        {
+          "entry_id": "2014-08-22 13:41:38.315010",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "RPPD",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "text": "08/08/2014",
+              "date": "2014-08-08",
+              "type": "DATE"
+            },
+            {
+              "text": "£200,000",
+              "type": "PRICE"
+            }
+          ],
+          "full_text": "The price stated to have been paid on 8 August 2014 was £200,000.",
+          "entry_date": "2014-08-22",
+          "template_text": "The price stated to have been paid on *DA* was *AM*.",
+          "draft_entry_code": "BK688"
+        }
+      ]
+    },
+    {
+      "group_id": "2014-08-22 13:44:21.848640",
+      "category": "CHARGE",
+      "entries": [
+        {
+          "entry_id": "2014-08-22 13:44:21.916360",
+          "charge_id": "2014-08-22 13:44:21.848640",
+          "sub_register": "C",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "CCHA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "CHARGE",
+          "infills": [
+            {
+              "text": "15/08/2014",
+              "date": "2014-08-15",
+              "type": "DATE"
+            }
+          ],
+          "full_text": "REGISTERED CHARGE dated 15 August 2014.",
+          "entry_date": "2014-08-22",
+          "template_text": "REGISTERED CHARGE dated *CD*.",
+          "draft_entry_code": "CD100"
+        },
+        {
+          "entry_id": "2014-08-22 13:44:22.187420",
+          "charge_id": "2014-08-22 13:44:21.848640",
+          "sub_register": "C",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "CCHR",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "CHARGE",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "address_string": "Metropolitan House, Darkes Lane, Potters Bar, Herts. EN6 1AJ",
+                      "address_type": "UK"
+                    }
+                  ],
+                  "name": {
+                    "non_private_individual_name": "ACFC Corporate Finance Limited"
+                  }
+                }
+              ],
+              "type": "Charge Proprietor"
+            }
+          ],
+          "full_text": "Proprietor: #ACFC CORPORATE FINANCE LIMITED# (Co. Regn. No. 2054103) of Metropolitan House, Darkes Lane, Potters Bar, Herts. EN6 1AJ.",
+          "entry_date": "2014-08-22",
+          "template_text": "Proprietor: #ACFC CORPORATE FINANCE LIMITED# (Co. Regn. No. 2054103) of Metropolitan House, Darkes Lane, Potters Bar, Herts. EN6 1AJ.",
+          "draft_entry_code": "CACFC"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-08-22",
+  "last_app_timestamp": "2014-08-22T13:30:07+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558668
+  ],
+  "title_number": "BD161874",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

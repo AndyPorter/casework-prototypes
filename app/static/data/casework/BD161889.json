@@ -1,0 +1,90 @@
+{
+  "application_reference": "MA27861",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-09-03 13:23:30.945140",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "town": "Luton",
+                "leading_info": "Land at",
+                "address_string": "Land at Grove Spring, Luton",
+                "house_description": "Grove Spring"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being Land at Grove Spring, Luton.",
+          "entry_date": "2014-09-03",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-09-03 13:23:18.167490",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "PL10 1EA",
+                      "town": "Plymouth",
+                      "local_name": "Stoke",
+                      "address_string": "The White House, Stoke, Plymouth PL10 1EA",
+                      "address_type": "UK",
+                      "house_description": "The White House"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Armstrong",
+                    "forename": "Kelly",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %KELLY ARMSTRONG% of The White House, Stoke, *Plymouth* PL10 1EA.",
+          "entry_date": "2014-09-03",
+          "template_text": "PROPRIETOR: *RP*"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-09-03",
+  "last_app_timestamp": "2014-09-03T13:18:11+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558731
+  ],
+  "title_number": "BD161889",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

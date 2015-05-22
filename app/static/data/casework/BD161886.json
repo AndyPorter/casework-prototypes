@@ -1,0 +1,117 @@
+{
+  "application_reference": "MA2785E",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-09-02 14:20:18.417140",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "postcode": "LU1 1DQ",
+                "town": "Luton",
+                "leading_info": "Land adjoining",
+                "address_string": "Land adjoining 29 Kenilworth Road, Luton (LU1 1DQ)",
+                "house_no": "29",
+                "street_name": "Kenilworth Road"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being Land adjoining 29 Kenilworth Road, Luton (LU1 1DQ).",
+          "entry_date": "2014-09-02",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-09-02 14:19:28.348070",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "PL1 5DD",
+                      "town": "Plymouth",
+                      "address_string": "Flower Cottage, Notte Street, Plymouth PL1 5DD",
+                      "address_type": "UK",
+                      "street_name": "Notte Street",
+                      "house_description": "Flower Cottage"
+                    }
+                  ],
+                  "name": {
+                    "surname": "White",
+                    "forename": "Emma",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %EMMA WHITE% of Flower Cottage, Notte Street, *Plymouth* PL1 5DD.",
+          "entry_date": "2014-09-02",
+          "template_text": "PROPRIETOR: *RP*"
+        },
+        {
+          "entry_id": "2014-09-02 14:19:52.489080",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "RPPD",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "text": "02/09/2014",
+              "date": "2014-09-02",
+              "type": "DATE"
+            },
+            {
+              "text": "£10,000",
+              "type": "PRICE"
+            }
+          ],
+          "full_text": "The price stated to have been paid on 2 September 2014 was £10,000.",
+          "entry_date": "2014-09-02",
+          "template_text": "The price stated to have been paid on *DA* was *AM*.",
+          "draft_entry_code": "BK688"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-09-02",
+  "last_app_timestamp": "2014-09-02T14:14:54+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558728
+  ],
+  "title_number": "BD161886",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "case": {
+    "application" : {
+      "titleNumber": "DN1",
+      "applicationReference": "LR0001",
+      "mortgageDate": "1997-02-13T00:00:01Z",
+      "lenderName": "GE Money Home Finance Limited",
+      "borrowerName": "same as the proprietor?",
+      "feeData" : "£5",
+      "mortgageRef" : "digital-MD123",
+      "propertyDetails" : "should be the same as the existing property details?",
+      "applicantDetails" : "conveyancer? lender?",
+      "dateReceived": "1997-02-13T00:00:01Z"
+    },
+    "entries": [
+      {
+        "type": "charge",
+        "date": "1997-02-13T12:00:00Z",
+        "text": "REGISTERED CHARGE dated 13 February 1997.",
+        "status" : "proposed"
+      },
+      {
+        "type": "charge proprietor",
+        "date": "1997-02-13T12:00:00Z",
+        "text": "Proprietor: GE Money Home Finance Limited (Co. Regn. No. 592986) of Building 4, Hatters Lane, Croxley Green Business Park, Watford WD18 8YF",
+        "status" : "proposed"
+      }
+    ]
+
+  }
+}

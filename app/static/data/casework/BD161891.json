@@ -1,0 +1,89 @@
+{
+  "application_reference": "MA27863",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-09-03 15:50:55.193160",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "town": "Luton",
+                "leading_info": "Land lying to the south of",
+                "address_string": "Land lying to the south of Blow's Down, Luton",
+                "house_description": "Blow's Down"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being Land lying to the south of Blow's Down, Luton.",
+          "entry_date": "2014-09-03",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-09-03 15:50:35.643690",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "PL1 1DD",
+                      "town": "Plymouth",
+                      "address_string": "Crewe Farm, Plymouth PL1 1DD",
+                      "address_type": "UK",
+                      "house_description": "Crewe Farm"
+                    }
+                  ],
+                  "name": {
+                    "surname": "White",
+                    "forename": "William",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %WILLIAM WHITE% of Crewe Farm, *Plymouth* PL1 1DD.",
+          "entry_date": "2014-09-03",
+          "template_text": "PROPRIETOR: *RP*"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-09-03",
+  "last_app_timestamp": "2014-09-03T15:46:45+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558733
+  ],
+  "title_number": "BD161891",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "application_reference": "MA2785F",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-09-03 12:01:54.446990",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "town": "Luton",
+                "leading_info": "Land at",
+                "address_string": "Land at Bush Wood, Luton",
+                "house_description": "Bush Wood"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being Land at Bush Wood, Luton.",
+          "entry_date": "2014-09-03",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-09-03 11:56:32.675490",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "PL10 1EA",
+                      "town": "Plymouth",
+                      "address_string": "Watchet Farm, Silver Road, Plymouth PL10 1EA",
+                      "address_type": "UK",
+                      "street_name": "Silver Road",
+                      "house_description": "Watchet Farm"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Mcnee",
+                    "forename": "Billy",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %BILLY MCNEE% of Watchet Farm, Silver Road, *Plymouth* PL10 1EA.",
+          "entry_date": "2014-09-03",
+          "template_text": "PROPRIETOR: *RP*"
+        }
+      ]
+    },
+    {
+      "category": "REGISTER",
+      "entries": [
+        {
+          "entry_id": "2014-09-03 12:04:02.814300",
+          "sub_register": "C",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RCEA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "REGISTER",
+          "full_text": "The land is subject to rights of drainage and rights in respect of water, gas and electricity supply services.",
+          "entry_date": "2014-09-03",
+          "template_text": "The land is subject to rights of drainage and rights in respect of water, gas and electricity supply services.",
+          "draft_entry_code": "CF676"
+        },
+        {
+          "entry_id": "2014-09-03 12:04:02.847220",
+          "sub_register": "C",
+          "status": "Current",
+          "sequence_number": 2,
+          "role_code": "RCEA",
+          "draft_entry_version": 1,
+          "language": "ENG",
+          "category": "REGISTER",
+          "infills": [
+            {
+              "text": "The land tinted blue on the title plan"
+            }
+          ],
+          "full_text": "The land tinted blue on the title plan is subject to rights of way.",
+          "entry_date": "2014-09-03",
+          "template_text": "*M<>M* is subject to rights of way.",
+          "draft_entry_code": "CF420"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-09-03",
+  "last_app_timestamp": "2014-09-03T11:49:22+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558729
+  ],
+  "title_number": "BD161887",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}

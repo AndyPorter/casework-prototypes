@@ -42,13 +42,13 @@ def hackday():
 # Just display a basic list - 
 @app.route('/cases')
 def casework_case_list():
-  json_data=open('app/static/data/casework-cases.json', "r")
+  json_data=open('app/static/data/casework/cases.json', "r")
   data = json.load(json_data)
   return render_template('casework/case-list.html', data=data)
 
 @app.route('/cases/<case_id>')
 def casework_case(case_id):
-  json_data=open('app/static/data/casework-' + case_id + '.json', "r")
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
   data = json.load(json_data)
   return render_template('casework/case.html', data=data)
 

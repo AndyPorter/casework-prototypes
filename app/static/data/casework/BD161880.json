@@ -1,0 +1,91 @@
+{
+  "application_reference": "MA27858",
+  "groups": [
+    {
+      "category": "PROPERTY",
+      "entries": [
+        {
+          "entry_id": "2014-08-27 15:25:38.667880",
+          "sub_register": "A",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RDES",
+          "language": "ENG",
+          "category": "PROPERTY",
+          "infills": [
+            {
+              "address": {
+                "postcode": "LU1 1DZ",
+                "town": "Luton",
+                "address_string": "18 Hazelbury Crescent, Luton (LU1 1DZ)",
+                "house_no": "18",
+                "street_name": "Hazelbury Crescent"
+              },
+              "type": "Address"
+            }
+          ],
+          "full_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being 18 Hazelbury Crescent, Luton (LU1 1DZ).",
+          "entry_date": "2014-08-27",
+          "template_text": "The Freehold land shown edged with red on the plan of the above title filed at the Registry and being *AD*"
+        }
+      ]
+    },
+    {
+      "category": "OWNERSHIP",
+      "entries": [
+        {
+          "entry_id": "2014-08-27 15:25:12.788230",
+          "sub_register": "B",
+          "status": "Current",
+          "sequence_number": 1,
+          "role_code": "RPRO",
+          "language": "ENG",
+          "category": "OWNERSHIP",
+          "infills": [
+            {
+              "proprietors": [
+                {
+                  "addresses": [
+                    {
+                      "postcode": "PL1 2DW",
+                      "town": "Plymouth",
+                      "address_string": "125 Basil Row, Plymouth PL1 2DW",
+                      "house_no": "125",
+                      "address_type": "UK",
+                      "street_name": "Basil Row"
+                    }
+                  ],
+                  "name": {
+                    "surname": "Wood",
+                    "forename": "Alan",
+                    "name_category": "PRIVATE INDIVIDUAL"
+                  }
+                }
+              ],
+              "type": "Proprietor"
+            }
+          ],
+          "full_text": "PROPRIETOR: %ALAN WOOD% of 125 Basil Row, *Plymouth* PL1 2DW.",
+          "entry_date": "2014-08-27",
+          "template_text": "PROPRIETOR: *RP*"
+        }
+      ]
+    }
+  ],
+  "edition_date": "2014-08-27",
+  "last_app_timestamp": "2014-08-27T15:17:12+01:00",
+  "filed_plan_format": "VECTOR",
+  "class": "Absolute",
+  "tenure": "Freehold",
+  "closure_status": "OPEN",
+  "uprns": [
+    1068558680
+  ],
+  "title_number": "BD161880",
+  "dlr": "Peterborough Office",
+  "districts": [
+    {
+      "name": "LUTON"
+    }
+  ]
+}
