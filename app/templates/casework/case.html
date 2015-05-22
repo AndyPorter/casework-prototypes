@@ -7,7 +7,7 @@ Case
 {% endblock %}
 
 {% block head %}
-  <link href="{{ prototypes_asset_path }}stylesheets/transfer.css" media="screen" rel="stylesheet" type="text/css">
+
 {% endblock %}
   
 {% block content %}
@@ -18,25 +18,34 @@ Case
 
     <div class="inner-block">
 
-      <h1 class="heading-large">Case reference {{ data.case.applicationReference }} </h1>
+      <h1 class="heading-large">Case reference {{ data.case.application.applicationReference }} </h1>
 
-      <table class="casework-dashboard">
-        <thead>
-          <tr>
-            <th scope="col">Title No</th>
-            <th scope="col">Received ▼</th>
 
-          </tr>
-        </thead>
-        <tbody>
+      <h2>Application data</h2>
+      <ul>   
+        <li>application Ref: {{ data.case.application.applicationReference }}</li>
+        <li>applicant Details: {{ data.case.application.applicantDetails }}</li>
+        <li>property Details: {{ data.case.application.propertyDetails }}</li>
+        <li>borrower: {{ data.case.application.borrowerName }}</li>
+        <li>mortgage Ref: {{ data.case.application.mortgageRef }}</li>
+        <li>lender: {{ data.case.application.lenderName }}</li>
+        <li>mortgage Date: {{ data.case.application.mortgageDate }}</li>
+        
+        <li>fee: {{ data.case.application.feeData }}</li>
+        <li>title No: {{ data.case.application.titleNumber }}</li>
+        <li>received: {{ data.case.application.dateReceived }}</li>
+      </ul>
 
-          <tr>
-            <td>{{ data.case.titleNumber }}</td>
-            <td>{{ data.case.dateReceived }}</td>
-          </tr>
+      <h2>Register data</h2>
+      {% for entry in data.case.entries %}
+      <ul>
+      <li>type: {{ entry.type }}</li>
+      <li>date: {{ entry.date }}</li>
+      <li>text: {{ entry.text }}</li>
+      <li>status: {{ entry.status }}</li>
+      </ul>
+      {% endfor %}
 
-        </tbody>
-      </table>
 
       <p><a href="/cases">worklist</a></p>
 
