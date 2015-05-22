@@ -1,0 +1,103 @@
+{% extends "global/casework_prototypes_base.html" %}
+
+{% block page_title %}
+
+Case
+
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/transfer.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    <div class="inner-block">
+
+      <h1 class="heading-large">Title Register {{ regData.title_number }} </h1>
+
+      <div class="grid-row">
+      <div class="column-half">
+
+  <!--       <h2>Register data</h2>
+        {% for subReg in regData.groups %}
+        <h3>{{ subReg.category }}</h3>
+          {% for entry in subReg.entries %}
+          <ul>
+          <li>sub reg: {{ entry.sub_register }}</li>
+          <li>sequence_number: {{ entry.sequence_number }}</li>
+          <li>entry text (full): {{ entry.full_text }}</li>
+          </ul>
+          {% endfor %}
+        {% endfor %} -->
+
+
+<!-- if these exist -->
+        <h2>A</h2>
+        <ol class="list-number">
+        {% for subReg in regData.groups %}
+          {% for entry in subReg.entries %}
+            {% if entry.sub_register == "A" %}          
+  <!--             <li>sequence_number: {{ entry.sequence_number }}</li> -->
+              <li>{{ entry.full_text }}</li>
+            {% endif %} 
+          {% endfor %}
+        {% endfor %}
+        </ol>
+
+<!-- if these exist -->
+        <h2>B</h2>
+        <ol class="list-number">
+        {% for subReg in regData.groups %}
+          {% for entry in subReg.entries %}
+            {% if entry.sub_register == "B" %}                   
+  <!--             <li>sequence_number: {{ entry.sequence_number }}</li> -->
+              <li>{{ entry.full_text }}</li>          
+            {% endif %} 
+          {% endfor %}
+        {% endfor %}
+        </ol>
+
+<!-- if these exist -->
+        <h2>C</h2>
+        <ol class="list-number">
+        {% for subReg in regData.groups %}
+          {% for entry in subReg.entries %}
+            {% if entry.sub_register == "C" %}
+  <!--             <li>sequence_number: {{ entry.sequence_number }}</li> -->
+              <li>{{ entry.full_text }}</li>
+            {% endif %} 
+          {% endfor %}
+        {% endfor %}
+        </ol>
+
+
+<!-- if these exist, and do them per sub register - not this hack -->
+        <h2>other stuff - L, S, W</h2>
+        <ol class="list-number">
+        {% for subReg in regData.groups %}
+          {% for entry in subReg.entries %}
+            {% if not entry.sub_register in ("A", "B", "C") %} 
+              <li>sub reg: {{ entry.sub_register }}, sequence_number: {{ entry.sequence_number }}, {{ entry.full_text }}</li>
+            {% endif %} 
+          {% endfor %}
+        {% endfor %}
+        </ol>
+
+      </div>
+      <div class="column-half">&nbsp;</div>
+      </div>
+
+      <p><a href="/cases">worklist</a></p>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}
