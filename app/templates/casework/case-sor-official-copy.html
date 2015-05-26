@@ -7,10 +7,10 @@ Case
 {% endblock %}
 
 {% block head %}
-  <link href="{{ prototypes_asset_path }}stylesheets/transfer.css" media="screen" rel="stylesheet" type="text/css">
 
   <link href="{{ prototypes_asset_path }}stylesheets/govuk-elements.css" media="screen" rel="stylesheet" type="text/css" />
 
+  <link href="{{ prototypes_asset_path }}stylesheets/casework-shame.css" media="screen" rel="stylesheet" type="text/css">
 
 {% endblock %}
   
@@ -25,7 +25,9 @@ Case
 
       <div class="grid-row">
 
-        <div class="column-quarter">&nbsp;</div>
+        <div class="column-quarter">
+          &nbsp;
+        </div>
 
         <div class="column-half">
 
@@ -95,12 +97,14 @@ Case
           </ol>
 
         </div>
-        
-        <div class="column-quarter">&nbsp;</div>
+
+        <div class="column-quarter">
+          <p><a href="/cases-sor-grouped/{{ regData.title_number }}">group view</a></p>
+          <p><a href="/cases">worklist</a></p>
+        </div>
 
       </div>
 
-      <p><a href="/cases">worklist</a></p>
 
   </div>
 

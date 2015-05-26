@@ -52,11 +52,19 @@ def casework_case(case_id):
   data = json.load(json_data)
   return render_template('casework/case.html', data=data)
 
-@app.route('/cases-sor/<case_id>')
-def casework_case_sor(case_id):
+# register views - official copy (legal / traditional); grouped (Deed, charge, ownership, property,
+# unitlateral notices, register/general)
+@app.route('/cases-sor-official-copy/<case_id>')
+def casework_case_sor_official_copy(case_id):
   json_data=open('app/static/data/casework/' + case_id + '.json', "r")
   regData = json.load(json_data)
-  return render_template('casework/case-sor.html', regData=regData)
+  return render_template('casework/case-sor-official-copy.html', regData=regData)
+
+@app.route('/cases-sor-grouped/<case_id>')
+def casework_case_sor_grouped(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework/case-sor-grouped.html', regData=regData)
 
 # ---------------------------------------------------------------------------
 #hackday 
