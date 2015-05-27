@@ -107,7 +107,7 @@ Case
           <h2 class="heading-medium">Unilateral Notices</h2>
           <ol class="list-number">
           {% for subReg in regData.groups %}
-            {% if subReg.category == "UNILATERAL NOTICE" %}
+            {% if subReg.category == "UNILATERAL" %}
               {% for entry in subReg.entries %}      
                 <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
               {% endfor %}
@@ -119,7 +119,7 @@ Case
           <h2 class="heading-medium">erk!</h2>
           <ol class="list-number">
           {% for subReg in regData.groups %}
-            {% if not subReg.category in ("CHARGE", "PROPERTY", "OWNERSHIP", "DEED", "REGISTER", "UNILATERAL NOTICE") %}
+            {% if not subReg.category in ("CHARGE", "PROPERTY", "OWNERSHIP", "DEED", "REGISTER", "UNILATERAL") %}
               {% for entry in subReg.entries %}      
                 <li><em>Grouping: {{ regData.groups }}</em><br/> {{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
               {% endfor %}
