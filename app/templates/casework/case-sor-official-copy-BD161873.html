@@ -28,12 +28,16 @@ Case
       <div class="grid-row">
 
         <div class="column-quarter">
-          <h2 class="heading-medium">Application/Task</h2>
-          <h3 class="heading-small">application info</h3>
-          <p><span class="help-link" id="application-info-link">mortgage application DM0001</span> from <a href="">Coldpress solicitors</a> on behalf of <a href="">GE Money</a></p>
+<!--           <h2 class="heading-medium">Application/Task</h2> -->
+          <h3 class="heading-medium">application</h3>
+          <p><span class="help-link" id="application-info-link">mortgage application DM0001</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of <a href="">GE Money</a></p>
 
           <div class="help-text" id="application-info-text">
              {% include "casework/partials/_application-section-73.html" %}
+          </div>
+
+          <div class="help-text" id="applicant-info-text">
+             {% include "casework/partials/_applicant-section-73.html" %}
           </div>
 
 
@@ -46,8 +50,13 @@ Case
           </div>
 
 
-          <h3 class="heading-small">tasks to do</h3>
-          <p><em class="needs-approval">i</em> <a href="#proposed-entries">2 entries</a> need your approval</p>
+          <h3 class="heading-small">tasks</h3>
+          <p><em id="approval-task" class="needs-approval">i</em> <span id="entry-updated"><a href="#proposed-entries">2 entries</a> need your approval</span></p>
+
+          <div id="complete-application">
+            <button id="update-register">complete application</button>
+          </div>
+
         </div>
 
 
@@ -105,9 +114,11 @@ Case
               {% endif %} 
             {% endfor %}
           {% endfor %}
-          <h3 class="heading-small"><a id="proposed-entries">proposed entries</a></h3>
-          <li class="needs-attention">REGISTERED CHARGE dated 13 August 2015.</li>
-          <li class="needs-attention">Proprietor: #GE MONEY HOME FINANCE LIMITED# (Co. Regn. No. 592986) of Building 4, Hatters Lane, Croxley Green Business Park, Watford WD18 8YF.</li>
+
+          <!-- <h3 class="heading-small"><a id="proposed-entries">proposed entries</a></h3> -->
+          {% include "casework/partials/_charge-entry-73-1.html" %}
+          {% include "casework/partials/_charge-entry-73-2.html" %}
+
           </ol>
 
 
@@ -127,6 +138,9 @@ Case
 
         <div class="column-quarter">
           <p><a href="/cases">worklist</a></p>
+            {% include "casework/partials/_case-history-section-73.html" %}
+
+            {% include "casework/partials/_help-section-73.html" %}
         </div>
 
       </div>
@@ -149,6 +163,17 @@ $( "div#application-info-text" ).click(function() {
 </script>
 
 <script>
+$( "span#applicant-info-link" ).click(function() {
+  $( "div#applicant-info-text" ).toggle();
+});
+</script>
+<script>
+$( "div#applicant-info-text" ).click(function() {
+  $( "div#applicant-info-text" ).hide();
+});
+</script>
+
+<script>
 $( "span#priority-info-link" ).click(function() {
   $( "div#priority-info-text" ).toggle();
 });
@@ -156,6 +181,39 @@ $( "span#priority-info-link" ).click(function() {
 <script>
 $( "div#priority-info-text" ).click(function() {
   $( "div#priority-info-text" ).hide();
+});
+</script>
+
+<!-- entry functions -->
+<script>
+$( "li#entry-approve-link-1" ).click(function() {
+  $( "div#entry-approve-editor-1" ).toggle();
+});
+</script>
+<script>
+$( "button#accept-entry-1" ).click(function() {
+  $( "div#entry-approve-editor-1" ).hide();
+  $( "span#entry-updated").html( "<a href='#proposed-entries'>1 entry</a> needs your approval" );
+  $( "li#entry-approve-link-1" ).removeClass( "needs-approval" );
+  $( "li#entry-approve-link-1" ).addClass( "is-approved" );
+});
+</script>
+
+<script>
+$( "li#entry-approve-link-2" ).click(function() {
+  $( "div#entry-approve-editor-2" ).toggle();
+});
+</script>
+<script>
+$( "button#accept-entry-2" ).click(function() {
+  $( "div#entry-approve-editor-2" ).hide();
+  $( "span#entry-updated").html( "<a href='#proposed-entries'>all entries</a> approved" );
+  $( "li#entry-approve-link-2" ).removeClass( "needs-approval" );
+  $( "li#entry-approve-link-2" ).addClass( "is-approved" );
+  $( "em#approval-task" ).html( "&#10003;" );
+  $( "em#approval-task" ).removeClass( "needs-approval" );
+  $( "em#approval-task" ).addClass( "is-approved" );
+  $( "div#complete-application" ).show();
 });
 </script>
 

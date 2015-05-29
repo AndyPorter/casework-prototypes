@@ -4247,9 +4247,17 @@ em.needs-approval, em.needs-attention {
   background-color: #56c7c7;
 }
 
+.is-approved {
+  background-color: #6aa121;
+}
+
 .help-link {
   cursor: pointer;
   color: #005ea5;
+}
+
+.clickable {
+  cursor:pointer;
 }
 
 .help-text{
@@ -4269,5 +4277,33 @@ em.needs-approval, em.needs-attention {
   float: right;
 }
 
+.case-history ul{
+  font-size: 80%;
+}
+
+
+.help-feedback ul{
+  font-size: 80%;
+}
+
+.entry-editor {
+  background-color: #B2D1FF;
+  display:block;
+  padding: 5px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+button.accept-entry {
+  font-size: 100%;
+}
+
+#complete-application {
+  display: none;
+}
+
+button#update-register {
+  font-size: 120%;
+}
 
 
