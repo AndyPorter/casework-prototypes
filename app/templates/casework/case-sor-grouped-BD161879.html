@@ -28,13 +28,13 @@ Case
         <div class="column-quarter">
           <h2 class="heading-medium">Application/Task</h2>
           <h3 class="heading-small">application info</h3>
-          <p><a href="">Digital mortgage application</a> from <a href="">Coldpress solicitors</a> on behalf of <a href="">GE Money</a></p>
+          <p><a href="">mortgage application DM0023</a> from <a href="">Coldpress solicitors</a> on behalf of <a href="">GE Money</a></p>
           <h3 class="heading-small">can i proceed?</h3>
-          <p><em class="can-proceed">&#10003;</em> No other applications against this title (daylist clear)</p>
-<!--           <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
-          <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
+<!--           <p><em class="can-proceed">&#10003;</em> No other applications against this title (daylist clear)</p> -->
+          <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
+<!--           <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
           <h3 class="heading-small">tasks to do</h3>
-          <p><em class="needs-attention">i</em> 2 entries need your approval</p>
+          <p><em class="needs-approval">i</em> <a href="#proposed-entries">2 entries</a> need your approval</p>
         </div>
 
         <div class="column-half">
@@ -58,10 +58,11 @@ Case
           {% for subReg in regData.groups %}
             {% if subReg.category == "CHARGE" %}
               {% for entry in subReg.entries %}      
-                <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+                <li>{{ entry.full_text }}</li>
               {% endfor %}
             {% endif %}
           {% endfor %}
+          <h3 class="visuallyhidden"><a id="proposed-entries">proposed entries</a></h3>
           <li class="needs-attention">REGISTERED CHARGE dated 13 August 2007.</li>
           <li class="needs-attention">Proprietor: #GE MONEY HOME FINANCE LIMITED# (Co. Regn. No. 592986) of Building 4, Hatters Lane, Croxley Green Business Park, Watford WD18 8YF.</li>
           </ol>
@@ -72,7 +73,7 @@ Case
           {% for subReg in regData.groups %}
             {% if subReg.category == "PROPERTY" %}
               {% for entry in subReg.entries %}      
-                <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+                <li>{{ entry.full_text }}</li>
               {% endfor %}
             {% endif %}
           {% endfor %}
@@ -84,7 +85,7 @@ Case
           {% for subReg in regData.groups %}
             {% if subReg.category == "OWNERSHIP" %}
               {% for entry in subReg.entries %}      
-                <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+                <li>{{ entry.full_text }}</li>
               {% endfor %}
             {% endif %}
           {% endfor %}
@@ -96,7 +97,7 @@ Case
           {% for subReg in regData.groups %}
             {% if subReg.category == "DEED" %}
               {% for entry in subReg.entries %}      
-                <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+                <li>{{ entry.full_text }}</li>
               {% endfor %}
             {% endif %}
           {% endfor %}
@@ -108,7 +109,7 @@ Case
           {% for subReg in regData.groups %}
             {% if subReg.category == "REGISTER" %}
               {% for entry in subReg.entries %}      
-                <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+                <li>{{ entry.full_text }}</li>
               {% endfor %}
             {% endif %}
           {% endfor %}
@@ -120,7 +121,7 @@ Case
           {% for subReg in regData.groups %}
             {% if subReg.category == "UNILATERAL" %}
               {% for entry in subReg.entries %}      
-                <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+                <li>{{ entry.full_text }}</li>
               {% endfor %}
             {% endif %}
           {% endfor %}
@@ -132,7 +133,7 @@ Case
           {% for subReg in regData.groups %}
             {% if not subReg.category in ("CHARGE", "PROPERTY", "OWNERSHIP", "DEED", "REGISTER", "UNILATERAL") %}
               {% for entry in subReg.entries %}      
-                <li><em>Grouping: {{ regData.groups }}</em><br/> {{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+                <li><em>Grouping: {{ regData.groups }}</em><br/> {{ entry.full_text }}</li>
               {% endfor %}
             {% endif %}
           {% endfor %}
@@ -142,7 +143,7 @@ Case
         </div>
         
         <div class="column-quarter">         
-          <p><a href="/cases-sor-official-copy/{{ regData.title_number }}">official copy view</a></p>
+          <p><a href="/official-copy/{{ regData.title_number }}">official copy view</a></p>
           <p><a href="/cases">worklist</a></p>
         </div>
 

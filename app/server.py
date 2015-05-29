@@ -66,6 +66,22 @@ def casework_case_sor_grouped(case_id):
   regData = json.load(json_data)
   return render_template('casework/case-sor-grouped.html', regData=regData)
 
+# specific hard-coded pages - showing different states of case being processed
+# DM0001 = BD161873
+# DM0023 = BD161879
+# DM0017 = BD161882
+@app.route('/official-copy/<case_id>')
+def casework_case_official_copy(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework/case-sor-official-copy-' + case_id + '.html', regData=regData)
+
+@app.route('/grouped/<case_id>')
+def casework_case_grouped_(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework/case-sor-grouped-' + case_id + '.html', regData=regData)
+
 # ---------------------------------------------------------------------------
 #hackday 
 @app.route('/hackday/land-ownership-record')

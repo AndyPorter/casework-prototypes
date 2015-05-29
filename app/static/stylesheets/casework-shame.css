@@ -4220,3 +4220,54 @@ input[type="radio"]:checked ~ .dec-trust__hidden {
   color: #6f777b;
 }
 
+.can-proceed {
+  font-weight: 800;
+  background-color: #6aa121;
+  padding: 0 5px;
+}
+
+.cannot-proceed {
+  font-weight: 800;
+  background-color: #f62817;
+  padding: 0 5px;
+}
+
+.maybe-proceed {
+  font-weight: 800;
+  background-color: #ffdb58;
+  padding: 0 5px;
+}
+
+em.needs-approval, em.needs-attention {
+  font-weight: 800;
+  padding: 0 5px;
+}
+
+.needs-approval, .needs-attention {
+  background-color: #56c7c7;
+}
+
+.help-link {
+  cursor: pointer;
+  color: #005ea5;
+}
+
+.help-text{
+  display: inline-block;
+  color: #404040;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0.26316em;
+  display: none;
+  font-size: 80%;
+}
+
+.heading-link a {
+  color: #005ea5;;
+  font-weight: 400;
+  text-decoration: none;
+  float: right;
+}
+
+
+

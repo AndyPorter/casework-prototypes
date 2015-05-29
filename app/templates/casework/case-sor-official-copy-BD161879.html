@@ -28,13 +28,15 @@ Case
         <div class="column-quarter">
           <h2 class="heading-medium">Application/Task</h2>
           <h3 class="heading-small">application info</h3>
-          <p><a href="">Digital mortgage application DM0001</a> from <a href="">Coldpress solicitors</a> on behalf of <a href="">GE Money</a></p>
+          <p><a href="">mortgage application DM0023</a> from <a href="">Coldpress solicitors</a> on behalf of <a href="">GE Money</a></p>
           <h3 class="heading-small">can i proceed?</h3>
-          <p><em class="can-proceed">&#10003;</em> No other applications against this title (daylist clear)</p>
-<!--           <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
-          <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
+<!--           <p><em class="can-proceed">&#10003;</em> No other applications against this title (daylist clear)</p> -->
+          <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
+<!--           <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
           <h3 class="heading-small">tasks to do</h3>
           <p><em class="needs-approval">i</em> <a href="#proposed-entries">2 entries</a> need your approval</p>
+
+
         </div>
 
         <div class="column-half">
@@ -91,6 +93,7 @@ Case
               {% endif %} 
             {% endfor %}
           {% endfor %}
+          <h3 class="visuallyhidden"><a id="proposed-entries">proposed entries</a></h3>
           <li class="needs-attention">REGISTERED CHARGE dated 13 August 2007.</li>
           <li class="needs-attention">Proprietor: #GE MONEY HOME FINANCE LIMITED# (Co. Regn. No. 592986) of Building 4, Hatters Lane, Croxley Green Business Park, Watford WD18 8YF.</li>
           </ol>
@@ -111,7 +114,7 @@ Case
         </div>
 
         <div class="column-quarter">
-          <p><a href="/cases-sor-grouped/{{ regData.title_number }}">group view</a></p>
+          <p><a href="/grouped/{{ regData.title_number }}">group view</a></p>
           <p><a href="/cases">worklist</a></p>
         </div>
 
