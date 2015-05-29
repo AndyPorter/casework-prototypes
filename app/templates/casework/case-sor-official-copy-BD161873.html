@@ -12,6 +12,8 @@ Case
 
   <link href="{{ prototypes_asset_path }}stylesheets/casework-shame.css" media="screen" rel="stylesheet" type="text/css">
 
+  <script src="{{ prototypes_asset_path }}javascripts/vendor/jquery-2.1.4.min.js"></script>
+
 {% endblock %}
   
 {% block content %}
@@ -28,18 +30,30 @@ Case
         <div class="column-quarter">
           <h2 class="heading-medium">Application/Task</h2>
           <h3 class="heading-small">application info</h3>
-          <p><a href="">Digital mortgage application DM0001</a> from <a href="">Coldpress solicitors</a> on behalf of <a href="">GE Money</a></p>
+          <p><span class="help-link" id="application-info-link">mortgage application DM0001</span> from <a href="">Coldpress solicitors</a> on behalf of <a href="">GE Money</a></p>
+
+          <div class="help-text" id="application-info-text">
+             {% include "casework/partials/_application-section-73.html" %}
+          </div>
+
+
           <h3 class="heading-small">can i proceed?</h3>
-          <p><em class="can-proceed">&#10003;</em> No other applications against this title (daylist clear)</p>
+          <p><em class="can-proceed">&#10003;</em> <span class="help-link" id="priority-info-link">No prior applications</span> on this title</p>
 <!--           <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
           <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
+          <div class="help-text" id="priority-info-text">
+             {% include "casework/partials/_application-priority-section-73.html" %}
+          </div>
+
+
           <h3 class="heading-small">tasks to do</h3>
           <p><em class="needs-approval">i</em> <a href="#proposed-entries">2 entries</a> need your approval</p>
         </div>
 
+
         <div class="column-half">
 
-          <h2 class="heading-medium">Title Register {{ regData.title_number }}</h2>
+          <h2 class="heading-medium">Title Register {{ regData.title_number }}<span class="heading-small heading-link"><a href="/grouped/{{ regData.title_number }}">group view</a></span></h2>
 
     <!--       <h2>Register data</h2>
           {% for subReg in regData.groups %}
@@ -91,7 +105,8 @@ Case
               {% endif %} 
             {% endfor %}
           {% endfor %}
-          <li class="needs-attention">REGISTERED CHARGE dated 13 August 2007.</li>
+          <h3 class="heading-small"><a id="proposed-entries">proposed entries</a></h3>
+          <li class="needs-attention">REGISTERED CHARGE dated 13 August 2015.</li>
           <li class="needs-attention">Proprietor: #GE MONEY HOME FINANCE LIMITED# (Co. Regn. No. 592986) of Building 4, Hatters Lane, Croxley Green Business Park, Watford WD18 8YF.</li>
           </ol>
 
@@ -111,7 +126,6 @@ Case
         </div>
 
         <div class="column-quarter">
-          <p><a href="/cases-sor-grouped/{{ regData.title_number }}">group view</a></p>
           <p><a href="/cases">worklist</a></p>
         </div>
 
@@ -121,5 +135,29 @@ Case
   </div>
 
 </main>
+
+
+<script>
+$( "span#application-info-link" ).click(function() {
+  $( "div#application-info-text" ).toggle();
+});
+</script>
+<script>
+$( "div#application-info-text" ).click(function() {
+  $( "div#application-info-text" ).hide();
+});
+</script>
+
+<script>
+$( "span#priority-info-link" ).click(function() {
+  $( "div#priority-info-text" ).toggle();
+});
+</script>
+<script>
+$( "div#priority-info-text" ).click(function() {
+  $( "div#priority-info-text" ).hide();
+});
+</script>
+
 
 {% endblock %}
