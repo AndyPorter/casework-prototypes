@@ -29,6 +29,7 @@ Case
 
         <div class="column-quarter">
 <!--           <h2 class="heading-medium">Application/Task</h2> -->
+        <section class="js-stick-at-top-when-scrolling">
           <h2 class="heading-medium">application</h2>
           <p><span class="help-link" id="application-info-link">mortgage application DM0001</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of <a href="">GE Money</a></p>
 
@@ -56,6 +57,8 @@ Case
           <div id="complete-application">
             <button id="update-register">complete application</button>
           </div>
+
+        </section>
 
         </div>
 
@@ -85,6 +88,7 @@ Case
             {% endif %}
           {% endfor %}
 
+          <h3 class="heading-small visuallyhidden"><a id="proposed-entries">proposed entries</a></h3>
           {% include "casework/partials/_charge-entry-73-1.html" %}
           {% include "casework/partials/_charge-entry-73-2.html" %}
           </ol>
@@ -171,6 +175,8 @@ Case
 
             {% include "casework/partials/_help-section-73.html" %}
 
+            {% include "casework/partials/_system-help-section-73.html" %}
+
         </div>
 
       </div>
@@ -246,5 +252,7 @@ $( "button#accept-entry-2" ).click(function() {
   $( "div#complete-application" ).show();
 });
 </script>
+
+<script src="{{ prototypes_asset_path }}javascripts/stick-at-top-when-scrolling.js"></script>
 
 {% endblock %}
