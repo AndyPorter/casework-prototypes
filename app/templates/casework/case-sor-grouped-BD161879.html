@@ -12,6 +12,8 @@ Case
 
   <link href="{{ prototypes_asset_path }}stylesheets/casework-shame.css" media="screen" rel="stylesheet" type="text/css">
 
+  <script src="{{ prototypes_asset_path }}javascripts/vendor/jquery-2.1.4.min.js"></script>
+
 {% endblock %}
   
 {% block content %}
@@ -26,15 +28,38 @@ Case
       <div class="grid-row">
 
         <div class="column-quarter">
-          <h2 class="heading-medium">Application/Task</h2>
-          <h3 class="heading-small">application info</h3>
-          <p><a href="">mortgage application DM0023</a> from <a href="">Coldpress solicitors</a> on behalf of <a href="">GE Money</a></p>
-          <h3 class="heading-small">can i proceed?</h3>
-<!--           <p><em class="can-proceed">&#10003;</em> No other applications against this title (daylist clear)</p> -->
-          <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
-<!--           <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
-          <h3 class="heading-small">tasks to do</h3>
-          <p><em class="needs-approval">i</em> <a href="#proposed-entries">2 entries</a> need your approval</p>
+<!--           <h2 class="heading-medium">Application/Task</h2> -->
+        <section class="js-stick-at-top-when-scrolling">
+          <h2 class="heading-medium">application</h2>
+          <p><span class="help-link" id="application-info-link">mortgage application DM0001</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of <a href="">GE Money</a></p>
+
+          <div class="help-text" id="application-info-text">
+             {% include "casework/partials/_application-section-79.html" %}
+          </div>
+
+          <div class="help-text" id="applicant-info-text">
+             {% include "casework/partials/_applicant-section-79.html" %}
+          </div>
+
+
+            <h3 class="heading-small">can i proceed?</h3>
+<!--             <p><em class="can-proceed">&#10003;</em> <span class="help-link" id="priority-info-link">No prior applications</span> on this title</p> -->
+            <p><em class="maybe-proceed">?</em> <span class="help-link" id="priority-info-link">2 other prior applications</span> but you may still be able to process this application</p>
+<!--             <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
+            <div class="help-text" id="priority-info-text">
+               {% include "casework/partials/_application-priority-section-79.html" %}
+            </div>
+
+
+          <h3 class="heading-small">tasks</h3>
+          <p><em id="approval-task" class="needs-approval">i</em> <span id="entry-updated"><a href="#proposed-entries">2 entries</a> need your approval</span></p>
+
+          <div id="complete-application">
+            {% include "casework/partials/_complete-application-79.html" %}
+          </div>
+
+        </section>
+
         </div>
 
         <div class="column-half">
@@ -51,7 +76,7 @@ Case
 
           <hr> -->
 
-          <h2 class="heading-medium">Title Register {{ regData.title_number }}</h2>
+          <h2 class="heading-medium">Title Register {{ regData.title_number }}<span class="heading-small heading-link"><a href="/official-copy/{{ regData.title_number }}">statutory view</a></span></h2>
   <!-- if these exist -->
           <h2 class="heading-medium">Charges</h2>
           <ol class="list-number">
@@ -62,9 +87,10 @@ Case
               {% endfor %}
             {% endif %}
           {% endfor %}
-          <h3 class="visuallyhidden"><a id="proposed-entries">proposed entries</a></h3>
-          <li class="needs-attention">REGISTERED CHARGE dated 13 August 2007.</li>
-          <li class="needs-attention">Proprietor: #GE MONEY HOME FINANCE LIMITED# (Co. Regn. No. 592986) of Building 4, Hatters Lane, Croxley Green Business Park, Watford WD18 8YF.</li>
+
+          <h3 class="heading-small visuallyhidden"><a id="proposed-entries">proposed entries</a></h3>
+          {% include "casework/partials/_charge-entry-73-1.html" %}
+          {% include "casework/partials/_charge-entry-73-2.html" %}
           </ol>
 
   <!-- if these exist -->
@@ -143,8 +169,14 @@ Case
         </div>
         
         <div class="column-quarter">         
-          <p><a href="/official-copy/{{ regData.title_number }}">official copy view</a></p>
           <p><a href="/cases">worklist</a></p>
+
+            {% include "casework/partials/_case-history-section-73.html" %}
+
+            {% include "casework/partials/_help-section-73.html" %}
+
+            {% include "casework/partials/_system-help-section-73.html" %}
+
         </div>
 
       </div>
@@ -154,5 +186,73 @@ Case
   </div>
 
 </main>
+
+<script>
+$( "span#application-info-link" ).click(function() {
+  $( "div#application-info-text" ).toggle();
+});
+</script>
+<script>
+$( "div#application-info-text" ).click(function() {
+  $( "div#application-info-text" ).hide();
+});
+</script>
+
+<script>
+$( "span#applicant-info-link" ).click(function() {
+  $( "div#applicant-info-text" ).toggle();
+});
+</script>
+<script>
+$( "div#applicant-info-text" ).click(function() {
+  $( "div#applicant-info-text" ).hide();
+});
+</script>
+
+<script>
+$( "span#priority-info-link" ).click(function() {
+  $( "div#priority-info-text" ).toggle();
+});
+</script>
+<script>
+$( "div#priority-info-text" ).click(function() {
+  $( "div#priority-info-text" ).hide();
+});
+</script>
+
+<!-- entry functions -->
+<script>
+$( "li#entry-approve-link-1" ).click(function() {
+  $( "div#entry-approve-editor-1" ).toggle();
+});
+</script>
+<script>
+$( "button#accept-entry-1" ).click(function() {
+  $( "div#entry-approve-editor-1" ).hide();
+  $( "span#entry-updated").html( "<a href='#proposed-entries'>1 entry</a> needs your approval" );
+  $( "li#entry-approve-link-1" ).removeClass( "needs-approval" );
+  $( "li#entry-approve-link-1" ).addClass( "is-approved" );
+});
+</script>
+
+<script>
+$( "li#entry-approve-link-2" ).click(function() {
+  $( "div#entry-approve-editor-2" ).toggle();
+});
+</script>
+<script>
+$( "button#accept-entry-2" ).click(function() {
+  $( "div#entry-approve-editor-2" ).hide();
+  $( "span#entry-updated").html( "<a href='#proposed-entries'>all entries</a> approved" );
+  $( "li#entry-approve-link-2" ).removeClass( "needs-approval" );
+  $( "li#entry-approve-link-2" ).addClass( "is-approved" );
+  $( "em#approval-task" ).html( "&#10003;" );
+  $( "em#approval-task" ).removeClass( "needs-approval" );
+  $( "em#approval-task" ).addClass( "is-approved" );
+  $( "div#complete-application" ).show();
+});
+</script>
+
+<script src="{{ prototypes_asset_path }}javascripts/stick-at-top-when-scrolling.js"></script>
 
 {% endblock %}

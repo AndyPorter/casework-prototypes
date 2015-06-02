@@ -31,31 +31,31 @@ Case
 <!--           <h2 class="heading-medium">Application/Task</h2> -->
         <section class="js-stick-at-top-when-scrolling">
           <h2 class="heading-medium">application</h2>
-          <p><span class="help-link" id="application-info-link">mortgage application DM0001</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of <a href="">GE Money</a></p>
+          <p><span class="help-link" id="application-info-link">mortgage application DM0017</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of <a href="">GE Money</a></p>
 
           <div class="help-text" id="application-info-text">
-             {% include "casework/partials/_application-section-73.html" %}
+             {% include "casework/partials/_application-section-82.html" %}
           </div>
 
           <div class="help-text" id="applicant-info-text">
-             {% include "casework/partials/_applicant-section-73.html" %}
+             {% include "casework/partials/_applicant-section-82.html" %}
           </div>
 
 
-          <h3 class="heading-small">can i proceed?</h3>
-          <p><em class="can-proceed">&#10003;</em> <span class="help-link" id="priority-info-link">No prior applications</span> on this title</p>
-<!--           <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
-          <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
-          <div class="help-text" id="priority-info-text">
-             {% include "casework/partials/_application-priority-section-73.html" %}
-          </div>
+            <h3 class="heading-small">can i proceed?</h3>
+<!--             <p><em class="can-proceed">&#10003;</em> <span class="help-link" id="priority-info-link">No prior applications</span> on this title</p> -->
+<!--             <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p> -->
+            <p><em class="cannot-proceed">&#10008;</em> There is <span class="help-link" id="priority-info-link">a prior application</span> you cannot process this application</p>
+            <div class="help-text" id="priority-info-text">
+               {% include "casework/partials/_application-priority-section-82.html" %}
+            </div>
 
 
           <h3 class="heading-small">tasks</h3>
-          <p><em id="approval-task" class="needs-approval">i</em> <span id="entry-updated"><a href="#proposed-entries">2 entries</a> need your approval</span></p>
+          <p><em id="approval-task" class="needs-approval">i</em> <span id="entry-updated"><a href="#proposed-entries">2 entries</a> have been auto-drafted</span></p>
 
           <div id="complete-application">
-            {% include "casework/partials/_complete-application-73.html" %}
+            <button id="update-register">complete application</button>
           </div>
 
         </section>
@@ -89,8 +89,8 @@ Case
           {% endfor %}
 
           <h3 class="heading-small visuallyhidden"><a id="proposed-entries">proposed entries</a></h3>
-          {% include "casework/partials/_charge-entry-73-1.html" %}
-          {% include "casework/partials/_charge-entry-73-2.html" %}
+          {% include "casework/partials/_charge-entry-82-1.html" %}
+          {% include "casework/partials/_charge-entry-82-2.html" %}
           </ol>
 
   <!-- if these exist -->
