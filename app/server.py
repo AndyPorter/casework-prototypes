@@ -83,6 +83,22 @@ def casework_case_grouped_(case_id):
   return render_template('casework/case-sor-grouped-' + case_id + '.html', regData=regData)
 
 
+#search
+@app.route('/cases/search')
+def casework_case_search():
+  return render_template('casework/search.html')
+
+#performance
+@app.route('/performance')
+def casework_performance():
+  return render_template('casework/performance.html')
+
+#bugs = performance
+@app.route('/bugs')
+def casework_bugs():
+  return render_template('casework/performance.html')
+
+
 #  system of record json viewer
 @app.route('/json-reg/<case_id>')
 def casework_case_json_reg_(case_id):

@@ -1,0 +1,102 @@
+{% extends "global/casework_prototypes_base.html" %}
+
+{% block page_title %}
+
+Search results
+
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/govuk-elements.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <link href="{{ prototypes_asset_path }}stylesheets/casework-shame.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large">search results</h1>
+        
+        <p>To Do: make this page look like results :)</p>
+
+        <h2 class="heading-small">in progress</h2>
+        <table class="casework-dashboard">
+          <thead>
+            <tr>
+              <th scope="col">Reference</th>
+              <th scope="col">Title No</th>
+              <th scope="col">Status</th>
+              <th scope="col">Received</th>
+
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="summary">
+              <td width="30%"><a href="/official-copy/BD161873"><b>digital mortgage DM0144</b></a></td>
+              <td width="20%">BD161873 | &#10003;</td>
+              <td width="30%">you are working on it</td>
+              <td width="20%">21 May 2015 12:23</td>
+            </tr>
+
+
+            <tr class="summary">
+              <td><a href="/official-copy/BD161882"><b>digital mortgage DM0017</b></a></td>
+              <td>BD161882</td>
+              <td>Case broken - dev team investigating - expected fix: tomorrow</td>
+              <td>3 June 2015 9:43</td>
+            </tr>
+
+
+          </tbody>
+        </table>
+
+
+        <h2 class="heading-small">completed</h2>
+        <table class="casework-dashboard-completed">
+          <thead>
+            <tr>
+              <th scope="col">Reference</th>
+              <th scope="col">Title No</th>
+              <th scope="col">Status</th>
+              <th scope="col">Received</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr class="summary">
+              <td width="30%"><a href="/official-copy/BD161879"><b>digital mortgage DM0428</b></a></td>
+              <td width="30%">BD161879</td>
+              <td width="40%">you completed on 7 April 2015</td>
+              <td>&nbsp;</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="column-third">
+        <h2 class="heading-medium">Search guide</h2>
+        <p>you can search for anything: works best with case number; application ref (ours or applicants); search by lender, applicant (solicitor), </p>
+
+        <p>will show results for open and closed cases</p>
+        <p>perhaps filter on open/closed cases, or other options</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

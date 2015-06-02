@@ -3562,7 +3562,7 @@ nav ol, nav ul {
     overflow: hidden;
     text-indent: -5000px;
     background-color: #005ea5;
-    background-image: url("/static/build/images/search-button.png");
+    background-image: url("/static/images/search-button.png");
     background-repeat: no-repeat;
     background-position: 0 50%;
   }
@@ -3662,7 +3662,7 @@ nav ol, nav ul {
   text-indent: -5000px;
   color: white;
   background-color: #005ea5;
-  background-image: url("/static/build/images/search-button.png");
+  background-image: url("/static/images/search-button.png");
   background-repeat: no-repeat;
   background-position: 0 50%;
 }
@@ -3776,7 +3776,7 @@ nav ol, nav ul {
   line-height: 1.25;
   font-weight: 300;
   text-transform: none;
-  background-image: url("/static/build/images/separator.png");
+  background-image: url("/static/images/separator.png");
   background-position: 100% 50%;
   background-repeat: no-repeat;
   float: left;
@@ -3794,7 +3794,7 @@ nav ol, nav ul {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   #global-breadcrumb ol li {
-    background-image: url("/static/build/images/separator-2x.png");
+    background-image: url("/static/images/separator-2x.png");
     background-size: 6px 11px;
   }
 }
@@ -4305,5 +4305,7 @@ button.accept-entry {
 button#update-register {
   font-size: 120%;
 }
+
+
 
 
