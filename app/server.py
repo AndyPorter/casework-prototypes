@@ -82,6 +82,14 @@ def casework_case_grouped_(case_id):
   regData = json.load(json_data)
   return render_template('casework/case-sor-grouped-' + case_id + '.html', regData=regData)
 
+
+#  system of record json viewer
+@app.route('/json-reg/<case_id>')
+def casework_case_json_reg_(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework/case-sor-json-viewer.html', regData=regData)
+
 # ---------------------------------------------------------------------------
 #hackday 
 @app.route('/hackday/land-ownership-record')
