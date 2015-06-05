@@ -11,7 +11,15 @@ Case list
 
   <link href="{{ prototypes_asset_path }}stylesheets/casework-shame.css" media="screen" rel="stylesheet" type="text/css">
 {% endblock %}
+
+{% block navigation_header %}
+<!-- <a href="/" id="proposition-name">{{ env_flag }}</a> -->
+<a href="/" id="proposition-name">digital services: </a><a href="/cases" id="proposition-name">mortgage caselist</a>
+
+{% endblock %}
+
   
+
 {% block content %}
 
 <main id="wrapper" role="main">
@@ -20,9 +28,9 @@ Case list
 
     <div class="grid-row">
 
-      <div class="column-two-thirds">
+      <div class="column-three-quarters">
 
-        <h1 class="heading-large">our cases (team)</h1>
+        <h1 class="heading-large col-top">digital mortgages</h1>
 
         <table class="casework-dashboard">
           <thead>
@@ -37,23 +45,23 @@ Case list
           <tbody>
 
             <tr class="summary">
-              <td width="30%"><a href="/official-copy/BD161873"><b>digital mortgage DM0001</b></a></td>
-              <td width="20%">BD161873 | &#10003;</td>
-              <td width="30%">you are working on it</td>
-              <td width="20%">21 May 2015 12:23</td>
+              <td width="20%"><a href="/official-copy/BD161873"><b>DM0001</b></a></td>
+              <td width="20%">BD161873</td>
+              <td width="30%">no prior applications</td>
+              <td width="30%">21 May 2015 12:23</td>
             </tr>
 
             <tr class="summary">
-              <td><a href="/official-copy/BD161879"><b>digital mortgage DM0023</b></a></td>
-              <td>BD161879 | ?</td>
-              <td>Bob is actively working on it</td>
+              <td><a href="/official-copy/BD161879"><b>DM0023</b></a></td>
+              <td>BD161879</td>
+              <td>no prior applications</td>
               <td>28 May 2015 7:20</td>
             </tr>
 
             <tr class="summary">
-              <td><a href="/official-copy/BD161882"><b>digital mortgage DM0017</b></a></td>
-              <td>BD161882 | &#10008;</td>
-              <td>Susan has it, last accessed it on Friday</td>
+              <td><a href="/official-copy/BD161882"><b>DM0017</b></a></td>
+              <td>BD161882</td>
+              <td>no prior applications</td>
               <td>3 June 2015 9:43</td>
             </tr>
 
@@ -87,22 +95,10 @@ Case list
 
       </div>
 
-      <div class="column-third">
-        <h3>Bugs/upcoming features</h3>
-        <p>your dev team are <a href="/bugs">tracking 3 bugs</a>.
-        </p>
-        <p>New feature <a href="/bugs">highlight restricitions</a> sheduled for Monday.  Feel free <a href="/bugs">check out progress</a> in the preview system.
-        </p>
-        <p>New feature <a href="/bugs">inform applicant (digital channel) of estimated competion date</a> sheduled for Monday.  Feel free <a href="/bugs">check out progress</a> in the preview system.
-        </p>
+      <div class="column-quarter">
+        {% include "casework/partials/_bugs-features-section.html" %}
 
-        <h3>Service performance (summary)</h3>
-        <p><a href="/performance">performance page</a>
-
-        </p>
-        <p>put team focussed summary here - current throughput of applications</p>
-        <p>on the full performance page show how the whole service is operating - customer satisfation, time to complete</p>
-
+        {% include "casework/partials/_performance-section.html" %}
 
       </div>
 

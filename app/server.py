@@ -37,7 +37,7 @@ def hackday():
 
 # ---------------------------------------------------------------------------
 
-#Casework prototypes 
+#Casework prototypes - current version (casework)
 
 # Just display a basic list - 
 @app.route('/cases')
@@ -70,11 +70,12 @@ def casework_case_sor_grouped(case_id):
 # DM0001 = BD161873
 # DM0023 = BD161879
 # DM0017 = BD161882
+# need to fix case_id ->not the titleno matching the json
 @app.route('/official-copy/<case_id>')
 def casework_case_official_copy(case_id):
   json_data=open('app/static/data/casework/' + case_id + '.json', "r")
   regData = json.load(json_data)
-  return render_template('casework/case-sor-official-copy-' + case_id + '.html', regData=regData)
+  return render_template('casework/case-sor-official-copy-' + case_id + '.html', regData=regData, caseID=case_id)
 
 @app.route('/grouped/<case_id>')
 def casework_case_grouped_(case_id):
@@ -105,6 +106,69 @@ def casework_case_json_reg_(case_id):
   json_data=open('app/static/data/casework/' + case_id + '.json', "r")
   regData = json.load(json_data)
   return render_template('casework/case-sor-json-viewer.html', regData=regData)
+
+
+#Casework prototypes - version 1 (casework-v1)
+
+# Just display a basic list - 
+@app.route('/cases-v1')
+def casework_case_list_v1():
+  json_data=open('app/static/data/casework/cases.json', "r")
+  data = json.load(json_data)
+  return render_template('casework-v1/case-list.html', data=data)
+
+@app.route('/cases-v1/<case_id>')
+def casework_case_v1(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  data = json.load(json_data)
+  return render_template('casework-v1/case.html', data=data)
+
+# register views - official copy (legal / traditional); grouped (Deed, charge, ownership, property,
+# unitlateral notices, register/general)
+@app.route('/cases-sor-official-copy-v1/<case_id>')
+def casework_case_sor_official_copy_v1(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v1/case-sor-official-copy.html', regData=regData)
+
+@app.route('/cases-sor-grouped-v1/<case_id>')
+def casework_case_sor_grouped_v1(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v1/case-sor-grouped.html', regData=regData)
+
+# specific hard-coded pages - showing different states of case being processed
+# DM0001 = BD161873
+# DM0023 = BD161879
+# DM0017 = BD161882
+# need to fix case_id ->not the titleno matching the json
+@app.route('/official-copy-v1/<case_id>')
+def casework_case_official_copy_v1(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v1/case-sor-official-copy-' + case_id + '.html', regData=regData, caseID=case_id)
+
+@app.route('/grouped-v1/<case_id>')
+def casework_case_grouped_v1(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v1/case-sor-grouped-' + case_id + '.html', regData=regData)
+
+
+#search
+@app.route('/cases-v1/search')
+def casework_case_search_v1():
+  return render_template('casework-v1/search.html')
+
+#performance
+@app.route('/performance-v1')
+def casework_performance_v1():
+  return render_template('casework-v1/performance.html')
+
+#bugs = performance
+@app.route('/bugs-v1')
+def casework_bugs_v1():
+  return render_template('casework-v1/performance.html')
 
 # ---------------------------------------------------------------------------
 #hackday 

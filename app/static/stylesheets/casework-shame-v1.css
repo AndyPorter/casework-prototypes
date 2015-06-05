@@ -4250,23 +4250,23 @@ em.needs-approval, em.needs-attention {
   background-color: #56c7c7;
 }
 
-li.needs-approval {
+/*li.needs-approval {
   background-color: transparent;
   border-left: 5px solid #56c7c7;
   padding-left: 5px;
   padding-top: 5px;
-}
+}*/
 
 .is-approved {
   background-color: #6aa121;
 }
 
-li.is-approved {
+/*li.is-approved {
   background-color: transparent;
   border-left: 5px solid #6aa121;
   padding-left: 5px;
   padding-top: 5px;
-}
+}*/
 
 button.accept-entry {
 
@@ -4308,13 +4308,12 @@ button.accept-entry {
 }
 
 .entry-editor {
-  /*background-color: #f8f8f8;*/
+  background-color: #56c7c7;
   padding: 10px 5px;
-  margin-top: -10px;
+  margin-top: 5px;
   margin-bottom: 10px;
-  border-left: 5px solid #56c7c7;
-/*  border-top: 1px solid #b0b0b0;
-  border-bottom: 1px solid #b0b0b0;*/
+/*  border-left: 5px solid #56c7c7;
+*/
 }
 
 button.accept-entry {
@@ -4346,15 +4345,15 @@ button#update-register {
   margin-bottom: 10px;
 }
 
-#content {
+/*#content {
   margin: 0px 60px;
   max-width: none;
-}
+}*/
 
-#global-header .header-wrapper {
+/*#global-header .header-wrapper {
   max-width: none;
   margin: 0px 30px;
-  /*background-color: #808080;*/
+
 }
 
 #global-header-bar {
@@ -4363,7 +4362,7 @@ button#update-register {
 }
 
 #global-header {
-  /*background-color: #808080;*/
+
 }
 
 #global-header .header-proposition #proposition-name {
@@ -4391,7 +4390,7 @@ button#update-register {
     float: left;
     width: 75%;
   }
-}
+}*/
 
 .statutory-register ol {
   margin-left: 10px;
