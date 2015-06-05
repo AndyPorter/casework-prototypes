@@ -1,0 +1,234 @@
+{% extends "global/casework_prototypes_base_v1.html" %}
+
+{% block page_title %}
+
+Case
+
+{% endblock %}
+
+{% block head %}
+
+  <link href="{{ prototypes_asset_path }}stylesheets/govuk-elements.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <link href="{{ prototypes_asset_path }}stylesheets/casework-shame-v1.css" media="screen" rel="stylesheet" type="text/css">
+
+  <script src="{{ prototypes_asset_path }}javascripts/vendor/jquery-2.1.4.min.js"></script>
+
+{% endblock %}
+
+{% block navigation_header %}
+      <a href="/" id="proposition-name">Digital Services: </a><a href="/cases-v1" id="proposition-name">Mortgage casework</a>
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+
+<!--       <h1 class="heading-large">Title Register {{ regData.title_number }} </h1> -->
+
+      <div class="grid-row">
+
+        <div class="column-quarter">
+  <!--           <h2 class="heading-medium">Application/Task</h2> -->
+
+          <section class="js-stick-at-top-when-scrolling">
+
+            <h3 class="heading-medium">application</h3>
+            <p><span class="help-link" id="application-info-link">mortgage application DM0001</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of <a href="">GE Money</a></p>
+
+            <div class="help-text" id="application-info-text">
+               {% include "casework-v1/partials/_application-section-73.html" %}
+            </div>
+
+            <div class="help-text" id="applicant-info-text">
+               {% include "casework-v1/partials/_applicant-section-73.html" %}
+            </div>
+
+
+            <h3 class="heading-small">can i proceed?</h3>
+            <p><em class="can-proceed">&#10003;</em> <span class="help-link" id="priority-info-link">No prior applications</span> on this title</p>
+  <!--           <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
+            <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
+            <div class="help-text" id="priority-info-text">
+               {% include "casework-v1/partials/_application-priority-section-73.html" %}
+            </div>
+
+
+            <h3 class="heading-small">tasks</h3>
+            <p><em id="approval-task" class="needs-approval">i</em> <span id="entry-updated"><a href="#proposed-entries">2 entries</a> need your approval</span></p>
+
+            <div id="complete-application">
+              {% include "casework-v1/partials/_complete-application-73.html" %}
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <div class="column-half">
+
+          <h2 class="heading-medium">Title Register {{ regData.title_number }}<span class="heading-small heading-link"><a href="/grouped-v1/{{ regData.title_number }}">group view</a></span></h2>
+
+    <!--       <h2>Register data</h2>
+          {% for subReg in regData.groups %}
+          <h3>{{ subReg.category }}</h3>
+            {% for entry in subReg.entries %}
+            <ul>
+            <li>sub reg: {{ entry.sub_register }}</li>
+            <li>sequence_number: {{ entry.sequence_number }}</li>
+            <li>entry text (full): {{ entry.full_text }}</li>
+            </ul>
+            {% endfor %}
+          {% endfor %} -->
+
+
+  <!-- if these exist -->
+          <h2 class="heading-medium">A</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% for entry in subReg.entries %}
+              {% if entry.sub_register == "A" %}          
+    <!--             <li>sequence_number: {{ entry.sequence_number }}</li> -->
+                <li>{{ entry.full_text }}</li>
+              {% endif %} 
+            {% endfor %}
+          {% endfor %}
+          </ol>
+
+  <!-- if these exist -->
+          <h2 class="heading-medium">B</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% for entry in subReg.entries %}
+              {% if entry.sub_register == "B" %}                   
+    <!--             <li>sequence_number: {{ entry.sequence_number }}</li> -->
+                <li>{{ entry.full_text }}</li>          
+              {% endif %} 
+            {% endfor %}
+          {% endfor %}
+          </ol>
+
+  <!-- if these exist -->
+          <h2 class="heading-medium">C</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% for entry in subReg.entries %}
+              {% if entry.sub_register == "C" %}
+    <!--             <li>sequence_number: {{ entry.sequence_number }}</li> -->
+                <li>{{ entry.full_text }}</li>
+              {% endif %} 
+            {% endfor %}
+          {% endfor %}
+
+          <h3 class="heading-small visuallyhidden"><a id="proposed-entries">proposed entries</a></h3>
+          {% include "casework-v1/partials/_charge-entry-73-1.html" %}
+          {% include "casework-v1/partials/_charge-entry-73-2.html" %}
+
+          </ol>
+
+
+  <!-- if these exist, and do them per sub register - not this hack -->
+          <h2 class="heading-medium">other stuff - L, S, W</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% for entry in subReg.entries %}
+              {% if not entry.sub_register in ("A", "B", "C") %} 
+                <li>sub reg: {{ entry.sub_register }}, sequence_number: {{ entry.sequence_number }}, {{ entry.full_text }}</li>
+              {% endif %} 
+            {% endfor %}
+          {% endfor %}
+          </ol>
+
+        </div>
+
+        <div class="column-quarter">
+          <p><a href="/cases-v1">worklist</a></p>
+            {% include "casework-v1/partials/_case-history-section-73.html" %}
+
+            {% include "casework-v1/partials/_help-section-73.html" %}
+
+            {% include "casework-v1/partials/_system-help-section-73.html" %}
+        </div>
+
+      </div>
+
+
+  </div>
+
+</main>
+
+
+<script>
+$( "span#application-info-link" ).click(function() {
+  $( "div#application-info-text" ).toggle();
+});
+</script>
+<script>
+$( "div#application-info-text" ).click(function() {
+  $( "div#application-info-text" ).hide();
+});
+</script>
+
+<script>
+$( "span#applicant-info-link" ).click(function() {
+  $( "div#applicant-info-text" ).toggle();
+});
+</script>
+<script>
+$( "div#applicant-info-text" ).click(function() {
+  $( "div#applicant-info-text" ).hide();
+});
+</script>
+
+<script>
+$( "span#priority-info-link" ).click(function() {
+  $( "div#priority-info-text" ).toggle();
+});
+</script>
+<script>
+$( "div#priority-info-text" ).click(function() {
+  $( "div#priority-info-text" ).hide();
+});
+</script>
+
+<!-- entry functions -->
+<script>
+$( "li#entry-approve-link-1" ).click(function() {
+  $( "div#entry-approve-editor-1" ).toggle();
+});
+</script>
+<script>
+$( "button#accept-entry-1" ).click(function() {
+  $( "div#entry-approve-editor-1" ).hide();
+  $( "span#entry-updated").html( "<a href='#proposed-entries'>1 entry</a> needs your approval" );
+  $( "li#entry-approve-link-1" ).removeClass( "needs-approval" );
+  $( "li#entry-approve-link-1" ).addClass( "is-approved" );
+});
+</script>
+
+<script>
+$( "li#entry-approve-link-2" ).click(function() {
+  $( "div#entry-approve-editor-2" ).toggle();
+});
+</script>
+<script>
+$( "button#accept-entry-2" ).click(function() {
+  $( "div#entry-approve-editor-2" ).hide();
+  $( "span#entry-updated").html( "<a href='#proposed-entries'>all entries</a> approved" );
+  $( "li#entry-approve-link-2" ).removeClass( "needs-approval" );
+  $( "li#entry-approve-link-2" ).addClass( "is-approved" );
+  $( "em#approval-task" ).html( "&#10003;" );
+  $( "em#approval-task" ).removeClass( "needs-approval" );
+  $( "em#approval-task" ).addClass( "is-approved" );
+  $( "div#complete-application" ).show();
+});
+</script>
+
+<script src="{{ prototypes_asset_path }}javascripts/stick-at-top-when-scrolling.js"></script>
+
+
+{% endblock %}

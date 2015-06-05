@@ -1,0 +1,161 @@
+{% extends "global/casework_prototypes_base_v1.html" %}
+
+{% block page_title %}
+
+Case
+
+{% endblock %}
+
+{% block head %}
+
+  <link href="{{ prototypes_asset_path }}stylesheets/govuk-elements.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <link href="{{ prototypes_asset_path }}stylesheets/casework-shame-v1.css" media="screen" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block navigation_header %}
+      <a href="/" id="proposition-name">Digital Services: </a><a href="/cases-v1" id="proposition-name">Mortgage casework</a>
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+
+<!--       <h1 class="heading-large">Title Register {{ regData.title_number }}</h1> -->
+
+      <div class="grid-row">
+
+        <div class="column-quarter">
+          <h2 class="heading-medium">Application/Task</h2>
+          <h3 class="heading-small">application info</h3>
+          <p><a href="">Digital mortgage application</a> from <a href="">Coldpress solicitors</a> on behalf of <a href="">GE Money</a></p>
+          <h3 class="heading-small">can i proceed?</h3>
+          <p><em class="can-proceed">&#10003;</em> No other applications against this title (daylist clear)</p>
+<!--           <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
+          <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
+          <h3 class="heading-small">tasks to do</h3>
+          <p><em class="needs-attention">i</em> 2 entries need your approval</p>
+        </div>
+
+        <div class="column-half">
+
+<!--           {% for subReg in regData.groups %}
+          <h2 class="heading-medium">{{ subReg.category }}</h2>
+            {% for entry in subReg.entries %}
+            <ol class="list-number">
+            <li>sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; entry text (full): {{ entry.full_text }}</li>
+            </ol>
+            {% endfor %}
+          {% endfor %}
+
+
+          <hr> -->
+
+          <h2 class="heading-medium">Title Register {{ regData.title_number }}</h2>
+  <!-- if these exist -->
+          <h2 class="heading-medium">Charges</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% if subReg.category == "CHARGE" %}
+              {% for entry in subReg.entries %}      
+                <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+          <li class="needs-attention">REGISTERED CHARGE dated 13 August 2007.</li>
+          <li class="needs-attention">Proprietor: #GE MONEY HOME FINANCE LIMITED# (Co. Regn. No. 592986) of Building 4, Hatters Lane, Croxley Green Business Park, Watford WD18 8YF.</li>
+          </ol>
+
+  <!-- if these exist -->
+          <h2 class="heading-medium">Property</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% if subReg.category == "PROPERTY" %}
+              {% for entry in subReg.entries %}      
+                <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+
+          </ol>
+  <!-- if these exist -->
+          <h2 class="heading-medium">Ownership</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% if subReg.category == "OWNERSHIP" %}
+              {% for entry in subReg.entries %}      
+                <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+          </ol>
+
+  <!-- if these exist -->
+          <h2 class="heading-medium">Deeds</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% if subReg.category == "DEED" %}
+              {% for entry in subReg.entries %}      
+                <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+          </ol>
+
+  <!-- if these exist -->
+          <h2 class="heading-medium">General Register</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% if subReg.category == "REGISTER" %}
+              {% for entry in subReg.entries %}      
+                <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+          </ol>
+
+  <!-- if these exist -->
+          <h2 class="heading-medium">Unilateral Notices</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% if subReg.category == "UNILATERAL" %}
+              {% for entry in subReg.entries %}      
+                <li>{{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+          </ol>
+
+  <!-- if these exist -->
+          <h2 class="heading-medium">erk!</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% if not subReg.category in ("CHARGE", "PROPERTY", "OWNERSHIP", "DEED", "REGISTER", "UNILATERAL") %}
+              {% for entry in subReg.entries %}      
+                <li><em>Grouping: {{ regData.groups }}</em><br/> {{ entry.full_text }} <br/><span class="muted">sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; role_code: {{ entry.role_code }}; draft_entry_code: {{ entry.draft_entry_code }}</span> </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+          </ol>
+
+
+        </div>
+        
+        <div class="column-quarter">         
+          <p><a href="/cases-sor-official-copy-v1/{{ regData.title_number }}">official copy view</a></p>
+          <p><a href="/cases-v1">worklist</a></p>
+        </div>
+
+      </div>
+
+      
+
+  </div>
+
+</main>
+
+{% endblock %}

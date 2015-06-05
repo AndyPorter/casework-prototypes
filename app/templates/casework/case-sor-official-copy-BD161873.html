@@ -2,7 +2,7 @@
 
 {% block page_title %}
 
-Case
+Case {{ regData.title_number }}
 
 {% endblock %}
 
@@ -14,6 +14,11 @@ Case
 
   <script src="{{ prototypes_asset_path }}javascripts/vendor/jquery-2.1.4.min.js"></script>
 
+{% endblock %}
+
+{% block navigation_header %}
+<!-- <a href="/" id="proposition-name">{{ env_flag }}</a> -->
+<a href="/cases" id="proposition-name">mortgage caselist</a>
 {% endblock %}
   
 {% block content %}
@@ -28,11 +33,10 @@ Case
       <div class="grid-row">
 
         <div class="column-quarter">
-  <!--           <h2 class="heading-medium">Application/Task</h2> -->
 
-          <section class="js-stick-at-top-when-scrolling">
+          <!-- <section class="js-stick-at-top-when-scrolling"> -->
 
-            <h3 class="heading-medium">application</h3>
+            <h3 class="heading-medium col-top">application</h3>
             <p><span class="help-link" id="application-info-link">mortgage application DM0001</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of <a href="">GE Money</a></p>
 
             <div class="help-text" id="application-info-text">
@@ -60,89 +64,23 @@ Case
               {% include "casework/partials/_complete-application-73.html" %}
             </div>
 
-          </section>
+          <!-- </section> -->
 
         </div>
 
 
         <div class="column-half">
 
-          <h2 class="heading-medium">Title Register {{ regData.title_number }}<span class="heading-small heading-link"><a href="/grouped/{{ regData.title_number }}">group view</a></span></h2>
+          <h2 class="heading-medium col-top">Title Register {{ regData.title_number }}<span class="heading-small heading-link"><a href="/grouped/{{ regData.title_number }}">group view</a></span></h2>
 
-    <!--       <h2>Register data</h2>
-          {% for subReg in regData.groups %}
-          <h3>{{ subReg.category }}</h3>
-            {% for entry in subReg.entries %}
-            <ul>
-            <li>sub reg: {{ entry.sub_register }}</li>
-            <li>sequence_number: {{ entry.sequence_number }}</li>
-            <li>entry text (full): {{ entry.full_text }}</li>
-            </ul>
-            {% endfor %}
-          {% endfor %} -->
+         
+          {% include "casework/partials/_statutory-register-73.html" %}
 
-
-  <!-- if these exist -->
-          <h2 class="heading-medium">A</h2>
-          <ol class="list-number">
-          {% for subReg in regData.groups %}
-            {% for entry in subReg.entries %}
-              {% if entry.sub_register == "A" %}          
-    <!--             <li>sequence_number: {{ entry.sequence_number }}</li> -->
-                <li>{{ entry.full_text }}</li>
-              {% endif %} 
-            {% endfor %}
-          {% endfor %}
-          </ol>
-
-  <!-- if these exist -->
-          <h2 class="heading-medium">B</h2>
-          <ol class="list-number">
-          {% for subReg in regData.groups %}
-            {% for entry in subReg.entries %}
-              {% if entry.sub_register == "B" %}                   
-    <!--             <li>sequence_number: {{ entry.sequence_number }}</li> -->
-                <li>{{ entry.full_text }}</li>          
-              {% endif %} 
-            {% endfor %}
-          {% endfor %}
-          </ol>
-
-  <!-- if these exist -->
-          <h2 class="heading-medium">C</h2>
-          <ol class="list-number">
-          {% for subReg in regData.groups %}
-            {% for entry in subReg.entries %}
-              {% if entry.sub_register == "C" %}
-    <!--             <li>sequence_number: {{ entry.sequence_number }}</li> -->
-                <li>{{ entry.full_text }}</li>
-              {% endif %} 
-            {% endfor %}
-          {% endfor %}
-
-          <h3 class="heading-small visuallyhidden"><a id="proposed-entries">proposed entries</a></h3>
-          {% include "casework/partials/_charge-entry-73-1.html" %}
-          {% include "casework/partials/_charge-entry-73-2.html" %}
-
-          </ol>
-
-
-  <!-- if these exist, and do them per sub register - not this hack -->
-          <h2 class="heading-medium">other stuff - L, S, W</h2>
-          <ol class="list-number">
-          {% for subReg in regData.groups %}
-            {% for entry in subReg.entries %}
-              {% if not entry.sub_register in ("A", "B", "C") %} 
-                <li>sub reg: {{ entry.sub_register }}, sequence_number: {{ entry.sequence_number }}, {{ entry.full_text }}</li>
-              {% endif %} 
-            {% endfor %}
-          {% endfor %}
-          </ol>
 
         </div>
 
         <div class="column-quarter">
-          <p><a href="/cases">worklist</a></p>
+          <!-- <p><a href="/cases">worklist</a></p> -->
             {% include "casework/partials/_case-history-section-73.html" %}
 
             {% include "casework/partials/_help-section-73.html" %}
@@ -203,6 +141,7 @@ $( "button#accept-entry-1" ).click(function() {
   $( "span#entry-updated").html( "<a href='#proposed-entries'>1 entry</a> needs your approval" );
   $( "li#entry-approve-link-1" ).removeClass( "needs-approval" );
   $( "li#entry-approve-link-1" ).addClass( "is-approved" );
+  $( "span.entry-accepted-1" ).show();
 });
 </script>
 
@@ -221,6 +160,7 @@ $( "button#accept-entry-2" ).click(function() {
   $( "em#approval-task" ).removeClass( "needs-approval" );
   $( "em#approval-task" ).addClass( "is-approved" );
   $( "div#complete-application" ).show();
+  $( "span.entry-accepted-2" ).show();
 });
 </script>
 
