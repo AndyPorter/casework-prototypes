@@ -15,6 +15,11 @@ Case
   <script src="{{ prototypes_asset_path }}javascripts/vendor/jquery-2.1.4.min.js"></script>
 
 {% endblock %}
+
+{% block navigation_header %}
+<!-- <a href="/" id="proposition-name">{{ env_flag }}</a> -->
+<a href="/cases" id="proposition-name">mortgage caselist</a>
+{% endblock %}
   
 {% block content %}
 
@@ -29,9 +34,9 @@ Case
 
         <div class="column-quarter">
 <!--           <h2 class="heading-medium">Application/Task</h2> -->
-        <section class="js-stick-at-top-when-scrolling">
-          <h2 class="heading-medium">application</h2>
-          <p><span class="help-link" id="application-info-link">mortgage application DM0001</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of <a href="">GE Money</a></p>
+        <!-- <section class="js-stick-at-top-when-scrolling"> -->
+          <h2 class="heading-medium col-top">application</h2>
+          <p><span class="help-link" id="application-info-link">mortgage application DM0001</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of GE Money</p>
 
           <div class="help-text" id="application-info-text">
              {% include "casework/partials/_application-section-73.html" %}
@@ -64,112 +69,15 @@ Case
 
         <div class="column-half">
 
-<!--           {% for subReg in regData.groups %}
-          <h2 class="heading-medium">{{ subReg.category }}</h2>
-            {% for entry in subReg.entries %}
-            <ol class="list-number">
-            <li>sub reg: {{ entry.sub_register }}; sequence_number: {{ entry.sequence_number }}; entry text (full): {{ entry.full_text }}</li>
-            </ol>
-            {% endfor %}
-          {% endfor %}
 
+          <h2 class="heading-medium col-top">Title Register {{ regData.title_number }}<span class="heading-small heading-link"><a href="/official-copy/{{ regData.title_number }}">statutory view</a></span></h2>
 
-          <hr> -->
-
-          <h2 class="heading-medium">Title Register {{ regData.title_number }}<span class="heading-small heading-link"><a href="/official-copy/{{ regData.title_number }}">statutory view</a></span></h2>
-  <!-- if these exist -->
-          <h2 class="heading-medium">Charges</h2>
-          <ol class="list-number">
-          {% for subReg in regData.groups %}
-            {% if subReg.category == "CHARGE" %}
-              {% for entry in subReg.entries %}      
-                <li>{{ entry.full_text }}</li>
-              {% endfor %}
-            {% endif %}
-          {% endfor %}
-
-          <h3 class="heading-small visuallyhidden"><a id="proposed-entries">proposed entries</a></h3>
-          {% include "casework/partials/_charge-entry-73-1.html" %}
-          {% include "casework/partials/_charge-entry-73-2.html" %}
-          </ol>
-
-  <!-- if these exist -->
-          <h2 class="heading-medium">Property</h2>
-          <ol class="list-number">
-          {% for subReg in regData.groups %}
-            {% if subReg.category == "PROPERTY" %}
-              {% for entry in subReg.entries %}      
-                <li>{{ entry.full_text }}</li>
-              {% endfor %}
-            {% endif %}
-          {% endfor %}
-
-          </ol>
-  <!-- if these exist -->
-          <h2 class="heading-medium">Ownership</h2>
-          <ol class="list-number">
-          {% for subReg in regData.groups %}
-            {% if subReg.category == "OWNERSHIP" %}
-              {% for entry in subReg.entries %}      
-                <li>{{ entry.full_text }}</li>
-              {% endfor %}
-            {% endif %}
-          {% endfor %}
-          </ol>
-
-  <!-- if these exist -->
-          <h2 class="heading-medium">Deeds</h2>
-          <ol class="list-number">
-          {% for subReg in regData.groups %}
-            {% if subReg.category == "DEED" %}
-              {% for entry in subReg.entries %}      
-                <li>{{ entry.full_text }}</li>
-              {% endfor %}
-            {% endif %}
-          {% endfor %}
-          </ol>
-
-  <!-- if these exist -->
-          <h2 class="heading-medium">General Register</h2>
-          <ol class="list-number">
-          {% for subReg in regData.groups %}
-            {% if subReg.category == "REGISTER" %}
-              {% for entry in subReg.entries %}      
-                <li>{{ entry.full_text }}</li>
-              {% endfor %}
-            {% endif %}
-          {% endfor %}
-          </ol>
-
-  <!-- if these exist -->
-          <h2 class="heading-medium">Unilateral Notices</h2>
-          <ol class="list-number">
-          {% for subReg in regData.groups %}
-            {% if subReg.category == "UNILATERAL" %}
-              {% for entry in subReg.entries %}      
-                <li>{{ entry.full_text }}</li>
-              {% endfor %}
-            {% endif %}
-          {% endfor %}
-          </ol>
-
-  <!-- if these exist -->
-          <h2 class="heading-medium">erk!</h2>
-          <ol class="list-number">
-          {% for subReg in regData.groups %}
-            {% if not subReg.category in ("CHARGE", "PROPERTY", "OWNERSHIP", "DEED", "REGISTER", "UNILATERAL") %}
-              {% for entry in subReg.entries %}      
-                <li><em>Grouping: {{ regData.groups }}</em><br/> {{ entry.full_text }}</li>
-              {% endfor %}
-            {% endif %}
-          {% endfor %}
-          </ol>
+          {% include "casework/partials/_grouped-register-73.html" %}
 
 
         </div>
         
         <div class="column-quarter">         
-          <p><a href="/cases">worklist</a></p>
 
             {% include "casework/partials/_case-history-section-73.html" %}
 
@@ -232,6 +140,7 @@ $( "button#accept-entry-1" ).click(function() {
   $( "span#entry-updated").html( "<a href='#proposed-entries'>1 entry</a> needs your approval" );
   $( "li#entry-approve-link-1" ).removeClass( "needs-approval" );
   $( "li#entry-approve-link-1" ).addClass( "is-approved" );
+  $( "span.entry-accepted-1" ).show();
 });
 </script>
 
@@ -250,6 +159,7 @@ $( "button#accept-entry-2" ).click(function() {
   $( "em#approval-task" ).removeClass( "needs-approval" );
   $( "em#approval-task" ).addClass( "is-approved" );
   $( "div#complete-application" ).show();
+  $( "span.entry-accepted-2" ).show();
 });
 </script>
 
