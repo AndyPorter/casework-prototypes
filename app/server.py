@@ -107,7 +107,7 @@ def ux_principles():
 # pattern learning
 @app.route('/systemlearning')
 def system_learning():
-  return render_template('systemLearning.html')
+  return render_template('systemlearning.html')
 
 
 #  system of record json viewer
