@@ -1,0 +1,58 @@
+{% extends "global/casework_prototypes_base.html" %}
+
+{% block body_classes %}prototypes-index{% endblock %}
+
+
+
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <h1 class="heading-large">
+          UX Principles
+        </h1>
+        <div class="text">
+          <ul>
+              <li>What experienced designers thought</li>
+              <li>What we learnt from our users and stakeholders</li>
+              <li>What we learnt from cross-government</li>
+          </ul>
+        </div>
+
+        <h2 class="heading-medium">Everything i need - in one place</h2>
+          <ul>
+              <li>The system gives me what i need to do my job.</li>
+              <li>It brings what i need most to the fore, but lets me discover the rest when i need to.</li>
+          </ul>
+
+        <h2 class="heading-medium">The system supports me</h2>
+          <ul>
+              <li>I make legal/skilled decisions.  The system automates the admin work.</li>
+              <li>It lets me do things my own way, but always generates consistent results.</li>
+          </ul>
+
+
+        <h2 class="heading-medium">I trust the system</h2>
+          <ul>
+              <li>I care about the integrity of the register.</li>
+              <li>I can rely on the system, and it supports me in our goal.</li>
+              <li>It is easy to use and reliable.</li>
+          </ul>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+</main>
+
+{% endblock %}

@@ -4453,3 +4453,12 @@ span.entry-accepted-1, span.entry-accepted-2 {
   float:right;
   text-align: top;
 }
+
+.headline-stat {
+  font-size: 76px;
+}
+
+.level2-stat {
+  font-size: 36px;
+  color: grey;
+}

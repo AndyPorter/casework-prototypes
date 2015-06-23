@@ -99,6 +99,16 @@ def casework_performance():
 def casework_bugs():
   return render_template('casework/performance.html')
 
+# UX Principles
+@app.route('/uxprinciples')
+def ux_principles():
+  return render_template('UXPrinciples.html')
+
+# pattern learning
+@app.route('/systemlearning')
+def system_learning():
+  return render_template('systemLearning.html')
+
 
 #  system of record json viewer
 @app.route('/json-reg/<case_id>')
