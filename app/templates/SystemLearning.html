@@ -1,0 +1,37 @@
+{% extends "global/casework_prototypes_base.html" %}
+
+{% block body_classes %}prototypes-index{% endblock %}
+
+
+
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    {% include "includes/prototypes_banner.html" %}
+
+    <div class="outer-block">
+      <div class="inner-block">
+
+        <h1 class="heading-large">
+          Beta - system learning
+        </h1>
+        <div class="text">
+        <p>How is the system going to improve?</p>
+        <p>Mechanism for learning - driven by users<p>
+        </div>
+
+<img src="{{ prototypes_asset_path }}images/AutoProcessLearning.png" width="1200" alt="Simple improvement">
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+</main>
+
+{% endblock %}
