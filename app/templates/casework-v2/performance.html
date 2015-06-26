@@ -1,0 +1,56 @@
+{% extends "global/casework_prototypes_base-v2.html" %}
+
+{% block page_title %}
+
+Search results
+
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/govuk-elements.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <link href="{{ prototypes_asset_path }}stylesheets/casework-shame-v2.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    <div class="grid-row">
+
+      <h1 class="heading-large">lots of nice performance stuff</h1>
+
+    <p>To Do: make this look nice with charts and info</p>
+
+      <div class="column-half">
+
+        <h3>Service performance (summary)</h3>
+        <p><a href="/performance-v2">performance page</a>
+
+        </p>
+        <p>put team focussed summary here - current throughput of applications</p>
+        <p>on the full performance page show how the whole service is operating - customer satisfation, time to complete</p>
+
+      </div>
+
+      <div class="column-half">
+
+        <h3>Bugs/upcoming features</h3>
+        <p>your dev team are <a href="/bugs-v2">tracking 3 bugs</a>.
+        </p>
+        <p>New feature <a href="/bugs-v2">highlight restricitions</a> sheduled for Monday.  Feel free <a href="/bugs-v2">check out progress</a> in the preview system.
+        </p>
+        <p>New feature <a href="/bugs-v2">inform applicant (digital channel) of estimated competion date</a> sheduled for Monday.  Feel free <a href="/bugs-v2">check out progress</a> in the preview system.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

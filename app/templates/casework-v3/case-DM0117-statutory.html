@@ -1,0 +1,204 @@
+{% extends "global/casework_prototypes_base-v3.html" %}
+
+{% block page_title %}
+
+Case DM0117
+
+{% endblock %}
+
+{% block head %}
+
+  <link href="{{ prototypes_asset_path }}stylesheets/govuk-elements.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <link href="{{ prototypes_asset_path }}stylesheets/casework-shame-v3.css" media="screen" rel="stylesheet" type="text/css">
+
+  <script src="{{ prototypes_asset_path }}javascripts/vendor/jquery-2.1.4.min.js"></script>
+
+{% endblock %}
+
+{% block navigation_header %}
+<!-- <a href="/" id="proposition-name">{{ env_flag }}</a> -->
+<a href="/cases-v3-step-2" id="proposition-name">mortgage caselist</a>
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+      <div class="grid-row">
+
+        <div class="column-quarter">
+
+          <section class="js-stick-at-top-when-scrolling">
+
+            <h3 class="heading-medium col-top">application</h3>
+            <p><span class="help-link" id="application-info-link">mortgage application DM0117</span> from <span class="help-link" id="applicant-info-link">Fenwick solicitors</span> on behalf of Shawbrook Bank Limited</p>
+
+            <div class="help-text" id="application-info-text">
+               {% include "casework-v3/partials/_application-section-dm0117.html" %}
+            </div>
+
+            <div class="help-text" id="applicant-info-text">
+               {% include "casework-v3/partials/_applicant-section-dm0117.html" %}
+            </div>
+
+
+            <!-- <h3 class="heading-small">can i proceed?</h3> -->
+
+            <p><em class="can-proceed">&#10003;</em> Application correct, and matches register</p>
+            <p><em class="can-proceed">&#10003;</em> <span class="help-link" id="priority-info-link">No prior applications</span> on this title</p>
+  <!--           <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
+            <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
+            <div class="help-text" id="priority-info-text">
+               {% include "casework-v3/partials/_application-priority-section-73.html" %}
+            </div>
+
+
+            <h3 class="heading-small">tasks</h3>
+            <p><em id="approval-task-b" class="needs-approval">i</em> <span id="entry-updated-b1"><a href="#proposed-entries-b">a proprietorship entry</a></span></p>
+            <p><em id="approval-task-c" class="needs-approval">i</em> <span id="entry-updated"><a href="#proposed-entries-c">2 charge entries</a> need your approval</span></p>
+
+            <div id="complete-application">
+              {% include "casework-v3/partials/_complete-application-dm0117.html" %}
+            </div>
+
+          <!-- </section> -->
+
+        </div>
+
+
+        <div class="column-half">
+
+          <h2 class="heading-medium col-top">Title Register BD161882<span class="heading-small heading-link"><a href="/grouped-v3/xxxx">group view</a></span></h2>
+
+         
+          {% include "casework-v3/partials/_statutory-register-long-1-shaw.html" %}
+
+
+        </div>
+
+        <div class="column-quarter">
+          <!-- <p><a href="/cases">worklist</a></p> -->
+            {% include "casework-v3/partials/_case-history-section-73.html" %}
+
+            {% include "casework-v3/partials/_help-section-73.html" %}
+
+            {% include "casework-v3/partials/_system-help-section-73.html" %}
+        </div>
+
+      </div>
+
+
+  </div>
+
+</main>
+
+
+<script>
+$( "span#application-info-link" ).click(function() {
+  $( "div#application-info-text" ).toggle();
+  $( "div#applicant-info-text" ).hide();
+});
+</script>
+<script>
+$( "div#application-info-text" ).click(function() {
+  $( "div#application-info-text" ).hide();
+});
+</script>
+
+<script>
+$( "span#applicant-info-link" ).click(function() {
+  $( "div#applicant-info-text" ).toggle();
+  $( "div#application-info-text" ).hide();
+});
+</script>
+<script>
+$( "div#applicant-info-text" ).click(function() {
+  $( "div#applicant-info-text" ).hide();
+});
+</script>
+
+<script>
+$( "span#priority-info-link" ).click(function() {
+  $( "div#priority-info-text" ).toggle();
+});
+</script>
+<script>
+$( "div#priority-info-text" ).click(function() {
+  $( "div#priority-info-text" ).hide();
+});
+</script>
+
+<!-- entry functions -->
+
+<!-- b entry functions --> 
+<script>
+$( "li#entry-approve-link-b1" ).click(function() {
+  $( "div#entry-approve-editor-b1" ).toggle();
+});
+</script>
+<script>
+$( "button#accept-entry-b1" ).click(function() {
+  $( "div#entry-approve-editor-b1" ).hide();
+  $( "span#entry-updated-b1").html( "<a href='#proposed-entries-b'>proprietorship entry approved" );
+  $( "li#entry-approve-link-b1" ).removeClass( "needs-approval" );
+  $( "li#entry-approve-link-b1" ).addClass( "is-approved" );
+  $( "em#approval-task-b" ).html( "&#10003;" );
+  $( "em#approval-task-b" ).removeClass( "needs-approval" );
+  $( "em#approval-task-b" ).addClass( "is-approved" );
+  $( "span.entry-accepted-b1" ).show();
+  if( $( "em#approval-task-c" ).hasClass( "is-approved" ))
+  {
+    $( "div#complete-application" ).show();
+  }
+});
+</script>
+
+<!-- c entry functions -->
+
+<script>
+$( "li#entry-approve-link-1" ).click(function() {
+  $( "div#entry-approve-editor-1" ).toggle();
+});
+</script>
+<script>
+$( "button#accept-entry-1" ).click(function() {
+  $( "div#entry-approve-editor-1" ).hide();
+  $( "span#entry-updated").html( "<a href='#proposed-entries-c'>1 charge entry</a> needs your approval" );
+  $( "li#entry-approve-link-1" ).removeClass( "needs-approval" );
+  $( "li#entry-approve-link-1" ).addClass( "is-approved" );
+  $( "span.entry-accepted-1" ).show();
+});
+</script>
+
+<script>
+$( "li#entry-approve-link-2" ).click(function() {
+  $( "div#entry-approve-editor-2" ).toggle();
+});
+</script>
+<script>
+$( "button#accept-entry-2" ).click(function() {
+  $( "div#entry-approve-editor-2" ).hide();
+  $( "span#entry-updated").html( "<a href='#proposed-entries-c'>all charge entries</a> approved" );
+  $( "li#entry-approve-link-2" ).removeClass( "needs-approval" );
+  $( "li#entry-approve-link-2" ).addClass( "is-approved" );
+  $( "span.entry-accepted-1" ).show();
+  $( "li#entry-approve-link-1" ).removeClass( "needs-approval" );
+  $( "li#entry-approve-link-1" ).addClass( "is-approved" );
+  $( "em#approval-task-c" ).html( "&#10003;" );
+  $( "em#approval-task-c" ).removeClass( "needs-approval" );
+  $( "em#approval-task-c" ).addClass( "is-approved" );
+  $( "span.entry-accepted-2" ).show();
+  if( $( "em#approval-task-b" ).hasClass( "is-approved" ))
+  {
+    $( "div#complete-application" ).show();
+  }
+});
+</script>
+
+<script src="{{ prototypes_asset_path }}javascripts/stick-at-top-when-scrolling.js"></script>
+
+
+{% endblock %}

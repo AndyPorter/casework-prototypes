@@ -35,69 +35,10 @@ def proto():
 def hackday():
   return render_template('index-hack.html')
 
+
 # ---------------------------------------------------------------------------
 
-#Casework prototypes - current version (casework)
-
-# Just display a basic list - 
-@app.route('/cases')
-def casework_case_list():
-  json_data=open('app/static/data/casework/cases.json', "r")
-  data = json.load(json_data)
-  return render_template('casework/case-list.html', data=data)
-
-@app.route('/cases/<case_id>')
-def casework_case(case_id):
-  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
-  data = json.load(json_data)
-  return render_template('casework/case.html', data=data)
-
-# register views - official copy (legal / traditional); grouped (Deed, charge, ownership, property,
-# unitlateral notices, register/general)
-@app.route('/cases-sor-official-copy/<case_id>')
-def casework_case_sor_official_copy(case_id):
-  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
-  regData = json.load(json_data)
-  return render_template('casework/case-sor-official-copy.html', regData=regData)
-
-@app.route('/cases-sor-grouped/<case_id>')
-def casework_case_sor_grouped(case_id):
-  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
-  regData = json.load(json_data)
-  return render_template('casework/case-sor-grouped.html', regData=regData)
-
-# specific hard-coded pages - showing different states of case being processed
-# DM0001 = BD161873
-# DM0023 = BD161879
-# DM0017 = BD161882
-# need to fix case_id ->not the titleno matching the json
-@app.route('/official-copy/<case_id>')
-def casework_case_official_copy(case_id):
-  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
-  regData = json.load(json_data)
-  return render_template('casework/case-sor-official-copy-' + case_id + '.html', regData=regData, caseID=case_id)
-
-@app.route('/grouped/<case_id>')
-def casework_case_grouped_(case_id):
-  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
-  regData = json.load(json_data)
-  return render_template('casework/case-sor-grouped-' + case_id + '.html', regData=regData)
-
-
-#search
-@app.route('/cases/search')
-def casework_case_search():
-  return render_template('casework/search.html')
-
-#performance
-@app.route('/performance')
-def casework_performance():
-  return render_template('casework/performance.html')
-
-#bugs = performance
-@app.route('/bugs')
-def casework_bugs():
-  return render_template('casework/performance.html')
+#Casework prototypes - informational pages
 
 # UX Principles
 @app.route('/uxprinciples')
@@ -110,14 +51,204 @@ def system_learning():
   return render_template('SystemLearning.html')
 
 
-#  system of record json viewer
-@app.route('/json-reg/<case_id>')
-def casework_case_json_reg_(case_id):
+# ---------------------------------------------------------------------------
+#Casework prototypes - version 3 (casework-v3)
+
+# ----------------------------
+# flow of work
+
+# case list - step 1
+@app.route('/cases-v3-step-1')
+def casework_case_list_v3_step_1():
+  return render_template('casework-v3/case-list-ut-step-1.html')
+
+# case list - step 2
+@app.route('/cases-v3-step-2')
+def casework_case_list_v3_step_2():
+  return render_template('casework-v3/case-list-ut-step-2.html')
+
+# case list - step 3
+@app.route('/cases-v3-step-3')
+def casework_case_list_v3_step_3():
+  return render_template('casework-v3/case-list-ut-step-3.html')
+
+# case list - step 4
+@app.route('/cases-v3-step-4')
+def casework_case_list_v3_step_4():
+  return render_template('casework-v3/case-list-ut-step-4.html')
+
+# ----------------------------
+# mvp look and feel
+
+# Just display a case list - 
+@app.route('/cases-v3-initial')
+def casework_case_list_v3_initial():
+  return render_template('casework-v3/case-list.html')
+
+
+# long register
+@app.route('/case-dm0117')
+def casework_case_dm0117_v3():
+  return render_template('casework-v3/case-DM0117-statutory.html')
+
+# short register 1 - 2 borrowers; lender = 
+@app.route('/case-dm0112')
+def casework_case_dm0112_v3():
+  return render_template('casework-v3/case-DM0112-statutory.html')
+
+# short register 2 - 1 borrower; lender = 
+@app.route('/case-dm0123')
+def casework_case_dm0123_v3():
+  return render_template('casework-v3/case-DM0123-statutory.html')
+
+# short register 3 - x borrower; lender = 
+@app.route('/case-dm0277')
+def casework_case_dm0277_v3():
+  return render_template('casework-v3/case-DM0277-statutory.html')
+
+
+# Dm0130 - Bob is working on it
+@app.route('/case-dm0130')
+def casework_case_dm0130_v3():
+  return render_template('casework-v3/case-DM0130-statutory.html')
+
+# ----------------------------
+
+
+@app.route('/cases-v3/<case_id>')
+def casework_case_v3(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  data = json.load(json_data)
+  return render_template('casework-v3/case.html', data=data)
+
+# register views - official copy (legal / traditional); grouped (Deed, charge, ownership, property,
+# unitlateral notices, register/general)
+@app.route('/cases-sor-official-copy-v3/<case_id>')
+def casework_case_sor_official_copy_v3(case_id):
   json_data=open('app/static/data/casework/' + case_id + '.json', "r")
   regData = json.load(json_data)
-  return render_template('casework/case-sor-json-viewer.html', regData=regData)
+  return render_template('casework-v3/case-sor-official-copy.html', regData=regData)
+
+@app.route('/cases-sor-grouped-v3/<case_id>')
+def casework_case_sor_grouped_v3(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v3/case-sor-grouped.html', regData=regData)
+
+# specific hard-coded pages - showing different states of case being processed
+# DM0001 = BD161873
+# DM0023 = BD161879
+# DM0017 = BD161882
+# need to fix case_id ->not the titleno matching the json
+@app.route('/official-copy-v3/<case_id>')
+def casework_case_official_copy_v3(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v3/case-sor-official-copy-' + case_id + '.html', regData=regData, caseID=case_id)
+
+@app.route('/grouped-v3/<case_id>')
+def casework_case_grouped_v3(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v3/case-sor-grouped-' + case_id + '.html', regData=regData)
 
 
+#search
+@app.route('/cases-v3/search')
+def casework_case_search_v3():
+  return render_template('casework-v3/search.html')
+
+#performance
+@app.route('/performance-v3')
+def casework_performance_v3():
+  return render_template('casework-v3/performance.html')
+
+#bugs = performance
+@app.route('/bugs-v3')
+def casework_bugs_v3():
+  return render_template('casework-v3/performance.html')
+
+
+#  system of record json viewer
+@app.route('/json-reg-v3/<case_id>')
+def casework_case_json_reg_v3(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v3/case-sor-json-viewer.html', regData=regData)
+
+# ---------------------------------------------------------------------------
+
+#Casework prototypes - version 2 (casework-v2)
+
+# Just display a basic list - 
+@app.route('/cases-v2')
+def casework_case_list_v2():
+  json_data=open('app/static/data/casework/cases.json', "r")
+  data = json.load(json_data)
+  return render_template('casework-v2/case-list.html', data=data)
+
+@app.route('/cases-v2/<case_id>')
+def casework_case_v2(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  data = json.load(json_data)
+  return render_template('casework-v2/case.html', data=data)
+
+# register views - official copy (legal / traditional); grouped (Deed, charge, ownership, property,
+# unitlateral notices, register/general)
+@app.route('/cases-sor-official-copy-v2/<case_id>')
+def casework_case_sor_official_copy_v2(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v2/case-sor-official-copy.html', regData=regData)
+
+@app.route('/cases-sor-grouped-v2/<case_id>')
+def casework_case_sor_grouped_v2(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v2/case-sor-grouped.html', regData=regData)
+
+# specific hard-coded pages - showing different states of case being processed
+# DM0001 = BD161873
+# DM0023 = BD161879
+# DM0017 = BD161882
+# need to fix case_id ->not the titleno matching the json
+@app.route('/official-copy-v2/<case_id>')
+def casework_case_official_copy_v2(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v2/case-sor-official-copy-' + case_id + '.html', regData=regData, caseID=case_id)
+
+@app.route('/grouped-v2/<case_id>')
+def casework_case_grouped_v2(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v2/case-sor-grouped-' + case_id + '.html', regData=regData)
+
+
+#search
+@app.route('/cases-v2/search')
+def casework_case_search_v2():
+  return render_template('casework-v2/search.html')
+
+#performance
+@app.route('/performance-v2')
+def casework_performance_v2():
+  return render_template('casework-v2/performance.html')
+
+#bugs = performance
+@app.route('/bugs-v2')
+def casework_bugs_v2():
+  return render_template('casework-v2/performance.html')
+
+
+#  system of record json viewer
+@app.route('/json-reg-v2/<case_id>')
+def casework_case_json_reg_v2(case_id):
+  json_data=open('app/static/data/casework/' + case_id + '.json', "r")
+  regData = json.load(json_data)
+  return render_template('casework-v2/case-sor-json-viewer.html', regData=regData)
+
+# ---------------------------------------------------------
 #Casework prototypes - version 1 (casework-v1)
 
 # Just display a basic list - 

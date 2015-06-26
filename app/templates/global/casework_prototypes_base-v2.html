@@ -1,0 +1,48 @@
+{% extends "global/lr_template_base.html" %}
+
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/govuk-elements.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/prototypes.css" media="screen" rel="stylesheet" type="text/css">
+
+  {% block overwrite_css %}{% endblock %}
+{% endblock %}
+
+
+{% block header_class %}with-proposition{% endblock %}
+{% block proposition_header %}
+  <div class="header-proposition">
+    <div class="content">
+      {% block navigation_header %}
+      <!-- <a href="/" id="proposition-name">{{ env_flag }}</a> -->
+      <a href="/" id="proposition-name">Digital Services: </a><a href="/cases-v2" id="proposition-name">Mortgage casework</a>
+      {% endblock %}
+    </div>
+  </div>
+
+  <div class="header-global">
+    <div class="header-logo">
+      <form id="search" class="site-search" action="/cases-v2/search" method="get">
+        <div class="content">
+          <label for="site-search-text">find case/application</label>
+          <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus" role="search">
+          <input class="submit" type="submit" value="Search" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+
+
+<!-- {% block cookie_message %}
+  <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+{% endblock %} -->
+
+{% block body_end %}
+  <script src="{{ prototypes_asset_path }}javascripts/vendor/jquery-1.11.1.min.js"></script>
+  <script src="{{ prototypes_asset_path }}javascripts/vendor/modernizr-custom.js"></script>
+  <script src="{{ prototypes_asset_path }}javascripts/stick-at-top-when-scrolling.js"></script>
+  <script src="{{ prototypes_asset_path }}javascripts/govuk-elements.js"></script>
+  {% block body_end_additional %}{% endblock %}
+{% endblock %}

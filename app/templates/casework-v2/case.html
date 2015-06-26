@@ -1,0 +1,58 @@
+{% extends "global/casework_prototypes_base-v2.html" %}
+
+{% block page_title %}
+
+Case
+
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/transfer.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    <div class="inner-block">
+
+      <h1 class="heading-large">Case reference {{ data.case.application.applicationReference }} </h1>
+
+
+      <h2>Application data</h2>
+      <ul>   
+        <li>application Ref: {{ data.case.application.applicationReference }}</li>
+        <li>applicant Details: {{ data.case.application.applicantDetails }}</li>
+        <li>property Details: {{ data.case.application.propertyDetails }}</li>
+        <li>borrower: {{ data.case.application.borrowerName }}</li>
+        <li>mortgage Ref: {{ data.case.application.mortgageRef }}</li>
+        <li>lender: {{ data.case.application.lenderName }}</li>
+        <li>mortgage Date: {{ data.case.application.mortgageDate }}</li>
+        
+        <li>fee: {{ data.case.application.feeData }}</li>
+        <li>title No: {{ data.case.application.titleNumber }}</li>
+        <li>received: {{ data.case.application.dateReceived }}</li>
+      </ul>
+
+      <h2>Register data</h2>
+      {% for entry in data.case.entries %}
+      <ul>
+      <li>type: {{ entry.type }}</li>
+      <li>date: {{ entry.date }}</li>
+      <li>text: {{ entry.text }}</li>
+      <li>status: {{ entry.status }}</li>
+      </ul>
+      {% endfor %}
+
+
+      <p><a href="/cases-v2">worklist</a></p>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}
