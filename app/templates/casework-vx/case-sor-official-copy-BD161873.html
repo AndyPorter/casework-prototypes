@@ -1,8 +1,8 @@
-{% extends "global/casework_prototypes_base-v3.html" %}
+{% extends "global/casework_prototypes_base-vx.html" %}
 
 {% block page_title %}
 
-Case DM0112
+Case {{ regData.title_number }}
 
 {% endblock %}
 
@@ -10,7 +10,7 @@ Case DM0112
 
   <link href="{{ prototypes_asset_path }}stylesheets/govuk-elements.css" media="screen" rel="stylesheet" type="text/css" />
 
-  <link href="{{ prototypes_asset_path }}stylesheets/casework-shame-v3.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="{{ prototypes_asset_path }}stylesheets/casework-shame-vx.css" media="screen" rel="stylesheet" type="text/css">
 
   <script src="{{ prototypes_asset_path }}javascripts/vendor/jquery-2.1.4.min.js"></script>
 
@@ -18,7 +18,7 @@ Case DM0112
 
 {% block navigation_header %}
 <!-- <a href="/" id="proposition-name">{{ env_flag }}</a> -->
-<a href="/cases-v3-step-1" id="proposition-name">mortgage caselist</a>
+<a href="/cases" id="proposition-name">mortgage caselist</a>
 {% endblock %}
   
 {% block content %}
@@ -27,6 +27,9 @@ Case DM0112
 
   <div id="content">
 
+
+<!--       <h1 class="heading-large">Title Register {{ regData.title_number }} </h1> -->
+
       <div class="grid-row">
 
         <div class="column-quarter">
@@ -34,32 +37,31 @@ Case DM0112
           <!-- <section class="js-stick-at-top-when-scrolling"> -->
 
             <h3 class="heading-medium col-top">application</h3>
-            <p><span class="help-link" id="application-info-link">mortgage application DM0112</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of Skipton Building Society</p>
+            <p><span class="help-link" id="application-info-link">mortgage application DM0001</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of GE Money</p>
 
             <div class="help-text" id="application-info-text">
-               {% include "casework-v3/partials/_application-section-dm0112.html" %}
+               {% include "casework-vx/partials/_application-section-73.html" %}
             </div>
 
             <div class="help-text" id="applicant-info-text">
-               {% include "casework-v3/partials/_applicant-section-dm0112.html" %}
+               {% include "casework-vx/partials/_applicant-section-73.html" %}
             </div>
 
-            <p><em class="can-proceed">&#10003;</em> Application correct, and matches register</p>
 
-            <!-- <h3 class="heading-small">can i proceed?</h3> -->
+            <h3 class="heading-small">can i proceed?</h3>
             <p><em class="can-proceed">&#10003;</em> <span class="help-link" id="priority-info-link">No prior applications</span> on this title</p>
   <!--           <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
             <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
             <div class="help-text" id="priority-info-text">
-               {% include "casework-v3/partials/_application-priority-section-73.html" %}
+               {% include "casework-vx/partials/_application-priority-section-73.html" %}
             </div>
 
 
             <h3 class="heading-small">tasks</h3>
-            <p><em id="approval-task" class="needs-approval">i</em> <span id="entry-updated"><a href="#proposed-entries">mortgage entries</a> need your approval</span></p>
+            <p><em id="approval-task" class="needs-approval">i</em> <span id="entry-updated"><a href="#proposed-entries">2 entries</a> need your approval</span></p>
 
             <div id="complete-application">
-              {% include "casework-v3/partials/_complete-application-dm0112.html" %}
+              {% include "casework-vx/partials/_complete-application-73.html" %}
             </div>
 
           <!-- </section> -->
@@ -69,18 +71,21 @@ Case DM0112
 
         <div class="column-half">
 
-          <h2 class="heading-medium col-top">Title Register GM113631</h2>
+          <h2 class="heading-medium col-top">Title Register {{ regData.title_number }}<span class="heading-small heading-link"><a href="/grouped-vx/{{ regData.title_number }}">group view</a></span></h2>
 
          
-          {% include "casework-v3/partials/_statutory-register-short-1.html" %}
+          {% include "casework-vx/partials/_statutory-register-73.html" %}
 
 
         </div>
 
         <div class="column-quarter">
           <!-- <p><a href="/cases">worklist</a></p> -->
-            {% include "casework-v3/partials/_case-history-section-dm0112.html" %}
+            {% include "casework-vx/partials/_case-history-section-73.html" %}
 
+            {% include "casework-vx/partials/_help-section-73.html" %}
+
+            {% include "casework-vx/partials/_system-help-section-73.html" %}
         </div>
 
       </div>
