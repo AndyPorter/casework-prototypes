@@ -50,6 +50,88 @@ def ux_principles():
 def system_learning():
   return render_template('SystemLearning.html')
 
+# ---------------------------------------------------------------------------
+# Casework prototypes - version x (casework-vx) - work in progress
+# when making new version
+# copy folder version-vx; and do find/replace on -vx; 
+# copy casework-shame-vx.css; 
+# copy casework-prototypes-base-vx; and change links;
+
+# ----------------------------
+# flow of work
+
+# case list - step 1
+@app.route('/cases-vx-step-1')
+def casework_case_list_vx_step_1():
+  return render_template('casework-vx/case-list-ut-step-1.html')
+
+# case list - step 2
+@app.route('/cases-vx-step-2')
+def casework_case_list_vx_step_2():
+  return render_template('casework-vx/case-list-ut-step-2.html')
+
+# case list - step 3
+@app.route('/cases-vx-step-3')
+def casework_case_list_vx_step_3():
+  return render_template('casework-vx/case-list-ut-step-3.html')
+
+# case list - step 4
+@app.route('/cases-vx-step-4')
+def casework_case_list_vx_step_4():
+  return render_template('casework-vx/case-list-ut-step-4.html')
+
+# ----------------------------
+# mvp look and feel
+
+# Just display a case list - 
+@app.route('/cases-vx-mvp')
+def casework_case_list_vx_mvp():
+  return render_template('casework-vx/case-list.html')
+
+
+# long register
+@app.route('/case-dm0117-vx')
+def casework_case_dm0117_vx():
+  return render_template('casework-vx/case-DM0117-statutory.html')
+
+# short register 1 - 2 borrowers; lender = 
+@app.route('/case-dm0112-vx')
+def casework_case_dm0112_vx():
+  return render_template('casework-vx/case-DM0112-statutory.html')
+
+# short register 2 - 1 borrower; lender = 
+@app.route('/case-dm0123-vx')
+def casework_case_dm0123_vx():
+  return render_template('casework-vx/case-DM0123-statutory.html')
+
+# short register 3 - x borrower; lender = 
+@app.route('/case-dm0277-vx')
+def casework_case_dm0277_vx():
+  return render_template('casework-vx/case-DM0277-statutory.html')
+
+
+# Dm0130 - Bob is working on it
+@app.route('/case-dm0130-vx')
+def casework_case_dm0130_vx():
+  return render_template('casework-vx/case-DM0130-statutory.html')
+
+# ----------------------------
+
+
+#search
+@app.route('/cases-vx/search')
+def casework_case_search_vx():
+  return render_template('casework-vx/search.html')
+
+#performance
+@app.route('/performance-vx')
+def casework_performance_vx():
+  return render_template('casework-vx/performance.html')
+
+#bugs = performance
+@app.route('/bugs-vx')
+def casework_bugs_vx():
+  return render_template('casework-vx/performance.html')
 
 # ---------------------------------------------------------------------------
 #Casework prototypes - version 3 (casework-v3)
