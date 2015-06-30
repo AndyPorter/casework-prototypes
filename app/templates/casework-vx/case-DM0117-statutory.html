@@ -18,10 +18,13 @@ Case DM0117
 
 {% block navigation_header %}
 <!-- <a href="/" id="proposition-name">{{ env_flag }}</a> -->
+<span id="top-of-page" class="visuallyhidden">top of page</span>
 <a href="/cases-vx-step-2" id="proposition-name">mortgage caselist</a>
 {% endblock %}
   
 {% block content %}
+
+
 
 <main id="wrapper" role="main">
 
@@ -57,7 +60,7 @@ Case DM0117
 
 
             <h3 class="heading-small">tasks</h3>
-            <p><em id="approval-task-b" class="needs-approval">i</em> <span id="entry-updated-b1"><a href="#proposed-entries-b">a proprietorship entry</a></span></p>
+            <p><em id="approval-task-b" class="needs-approval">i</em> <span id="entry-updated-b1"><a href="#proposed-entries-b">a proprietorship entry</a> and</span></p>
             <p><em id="approval-task-c" class="needs-approval">i</em> <span id="entry-updated"><a href="#proposed-entries-c">2 charge entries</a> need your approval</span></p>
 
             <div id="complete-application">
@@ -75,6 +78,8 @@ Case DM0117
 
          
           {% include "casework-vx/partials/_statutory-register-long-1-shaw.html" %}
+
+          <p><span class="heading-small heading-link"><a href="#global-header">back to top &#x2b06;</a></span></p>
 
 
         </div>
@@ -133,7 +138,6 @@ $( "div#priority-info-text" ).click(function() {
 
 <!-- entry functions -->
 
-<!-- b entry functions --> 
 <script>
 $( "li#entry-approve-link-b1" ).click(function() {
   $( "div#entry-approve-editor-b1" ).toggle();
@@ -142,7 +146,7 @@ $( "li#entry-approve-link-b1" ).click(function() {
 <script>
 $( "button#accept-entry-b1" ).click(function() {
   $( "div#entry-approve-editor-b1" ).hide();
-  $( "span#entry-updated-b1").html( "<a href='#proposed-entries-b'>proprietorship entry approved" );
+  $( "span#entry-updated-b1").html( "<a href='#proposed-entries-b'>proprietorship entry</a> approved" );
   $( "li#entry-approve-link-b1" ).removeClass( "needs-approval" );
   $( "li#entry-approve-link-b1" ).addClass( "is-approved" );
   $( "em#approval-task-b" ).html( "&#10003;" );
@@ -182,6 +186,7 @@ $( "li#entry-approve-link-2" ).click(function() {
 $( "button#accept-entry-2" ).click(function() {
   $( "div#entry-approve-editor-2" ).hide();
   $( "span#entry-updated").html( "<a href='#proposed-entries-c'>all charge entries</a> approved" );
+  $( "span#entry-updated-b1").html( "<a href='#proposed-entries-b'>a proprietorship entry</a> needs approval" );
   $( "li#entry-approve-link-2" ).removeClass( "needs-approval" );
   $( "li#entry-approve-link-2" ).addClass( "is-approved" );
   $( "span.entry-accepted-1" ).show();
@@ -194,6 +199,7 @@ $( "button#accept-entry-2" ).click(function() {
   if( $( "em#approval-task-b" ).hasClass( "is-approved" ))
   {
     $( "div#complete-application" ).show();
+    $( "span#entry-updated-b1").html( "<a href='#proposed-entries-b'>a proprietorship entry</a> approved" );
   }
 });
 </script>
