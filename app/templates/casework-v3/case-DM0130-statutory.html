@@ -18,7 +18,7 @@ Case DM0130
 
 {% block navigation_header %}
 <!-- <a href="/" id="proposition-name">{{ env_flag }}</a> -->
-<a href="/cases-v3-initial" id="proposition-name">mortgage caselist</a>
+<a href="cases-v3-step-1" id="proposition-name">mortgage caselist</a>
 {% endblock %}
   
 {% block content %}
@@ -38,20 +38,18 @@ Case DM0130
             <p><span class="help-link" id="application-info-link">mortgage application DM0130</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of GE Money</p>
 
             <div class="help-text" id="application-info-text">
-               {% include "casework-v3/partials/_application-section-73.html" %}
+               {% include "casework-v3/partials/_application-section-dm0130.html" %}
             </div>
 
             <div class="help-text" id="applicant-info-text">
-               {% include "casework-v3/partials/_applicant-section-73.html" %}
+               {% include "casework-v3/partials/_applicant-section-dm0130.html" %}
             </div>
 
-
-            <h3 class="heading-small">can i proceed?</h3>
-            <p><em class="can-proceed">&#10003;</em> <span class="help-link" id="priority-info-link">No prior applications</span> on this title</p>
+            <p><em class="can-proceed">&#10003;</em> <span class="help-link" id="priority-info-link">An exisisting application</span> exists against this title but you can proceed</p>
   <!--           <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
             <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
             <div class="help-text" id="priority-info-text">
-               {% include "casework-v3/partials/_application-priority-section-73.html" %}
+               {% include "casework-v3/partials/_application-priority-section-dm0130.html" %}
             </div>
 
 
@@ -61,6 +59,10 @@ Case DM0130
             <div id="complete-application">
               {% include "casework-v3/partials/_complete-application-73.html" %}
             </div>
+
+            <p><em id="approval-task" class="needs-approval">i</em> Bob Kitto is working on this, but you can <a href="#">take over this case</a></p>
+
+            <p><a href="/cases-v3-step-1">Return to worklist</a></p>
 
           <!-- </section> -->
 
@@ -72,7 +74,7 @@ Case DM0130
           <h2 class="heading-medium col-top">Title Register BD161873</h2>
 
          
-          {% include "casework-v3/partials/_statutory-register-73.html" %}
+          {% include "casework-v3/partials/_statutory-register-dm0130.html" %}
 
 
         </div>
@@ -81,9 +83,9 @@ Case DM0130
           <!-- <p><a href="/cases">worklist</a></p> -->
             {% include "casework-v3/partials/_case-history-section-dm0130.html" %}
 
-            {% include "casework-v3/partials/_help-section-73.html" %}
+            {% include "casework-v3/partials/_help-section-dm0130.html" %}
 
-            {% include "casework-v3/partials/_system-help-section-73.html" %}
+            {% include "casework-v3/partials/_system-help-section-dm0130.html" %}
         </div>
 
       </div>

@@ -139,6 +139,16 @@ $( "button#accept-entry-1" ).click(function() {
   $( "li#entry-approve-link-1" ).removeClass( "needs-approval" );
   $( "li#entry-approve-link-1" ).addClass( "is-approved" );
   $( "span.entry-accepted-1" ).show();
+  if( $( "li#entry-approve-link-2" ).hasClass( "is-approved" ))
+  {
+    $( "span#entry-updated").html( "<a href='#proposed-entries'>all entries</a> approved" );
+    $( "em#approval-task" ).html( "&#10003;" );
+    $( "em#approval-task" ).removeClass( "needs-approval" );
+    $( "em#approval-task" ).addClass( "is-approved" );
+    $( "div#complete-application" ).show();
+  } else {
+    $( "span#entry-updated").html( "<a href='#proposed-entries'>1 entry</a> needs your approval" );   
+  }
 });
 </script>
 
@@ -153,11 +163,17 @@ $( "button#accept-entry-2" ).click(function() {
   $( "span#entry-updated").html( "<a href='#proposed-entries'>all entries</a> approved" );
   $( "li#entry-approve-link-2" ).removeClass( "needs-approval" );
   $( "li#entry-approve-link-2" ).addClass( "is-approved" );
-  $( "em#approval-task" ).html( "&#10003;" );
-  $( "em#approval-task" ).removeClass( "needs-approval" );
-  $( "em#approval-task" ).addClass( "is-approved" );
-  $( "div#complete-application" ).show();
   $( "span.entry-accepted-2" ).show();
+  if( $( "li#entry-approve-link-1" ).hasClass( "is-approved" ))
+  {
+    $( "span#entry-updated").html( "<a href='#proposed-entries'>all entries</a> approved" );
+    $( "em#approval-task" ).html( "&#10003;" );
+    $( "em#approval-task" ).removeClass( "needs-approval" );
+    $( "em#approval-task" ).addClass( "is-approved" );
+    $( "div#complete-application" ).show();
+  } else {
+    $( "span#entry-updated").html( "<a href='#proposed-entries'>1 entry</a> needs your approval" );   
+  }
 });
 </script>
 
