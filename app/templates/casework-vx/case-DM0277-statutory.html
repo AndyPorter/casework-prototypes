@@ -88,11 +88,49 @@ Case DM0130
 
       </div>
 
-
   </div>
+
+<p><span id="andy">tab 2 please</span></p>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<div>
+
+  <!-- Nav tabs -->
+  <ul id="myTabs" class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a id="1a" href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">a reg</div>
+    <div role="tabpanel" class="tab-pane" id="profile">b reg</div>
+    <div role="tabpanel" class="tab-pane" id="messages">c reg</div>
+    <div role="tabpanel" class="tab-pane" id="settings">other</div>
+  </div>
+
+</div>
 
 </main>
 
+
+<script>
+$( "span#andy" ).click(function() {
+  // $( "div#application-info-text" ).toggle();
+  // $( "a#1a" ).click();
+  document.getElementById("1a").click()
+  // alert('a_onClick');
+});
+</script>
+  
 
 <script>
 $( "span#application-info-link" ).click(function() {
