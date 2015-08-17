@@ -4483,3 +4483,8 @@ td.date-received, td.title-number {
   color:grey;
   font-size: 85%;
 }
+
+p.new {
+  padding: 0px 5px 10px 5px;
+  border-left: 5px solid #005ea5; 
+}
