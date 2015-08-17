@@ -50,6 +50,11 @@ def ux_principles():
 def system_learning():
   return render_template('SystemLearning.html')
 
+# design Principles
+@app.route('/designprinciples')
+def design_principles():
+  return render_template('DesignPrinciples.html')
+
 # ---------------------------------------------------------------------------
 # Casework prototypes - version x (casework-vx) - work in progress
 # when making new version
