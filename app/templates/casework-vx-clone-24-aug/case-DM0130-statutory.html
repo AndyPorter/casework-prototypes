@@ -18,7 +18,7 @@ Case DM0130
 
 {% block navigation_header %}
 <!-- <a href="/" id="proposition-name">{{ env_flag }}</a> -->
-<a href="/cases-vx-initial" id="proposition-name">mortgage caselist</a>
+<a href="cases-vx-step-1" id="proposition-name">mortgage caselist</a>
 {% endblock %}
   
 {% block content %}
@@ -34,38 +34,35 @@ Case DM0130
 
           <!-- <section class="js-stick-at-top-when-scrolling"> -->
 
-            <h3 class="heading-medium col-top"><!-- application --></h3>
-            <p><span style="text-decoration:underline;" class="help-link" id="application-info-link">mortgage application DM0277</span> from <span style="text-decoration:underline;" class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of GE Money</p>
+            <h3 class="heading-medium col-top">application</h3>
+            <p><span class="help-link" id="application-info-link">mortgage application DM0130</span> from <span class="help-link" id="applicant-info-link">Coldpress solicitors</span> on behalf of GE Money</p>
 
             <div class="help-text" id="application-info-text">
-               {% include "casework-vx/partials/_application-section-73.html" %}
+               {% include "casework-vx/partials/_application-section-dm0130.html" %}
             </div>
 
             <div class="help-text" id="applicant-info-text">
-               {% include "casework-vx/partials/_applicant-section-73.html" %}
+               {% include "casework-vx/partials/_applicant-section-dm0130.html" %}
             </div>
-<hr>
 
-<!--             <h3 class="heading-small">can i proceed?</h3>
-            <p><em class="can-proceed">&#10003;</em> <span class="help-link" id="priority-info-link">No prior applications</span> on this title</p>
-
+            <p><em class="can-proceed">&#10003;</em> <span class="help-link" id="priority-info-link">An exisisting application</span> exists against this title but you can proceed</p>
+  <!--           <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
+            <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
             <div class="help-text" id="priority-info-text">
-               {% include "casework-vx/partials/_application-priority-section-73.html" %}
-            </div> -->
-
-            <p>No prior applications against this title (daylist is clear)</p>
-<hr>            
-            <p>Mortgage deed has been digitally signed and all application details have been verified (no checks needed)</p>
-<hr>            
-            <p class="new">New version of the register has <a href="#proposed-entries">been automatically drafted</a></p>
+               {% include "casework-vx/partials/_application-priority-section-dm0130.html" %}
+            </div>
 
 
-<!--             <h3 class="heading-small">tasks</h3>
-            <p><em id="approval-task" class="needs-approval">i</em> <span id="entry-updated"><a href="#proposed-entries">2 autodrafted entries</a> have ben added</span></p> -->
+            <h3 class="heading-small">tasks</h3>
+            <p><em id="approval-task" class="needs-approval">i</em> <span id="entry-updated"><a href="#proposed-entries">2 entries</a> need approval</span></p>
 
             <div id="complete-application">
               {% include "casework-vx/partials/_complete-application-73.html" %}
             </div>
+
+            <p><em id="approval-task" class="needs-approval">i</em> Bob Kitto is working on this, but you can <a href="#">take over this case</a></p>
+
+            <p><a href="/cases-vx-step-1">Return to worklist</a></p>
 
           <!-- </section> -->
 
@@ -74,83 +71,35 @@ Case DM0130
 
         <div class="column-half">
 
-          <h2 class="heading-medium col-top">Title Register CL460071</h2>
+          <h2 class="heading-medium col-top">Title Register BD161873</h2>
 
          
-          {% include "casework-vx/partials/_statutory-register-short-3.html" %}
-
-
-<br><br>
-<form action="/casework-AP/list2" method="get">
-  <fieldset class="inline">
-      <legend>
-        <span class="form-label-bold">
-          If there are no problems with this draft register, please complete.
-        </span>
-      </legend>
-    </fieldset>
-    <button type="submit" id="complete-button" class="button">Complete</button>
-</form>
-  <br>
-  <br>
-
-<form action="/casework-AP/list2" method="get">
-  <fieldset>
-      <label class="block-label" for="cannot-complete-application" data-target="cant-complete-reason">
-        <input id="cannot-complete-application" type="checkbox" value="cannot-complete-application">
-          If there are problems that need to be resolved
-      </label>
-      <div class="panel-indent js-hidden" id="cant-complete-reason">
-        <label class="form-label" for="complete-problem">Please describe</label>
-        <textarea class="form-control" style="width:100%" id="complete-problem"></textarea>
-      </div>
-    </fieldset>
-  <button type="cancel" id="store-button" class="disabled button">Report problems</button>
-</form>
+          {% include "casework-vx/partials/_statutory-register-dm0130.html" %}
 
 
         </div>
 
         <div class="column-quarter">
           <!-- <p><a href="/cases">worklist</a></p> -->
-            {% include "casework-vx/partials/_case-history-section-73.html" %}
+            {% include "casework-vx/partials/_case-history-section-dm0130.html" %}
 
-            {% include "casework-vx/partials/_help-section-73.html" %}
+            {% include "casework-vx/partials/_help-section-dm0130.html" %}
 
-            {% include "casework-vx/partials/_system-help-section-73.html" %}
+            {% include "casework-vx/partials/_system-help-section-dm0130.html" %}
         </div>
 
       </div>
 
+
   </div>
-
-
 
 </main>
 
 
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script>
-$( "input#cannot-complete-application" ).click(function() {
-
-  if( $( "button#store-button" ).hasClass( "disabled" ))
-  {
-    $( "button#store-button" ).removeClass( "disabled" );
-    $( "button#complete-button" ).addClass( "disabled" );
-  }
-  else
-  {
-    $( "button#store-button" ).addClass( "disabled" );
-    $( "button#complete-button" ).removeClass( "disabled" );
-  }
-
-});
-</script>
-  
-
 <script>
 $( "span#application-info-link" ).click(function() {
   $( "div#application-info-text" ).toggle();
+  $( "div#applicant-info-text" ).hide();
 });
 </script>
 <script>
@@ -162,6 +111,7 @@ $( "div#application-info-text" ).click(function() {
 <script>
 $( "span#applicant-info-link" ).click(function() {
   $( "div#applicant-info-text" ).toggle();
+  $( "div#application-info-text" ).hide();
 });
 </script>
 <script>
