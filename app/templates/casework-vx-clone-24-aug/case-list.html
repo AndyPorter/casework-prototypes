@@ -1,0 +1,119 @@
+{% extends "global/casework_prototypes_base-vx.html" %}
+
+{% block page_title %}
+
+Case list
+
+{% endblock %}
+
+{% block head %}
+  <link href="{{ prototypes_asset_path }}stylesheets/govuk-elements.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <link href="{{ prototypes_asset_path }}stylesheets/casework-shame-vx.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block navigation_header %}
+<!-- <a href="/" id="proposition-name">{{ env_flag }}</a> -->
+<a href="/" id="proposition-name">digital services: </a><a href="/cases-vx-initial" id="proposition-name">mortgage caselist</a>
+
+{% endblock %}
+
+  
+
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+    <div class="grid-row">
+
+      <div class="column-three-quarters">
+
+        <h1 class="heading-large col-top">digital mortgages</h1>
+
+        <table class="casework-dashboard">
+          <thead>
+            <tr>
+              <th width="15%" scope="col">Reference</th>
+              <th width="50%" scope="col">Status</th>
+              <th width="15%" scope="col">Title No</th>
+              <th width="20%" scope="col">Received ▼</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr class="summary">
+              <td><a href="/case-dm0112-vx"><b>DM0112</b></a></td>
+              <td>no prior applications</td>
+              <td class="title-number">GM113631</td>
+              <td class="date-received">22 June 2015 12:23</td>
+            </tr>
+
+            <tr class="summary">
+              <td><a href="/case-dm0117-vx"><b>DM0117</b></a></td>
+              <td>no prior applications</td>
+              <td class="title-number">BD161882</td>
+              <td class="date-received">22 June 2015 17:20</td>
+            </tr>
+
+            <tr class="summary">
+              <td><a href="/case-dm0130-vx"><b>DM0130</b></a></td>
+              <td>Bob is currently working on it
+              
+              <p style="margin-bottom:0; color:grey;">prior application - can proceed</p></td>
+              <td class="title-number">BD161873</td>
+              <td class="date-received">23 June 2015 7:37</td>
+            </tr>
+
+            <tr class="summary">
+              <td><a href="/case-dm0123-vx"><b>DM0123</b></a></td>
+              <td>no prior applications</td>
+              <td class="title-number">BK34490</td>
+              <td class="date-received">23 June 2015 13:43</td>
+            </tr>
+
+
+            <tr class="summary">
+              <td><a href="/case-dm0277-vx"><b>DM0277</b></a></td>
+              <td>no prior applications</td>
+              <td class="title-number">CL460071</td>
+              <td class="date-received">24 June 2015 9:43</td>
+            </tr>
+
+            <tr class="summary">
+              <td><a href="/official-copy-vx/BD161879"><b>DM0273</b></a></td>
+              <td>prior application - can proceed</td>
+              <td class="title-number" class="title-number">ST50539</td>
+              <td class="date-received">25 June 2015 17:20</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="column-quarter">
+        {% include "casework-vx/partials/_performance-section-graph.html" %}
+
+<hr>
+        {% include "casework-vx/partials/_bugs-features-section.html" %}
+<hr>
+<div class="bugs-features">
+        <h3 class="heading-small"><a href="/bugs-vx">Report problem</a></h3>
+        <ul>
+        <li><a href="/bugs-vx">I've found a bug in this system</a></li>
+        <li><a href="/bugs-vx">I want to suggest an improvement</a></li>
+        </ul>
+        
+</div>
+      
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

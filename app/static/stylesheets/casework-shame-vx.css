@@ -4352,6 +4352,9 @@ button#update-register {
   max-width: none;
 }
 
+.unbranded * {
+  font-family: Arial !important; }
+
 #global-header .header-wrapper {
   max-width: none;
   margin: 0px 30px;
@@ -4372,11 +4375,16 @@ button#update-register {
 }
 
 #global-header-bar .header-bar {
-  height: 5px;
+  height: 8px;
+  background-color: #006400;
 }
 
 #global-header .header-wrapper .header-global .header-logo {
   margin-top: 0;
+}
+
+#global-header form#search input.submit {
+  background-color: #006400;
 }
 
 

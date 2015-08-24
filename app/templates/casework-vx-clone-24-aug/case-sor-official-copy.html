@@ -1,0 +1,125 @@
+{% extends "global/casework_prototypes_base-vx.html" %}
+
+{% block page_title %}
+
+Case
+
+{% endblock %}
+
+{% block head %}
+
+  <link href="{{ prototypes_asset_path }}stylesheets/govuk-elements.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <link href="{{ prototypes_asset_path }}stylesheets/casework-shame-vx.css" media="screen" rel="stylesheet" type="text/css">
+
+{% endblock %}
+  
+{% block content %}
+
+<main id="wrapper" role="main">
+
+  <div id="content">
+
+
+<!--       <h1 class="heading-large">Title Register {{ regData.title_number }} </h1> -->
+
+      <div class="grid-row">
+
+        <div class="column-quarter">
+          <h2 class="heading-medium">Application/Task</h2>
+          <h3 class="heading-small">application info</h3>
+          <p><a href="">Digital mortgage application DM0001</a> from <a href="">Coldpress solicitors</a> on behalf of <a href="">GE Money</a></p>
+          <h3 class="heading-small">can i proceed?</h3>
+          <p><em class="can-proceed">&#10003;</em> No other applications against this title (daylist clear)</p>
+<!--           <p><em class="maybe-proceed">?</em> <a href="">2 other prior applications</a> but you may still be able to process this application</p>
+          <p><em class="cannot-proceed">&#10008;</em> There is <a href="">a prior application</a> you cannot process this application</p> -->
+          <h3 class="heading-small">tasks to do</h3>
+          <p><em class="needs-approval">i</em> <a href="#proposed-entries">2 entries</a> need your approval</p>
+        </div>
+
+        <div class="column-half">
+
+          <h2 class="heading-medium">Title Register {{ regData.title_number }}</h2>
+
+    <!--       <h2>Register data</h2>
+          {% for subReg in regData.groups %}
+          <h3>{{ subReg.category }}</h3>
+            {% for entry in subReg.entries %}
+            <ul>
+            <li>sub reg: {{ entry.sub_register }}</li>
+            <li>sequence_number: {{ entry.sequence_number }}</li>
+            <li>entry text (full): {{ entry.full_text }}</li>
+            </ul>
+            {% endfor %}
+          {% endfor %} -->
+
+
+  <!-- if these exist -->
+          <h2 class="heading-medium">A</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% for entry in subReg.entries %}
+              {% if entry.sub_register == "A" %}          
+    <!--             <li>sequence_number: {{ entry.sequence_number }}</li> -->
+                <li>{{ entry.full_text }}</li>
+              {% endif %} 
+            {% endfor %}
+          {% endfor %}
+          </ol>
+
+  <!-- if these exist -->
+          <h2 class="heading-medium">B</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% for entry in subReg.entries %}
+              {% if entry.sub_register == "B" %}                   
+    <!--             <li>sequence_number: {{ entry.sequence_number }}</li> -->
+                <li>{{ entry.full_text }}</li>          
+              {% endif %} 
+            {% endfor %}
+          {% endfor %}
+          </ol>
+
+  <!-- if these exist -->
+          <h2 class="heading-medium">C</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% for entry in subReg.entries %}
+              {% if entry.sub_register == "C" %}
+    <!--             <li>sequence_number: {{ entry.sequence_number }}</li> -->
+                <li>{{ entry.full_text }}</li>
+              {% endif %} 
+            {% endfor %}
+          {% endfor %}
+          <li class="needs-attention">REGISTERED CHARGE dated 13 August 2007.</li>
+          <li class="needs-attention">Proprietor: #GE MONEY HOME FINANCE LIMITED# (Co. Regn. No. 592986) of Building 4, Hatters Lane, Croxley Green Business Park, Watford WD18 8YF.</li>
+          </ol>
+
+
+  <!-- if these exist, and do them per sub register - not this hack -->
+          <h2 class="heading-medium">other stuff - L, S, W</h2>
+          <ol class="list-number">
+          {% for subReg in regData.groups %}
+            {% for entry in subReg.entries %}
+              {% if not entry.sub_register in ("A", "B", "C") %} 
+                <li>sub reg: {{ entry.sub_register }}, sequence_number: {{ entry.sequence_number }}, {{ entry.full_text }}</li>
+              {% endif %} 
+            {% endfor %}
+          {% endfor %}
+          </ol>
+
+        </div>
+
+        <div class="column-quarter">
+          <p><a href="/cases-sor-grouped-vx/{{ regData.title_number }}">group view</a></p>
+          <p><a href="/cases-vx">worklist</a></p>
+        </div>
+
+      </div>
+
+
+  </div>
+
+</main>
+
+{% endblock %}
